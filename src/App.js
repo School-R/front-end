@@ -1,13 +1,19 @@
 import React from 'react';
 import './App.css';
+import Routes from './utils/Routes'
+import LandingPage from './components/marketing/LandingPage';
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-    </div>
+    <section className="App">
+      
+      <LandingPage/>
+      
+
+      <div>
+        <Routes/>
+      </div>
+    </section>
   );
 }
 
