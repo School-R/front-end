@@ -1,11 +1,11 @@
 import React from 'react'
 
-const KidsDash = () => {
+const AboutPage = () => {
   return (
     <section>
-    
+      
     </section>
   )
 }
 
-export default KidsDash
+export default AboutPage
