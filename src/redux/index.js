@@ -3,6 +3,9 @@ import thunk from 'redux-thunk'
 import { SET_ERROR } from './actions'
 
 const initialState = {
+	parents: [],
+	kids: [],
+	projects: [],
 	error: '',
 }
 
