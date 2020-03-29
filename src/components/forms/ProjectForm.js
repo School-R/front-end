@@ -5,6 +5,7 @@ const ProjectForm = () => {
 		<form>
 			<input type='text' value='' placeholder='Project Name' />
 			<select type='dropdown' value='' placeholder='Choose a Subject'>
+				<option value=''>Computer Education</option>
 				<option value=''>Math</option>
 				<option value=''>Science</option>
 				<option value=''>History</option>
