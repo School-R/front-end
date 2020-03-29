@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import MainNav from '../navs/MainNav'
 import { useDispatch } from 'react-redux'
 import { login } from '../../redux/actions'
 
-const Login = (props) => {
+const Login = props => {
 	const dispatch = useDispatch()
 	const [credentials, setCredentials] = useState({
 		email: '',
@@ -24,8 +24,14 @@ const Login = (props) => {
 		<section>
 			<MainNav />
 			<form onSubmit={handleSubmit}>
-				<input type='email' value={credentials.email} placeholder='Email' onChange={handleChange} />
-				<input type='password' value={credentials.password} placeholder='Password' onChange={handleChange} />
+				<input type='email' name='email' value={credentials.email} placeholder='Email' onChange={handleChange} />
+				<input
+					type='password'
+					name='password'
+					value={credentials.password}
+					placeholder='Password'
+					onChange={handleChange}
+				/>
 				<button>Log In</button>
 			</form>
 		</section>

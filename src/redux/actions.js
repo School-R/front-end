@@ -5,7 +5,7 @@ export const SET_ERROR = 'SET_ERROR'
 
 export const login = (credentials, props) => dispatch => {
 	axiosWithAuth()
-		.post('/schoolr_login.json?key=7924d6d0', credentials)
+		.post('/api/login', credentials)
 		.then(res => {
 			return (
 				localStorage.setItem('token', res.data.token),
@@ -23,7 +23,7 @@ export const login = (credentials, props) => dispatch => {
 
 export const postNewUser = (userToPost, props) => dispatch => {
 	axiosWithAuth()
-		.post('/schoolr_registration.json?key=7924d6d0', userToPost)
+		.post('/api/register', userToPost)
 		.then(res => {
 			localStorage.setItem('token', res.data.token)
 			res.data.isParent === true

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const MainNav = () => {
 	return (
 		<nav className='App-header'>
-			<Link>PlaceHolder</Link>
+			<Link to='/register'>PlaceHolder</Link>
 		</nav>
 	)
 }
