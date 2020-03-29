@@ -8,7 +8,7 @@ const LandingNav = () => {
 	return (
 		<nav className='App-header'>
 			<div href='Deployed Marketing Page Goes Here' className='school-r'>
-				<img src={Logo} alt='logo' className='logo' />
+				{/* <img src={Logo} alt='logo' className='logo' /> */}
 			</div>
 			<span>
 				<Link to='/'>
