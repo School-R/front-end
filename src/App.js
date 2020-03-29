@@ -1,16 +1,14 @@
-import React from 'react';
-import './App.css';
-import Routes from './utils/Routes'
-
+import React from "react";
+import "./App.css";
+import Routes from "./utils/Routes";
 
 const App = () => {
   return (
     <section className="App">
       <div>
-        <Routes/>
+        <Routes />
       </div>
     </section>
   );
-}
-
+};
 export default App;

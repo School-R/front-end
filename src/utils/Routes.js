@@ -4,17 +4,34 @@ import LandingPage from '../components/marketing/LandingPage'
 import AboutPage from '../components/marketing/AboutPage'
 import Login from '../components/forms/Login'
 import Registration from '../components/forms/Registration'
+import KidsDash from "../components/kids/KidsDash"
+import ParentsDash from "../components/parents/ParentDash"
+import ProjectForm from "../components/forms/ProjectForm"
+import UpdateProject from "../components/forms/UpdateProject"
+import ProtectedRoute from "./ProtectedRoute";
 
 const Routes = () => {
 
   return (
     <div>
-      <Route exact path='/' component={LandingPage} />
-      <Route path='/about' component={AboutPage} />
-      <Route path='/login' component={Login} />
-      <Route path='/register' component={Registration}/>
+      <ProtectedRoute exact path="/kids-dash/:id" component={KidsDash} />
+      <ProtectedRoute exact path="/parents-dash/:id" component={ParentsDash} />
+      <ProtectedRoute
+        exact
+        path="/kids-dash/:id/makeProject"
+        component={UpdateProject}
+      />
+      <ProtectedRoute
+        exact
+        path="/kids-dash/:id/showProject"
+        component={ProjectForm}
+      />
+      <Route exact path="/" component={LandingPage} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/login" component={Login} />
+      <Route path="/register" component={Registration} />
     </div>
-  )
+  );
 }
 
 export default Routes
