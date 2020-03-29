@@ -22,7 +22,7 @@ const LandingPage = () => {
 					<h1>School'R</h1>
 					<img src={lion} alt='lion-left-facing' className='img-lion' />
 				</span>
-				<section landing-container-content>
+				<section className='landing-container-content'>
 					<h3>Welcome to the School'R App</h3>
 					<h4>Our Aim:</h4>
 					<span>

@@ -6,10 +6,8 @@ import { postNewUser } from '../../redux/actions'
 const Registration = (props) => {
 	const dispatch = useDispatch()
 	const [userToPost, setUserToPost] = useState({
-		full_name: '',
 		email: '',
 		password: '',
-		isParent: 'false',
 	})
 
 	const handleChange = e => {
