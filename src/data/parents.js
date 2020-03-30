@@ -1,4 +1,4 @@
-export const parents = [
+const parents = [
   {
     "id": 1,
     "parent_id": 1,
@@ -45,3 +45,5 @@ export const parents = [
     "token": "!@$#%$4553dskdfeoizn;fdnds3-49r%$4"
   }
 ]
+
+export default parents

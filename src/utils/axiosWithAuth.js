@@ -8,6 +8,6 @@ export const axiosWithAuth = () => {
 			'Content-Type': 'application/json',
 			Authorization: `${token}`,
 		},
-		baseURL: 'https://reqres.in',
+		/* baseURL: 'https://reqres.in', */
 	})
 }

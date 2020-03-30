@@ -1,22 +1,25 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import RegistNav from '../navs/RegistNav'
 import { useDispatch } from 'react-redux'
-import { postNewParent, getParents, getKids } from '../../redux/actions'
+import { postNewChild, getParents, getKids } from '../../redux/actions'
 
-const Registration = (props) => {
+const KidsRegister = props => {
 	const dispatch = useDispatch()
 	const [userToPost, setUserToPost] = useState({
 		id: '',
-		parent_id: '',
+    parent_id: '',
+    kids_id: '',
 		email: '',
 		password: '',
-		isParent: true,
-		token:''
+		isParent: false,
+		token: '',
 	})
-	useEffect(() => {
-		dispatch(getParents())
-		dispatch(getKids())
-	},[dispatch])
+
+useEffect(() => {
+	dispatch(getParents())
+	dispatch(getKids())
+}, [dispatch])
+
 
 	const handleChange = e => {
 		setUserToPost({
@@ -26,7 +29,7 @@ const Registration = (props) => {
 	}
 	const handleSubmit = e => {
 		e.preventDefault()
-		dispatch(postNewParent(userToPost, props))
+		dispatch(postNewChild(userToPost, props))
 	}
 
 	return (
@@ -42,4 +45,4 @@ const Registration = (props) => {
 	)
 }
 
-export default Registration
+export default KidsRegister
