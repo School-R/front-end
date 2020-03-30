@@ -1,4 +1,4 @@
-export const kids = [
+const kids = [
   {
     "id": 1,
     "kids_id": 1, 
@@ -50,3 +50,5 @@ export const kids = [
     "token": "$#*&^&dsk$%$%feo4364zn;fdnds3-49r%$4"
   }
 ]
+
+export default kids

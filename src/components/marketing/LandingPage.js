@@ -33,12 +33,18 @@ const LandingPage = () => {
 						</h5>
 					</span>
 					<div>
-						<Link to='/register'>
-							<Button color='warning'>Register</Button>
-						</Link>
 						<Link to='/login'>
 							<Button color='warning'>Login</Button>
 						</Link>
+						<div>
+							<h4>Register Here</h4>
+							<Link to='/register'>
+								<Button color='warning'>Parents</Button>
+							</Link>
+							<Link to='/kids_register'>
+								<Button color='warning'>Kids</Button>
+							</Link>
+						</div>
 					</div>
 				</section>
 
