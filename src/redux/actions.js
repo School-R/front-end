@@ -3,6 +3,7 @@ import parents from '../data/parents'
 import  kids  from '../data/kids'
 
 
+
 export const LOGIN = 'LOGIN'
 export const SET_ERROR = 'SET_ERROR'
 export const GET_PARENTS = 'GET_PARENTS'
@@ -10,7 +11,7 @@ export const GET_KIDS = 'GET_KIDS'
 
 export const login = (credentials, props) => dispatch => {
 	axiosWithAuth()
-		.post({parents} || {kids}, credentials)
+		.post(parents || kids, credentials)
 		.then(res => {
 			return (
 				localStorage.setItem('token', res.data.token),
@@ -28,7 +29,7 @@ export const login = (credentials, props) => dispatch => {
 
 export const postNewParent = (parentToPost, props) => dispatch => {
 	axiosWithAuth()
-		.post({parents}, parentToPost)
+		.post(parents, parentToPost)
 		.then(res => {
 			localStorage.setItem('token', res.data.token)
 			props.history.push(`/parent-dash/${res.data.parent_id}`)
@@ -41,7 +42,7 @@ export const postNewParent = (parentToPost, props) => dispatch => {
 
 export const postNewChild = (kidToPost, props) => dispatch => {
 	axiosWithAuth()
-		.post({kids}, kidToPost)
+		.post(kids, kidToPost)
 		.then(res => {
 			localStorage.setItem('token', res.data.token)
 			props.history.push(`/kid-dash/${res.data.kids_id}`)
@@ -53,7 +54,7 @@ export const postNewChild = (kidToPost, props) => dispatch => {
 }
 export const getParents = () => dispatch => {
 	axiosWithAuth()
-		.get({parents})
+		.get(parents)
 		.then(res => {
 			dispatch({ type: GET_PARENTS, payload: res.data })
 		})
@@ -64,7 +65,7 @@ export const getParents = () => dispatch => {
 }
 export const getKids = () => dispatch => {
 	axiosWithAuth()
-		.get({kids})
+		.get(kids)
 		.then(res => {
 			dispatch({ type: GET_KIDS, payload: res.data })
 		})

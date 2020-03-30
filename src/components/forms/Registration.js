@@ -8,6 +8,7 @@ const Registration = (props) => {
 	const [userToPost, setUserToPost] = useState({
 		id: '',
 		parent_id: '',
+		fullname: '',
 		email: '',
 		password: '',
 		isParent: true,
@@ -33,7 +34,7 @@ const Registration = (props) => {
 		<section>
 			<RegistNav />
 			<form onSubmit={handleSubmit}>
-				<input type='text' name='full_name' value={userToPost.full_name} placeholder='Full Name' onChange={handleChange} />
+				<input type='text' name='fullname' value={userToPost.fullname} placeholder='Full Name' onChange={handleChange} />
 				<input type='email' name='email' value={userToPost.email} placeholder='Email' onChange={handleChange} />
 				<input type='password' name='password' value={userToPost.password} placeholder='Password' onChange={handleChange} />
 				<button>Submit</button>
