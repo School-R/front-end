@@ -4,20 +4,25 @@ import LandingPage from '../components/marketing/LandingPage'
 import AboutPage from '../components/marketing/AboutPage'
 import Login from '../components/forms/Login'
 import Registration from '../components/forms/Registration'
-import KidsDash from '../components/kids/KidsDash'
-import ParentsDash from '../components/parents/ParentDash'
-import ProjectForm from '../components/forms/ProjectForm'
+import KidsDash from '../components/dashboards/kids/KidsDash'
+import ParentDash from '../components/dashboards/parents/ParentDash'
+import AddProjectForm from '../components/forms/AddProjectForm'
 import UpdateProject from '../components/forms/UpdateProject'
+import NewsFeed from '../components/dashboards/Newsfeed'
 import ProtectedRoute from './ProtectedRoute'
 
 
 const Routes = () => {
 	return (
 		<div>
-			<ProtectedRoute exact path='/kids-dash/:id' component={KidsDash} />
-			<ProtectedRoute exact path='/parents-dash/:id' component={ParentsDash} />
-			<ProtectedRoute exact path='/kids-dash/:id/makeProject' component={UpdateProject} />
-			<ProtectedRoute exact path='/kids-dash/:id/showProject' component={ProjectForm} />
+			<ProtectedRoute path='/parents-dash/:id' component={ParentDash} />
+			<ProtectedRoute path='/parents-dash/:id/editProject' component={UpdateProject} />
+			<ProtectedRoute path='/parents-dash/:id/newProject' component={AddProjectForm} />
+			<ProtectedRoute path='/parents-dash/:id/newsfeed' component={NewsFeed} />
+			<ProtectedRoute path='/kids-dash/:id' component={KidsDash} />
+			<ProtectedRoute path='/kids-dash/:id/editProject' component={UpdateProject} />
+			<ProtectedRoute path='/kids-dash/:id/newProject' component={AddProjectForm} />
+			<ProtectedRoute path='/kids-dash/:id/newsfeed' component={NewsFeed} />
 			<Route exact path='/' component={LandingPage} />
 			<Route path='/about' component={AboutPage} />
 			<Route path='/login' component={Login} />
