@@ -236,6 +236,34 @@
       "isParent": true,
       "token": "66a8729b-d542-454b-8cbd-9b23498a9969",
       "id": 4
+    },
+    {
+      "email": "catherinesjkim@gmail.com",
+      "password": "123",
+      "isParent": false,
+      "token": "f7c3e8ec-18d1-48f8-b4ab-97722aae27d9",
+      "id": 5
+    },
+    {
+      "email": "cat@gmail.com",
+      "password": "123",
+      "isParent": true,
+      "token": "b00172a7-2d54-4cfe-b98f-8983051e90cb",
+      "id": 6
+    },
+    {
+      "email": "catherinesjkim@gmail.com",
+      "password": "123",
+      "isParent": false,
+      "token": "71c5f051-ff23-4212-87db-24370db856e3",
+      "id": 7
+    },
+    {
+      "email": "cat@gmail.com",
+      "password": "123",
+      "isParent": true,
+      "token": "b07c7850-7ff1-49c0-9b43-9eba3f250b1c",
+      "id": 8
     }
   ]
 }

@@ -7,7 +7,7 @@ const Button = style.button`
 	background-color: #F99C1B;
 	color: #fff;
 	padding: 10px;
-	width: 15%;
+	width: 20%;
 	border: none;
 	border-radius: 4px;
 	font-size: 14px;
@@ -30,11 +30,10 @@ const ParentDash = () => {
       <MainNav />
       <div>
         <NavLink to="/parents-dash/id/newsfeed">
-          <Button>News Feed</Button>
+          <Button>Parents News Feed</Button>
         </NavLink>
-        <br />
         <NavLink to="/parents-dash/id/newProject">
-          <Button>Add New Project</Button>
+          <Button>Parents Add New Project</Button>
         </NavLink>
       </div>
     </section>
