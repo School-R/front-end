@@ -1,10 +1,9 @@
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import { SET_ERROR, GET_KIDS, GET_PARENTS } from './actions'
+import { SET_ERROR,  GET_USERS } from './actions'
 
 const initialState = {
-	parents: [],
-	kids: [],
+	users:[],
 	projects: [],
 	error: '',
 }
@@ -16,15 +15,10 @@ const reducer = (state = initialState, action) => {
 				...state,
 				error: action.payload,
 			}
-		case GET_PARENTS:
+		case GET_USERS:
 			return {
 				...state,
-				error: action.payload,
-			}
-		case GET_KIDS:
-			return {
-				...state,
-				error: action.payload,
+				users: action.payload,
 			}
 		default:
 			return state

@@ -7,7 +7,6 @@ const kids = [
     "email": "maya@knight.com",
     "password": "123",
     "isParent": false,
-    "token": "dsk$%$%feo4364zn;fdnds3-49r%$4"
   },
   {
     "id": 2,
@@ -17,7 +16,6 @@ const kids = [
     "email": "mary@bates.com",
     "password": "123",
     "isParent": false,
-    "token": "dsk$%$%feeg4o4364zn;fdnddsews3-49r%$4"
   },
   {
     "id": 3,
@@ -27,7 +25,6 @@ const kids = [
     "email": "charlotte@ross.com",
     "password": "123",
     "isParent": false,
-    "token": "234ffhdsk$%$%feo4364zn;fdnds3-49r%$4"
   },
   {
     "id": 4,
@@ -37,7 +34,6 @@ const kids = [
     "email": "frankie@cynely.com",
     "password": "123",
     "isParent": false,
-    "token": "$#@$^dsk$%$%feo4364zn;fdnds3-49r%$4"
   },
   {
     "id": 5,
@@ -47,7 +43,6 @@ const kids = [
     "email": "sean@parker.com",
     "password": "123",
     "isParent": false,
-    "token": "$#*&^&dsk$%$%feo4364zn;fdnds3-49r%$4"
   }
 ]
 
