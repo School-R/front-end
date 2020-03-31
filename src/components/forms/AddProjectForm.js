@@ -3,7 +3,6 @@ import React, { useState} from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { postProject, saveEditProject } from '../../redux/actions'
-// import { AvForm, AvField } from 'availity-reactstrap-validation'
 import style from "styled-components";
 
 const AddEditContainer = style.div`
@@ -89,16 +88,6 @@ const AddProjectForm = props => {
 		setProject({ ...project, [event.target.name]: event.target.value })
 		console.log(event.target.name)
 	}
-
-	// const handleNumbers = event => {
-	// 	setProject({ ...project, [event.target.name]: parseInt(event.target.value) })
-	// 	console.log(event.target.name)
-	// }
-
-	// const handleClick = event => {
-	// 	setProject({ ...project, [ event.target.name]: (event.target.checked ? 1 : 0) })
-	// 	console.log(event.target.name)
-	// }
 
 	const submitForm = event => {
 		event.preventDefault();
