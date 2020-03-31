@@ -5,7 +5,7 @@ import { withRouter, useParams } from 'react-router-dom'
 import { postProject, saveEditProject } from '../../redux/actions'
 // import { AvForm, AvField } from 'availity-reactstrap-validation'
 // import { Button } from 'reactstrap'
-import style from "styled-components";
+import style from 'styled-components'
 
 const AddEditContainer = style.div`
   display: flex;
@@ -25,7 +25,7 @@ const FormContainer = style.form`
 	padding: auto;
 	overflow: auto;
 	flex: 1;
-	margin-botton: 80px;
+	margin-bottom: 80px;
 `;
 
 const FormTitle = style.h1`
@@ -89,7 +89,7 @@ const AddProjectForm = props => {
 	const { id } = useParams();
 
 	const [project, setProject] = useState({
-    project_id: 'project_id',
+    project_id: '',
     title: '',
     subject: '',
     favorite: '',
