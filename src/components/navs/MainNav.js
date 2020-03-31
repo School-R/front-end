@@ -19,22 +19,30 @@ const history = useHistory()
 
 	return (
 		<Navbar className='App-header'>
-				<Link to="/"><NavbarBrand className='school-r'>
+			<Link to='/'>
+				<NavbarBrand className='school-r'>
 					<img src={Logo} alt='logo' className='logo' />
-				</NavbarBrand></Link>
-				<span>
-					<Button
-						onClick={() => history.push('/register')}
-						outline
-						style={{ color: '#f99c1b', border: '1px solid #f99c1b' }}
-						className='school-r2'>
-						Register
-					</Button>
-					<Button onClick={logout} outline style={{ color: '#f99c1b', border: '1px solid #f99c1b' }} className='school-r2'>
-						Log Out
-					</Button>
-				</span>
-			</Navbar>
+				</NavbarBrand>
+			</Link>
+			<span>
+				<Button
+					onClick={() => history.push('/register')}
+					outline
+					color='danger'
+					style={{ color: '#f99c1b', border: '1px solid #f99c1b' }}
+					className='school-r2'>
+					Register
+				</Button>
+				<Button
+					onClick={logout}
+					outline
+					color='danger'
+					style={{ color: '#f99c1b', border: '1px solid #f99c1b' }}
+					className='school-r2'>
+					Log Out
+				</Button>
+			</span>
+		</Navbar>
 	)
 }
 

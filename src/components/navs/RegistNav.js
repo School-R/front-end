@@ -26,11 +26,12 @@ const RegistNav = () => {
 					<Button
 						onClick={() => history.push('/login')}
 						outline
+						color="danger"
 						style={{ color: '#f99c1b', border: '1px solid #f99c1b' }}
 						className='school-r2'>
 						Login
 					</Button>
-					<Button onClick={logout} outline style={{ color: '#f99c1b', border: '1px solid #f99c1b' }} className='school-r2'>
+					<Button onClick={logout} outline color='danger' style={{ color: '#f99c1b', border: '1px solid #f99c1b' }} className='school-r2'>
 						Log Out
 					</Button>
 				</span>

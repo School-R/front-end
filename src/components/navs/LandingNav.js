@@ -7,18 +7,19 @@ import Logo from '../../images/School_R.png'
 const LandingNav = () => {
 	return (
 		<nav className='App-header'>
-			<Link to='/'><div className='school-r'>
-				<img src={Logo} alt='logo' className='logo' />
-			</div>
+			<Link to='/'>
+				<div className='school-r'>
+					<img src={Logo} alt='logo' className='logo' />
+				</div>
 			</Link>
 			<span>
 				<Link to='/'>
-					<Button outline style={{ color: '#f99c1b', border: '1px solid #f99c1b' }}>
+					<Button outline color='danger' style={{ color: '#f99c1b', border: '1px solid #f99c1b' }}>
 						Home
 					</Button>
 				</Link>
 				<Link to='/about'>
-					<Button outline style={{ color: '#f99c1b', border: '1px solid #f99c1b' }}>
+					<Button outline color='danger' style={{ color: '#f99c1b', border: '1px solid #f99c1b' }}>
 						About
 					</Button>
 				</Link>
