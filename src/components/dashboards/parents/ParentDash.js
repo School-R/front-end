@@ -1,6 +1,6 @@
 import React from 'react';
 import MainNav from '../../navs/MainNav';
-import { NavLink, useParams } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const ParentDash = () => {
   

@@ -1,7 +1,7 @@
 // Catherine will add functionality and styles
 import React, { useState } from 'react'
-import { connect, useDispatch } from 'react-redux'
-import { withRouter, useParams } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import { postProject, saveEditProject } from '../../redux/actions'
 import style from 'styled-components'
 
