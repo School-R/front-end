@@ -3,7 +3,7 @@ import MainNav from '../../navs/MainNav';
 import { NavLink, useParams } from 'react-router-dom'
 
 const ParentDash = () => {
-  const { id } = useParams()
+  
 
   return (
     <section>
