@@ -1,30 +1,29 @@
 // Catherine will add functionality and styles
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { postProject, saveEditProject } from '../../redux/actions'
-import style from "styled-components";
+import style from 'styled-components'
 
 const AddEditContainer = style.div`
   display: flex;
   height: 100%;
-`;
-
+`
 const Form = style.div`
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-`;
+`
 
 const FormContainer = style.form`
 	width: 100%
 	padding: auto;
 	overflow: auto;
 	flex: 1;
-	margin-botton: 80px;
-`;
+	margin-bottom: 80px;
+`
 
 const FormTitle = style.h1`
 	font-size: 30px;
@@ -34,14 +33,14 @@ const FormTitle = style.h1`
   align-items: center;
   justify-content: center;
   flex-directions: column;
-`;
+`
 
 const Label = style.label`
 	font-size: 15px;
 	font-weight: 600;
 	color: #8f8d8d;
 	margin-top: 10px;
-`;
+`
 
 const Button = style.button`
 	background-color: #FCCB3D;
@@ -60,7 +59,7 @@ const Button = style.button`
     &:hover {
       background-color: #FFDB48;
     }
-`;
+`
 
 const FormInput = style.input`
   border: 1px solid #a9a9a9;
@@ -71,7 +70,7 @@ const FormInput = style.input`
   background-color: #f3f3f3;
   box-sizing: border-box;
   margin-top: 10px;
-`;
+`
 
 const AddProjectForm = props => {
 
@@ -89,14 +88,24 @@ const AddProjectForm = props => {
 		console.log(event.target.name)
 	}
 
+	/* const handleNumbers = event => {
+		setProject({ ...project, [event.target.name]: parseInt(event.target.value) })
+		console.log(event.target.name)
+	}
+
+	const handleClick = event => {
+		setProject({ ...project, [event.target.name]: event.target.checked ? 1 : 0 })
+		console.log(event.target.name)
+	} */
+
 	const submitForm = event => {
-		event.preventDefault();
-		props.postProject(localStorage.getItem("token"), project, props.history)
+		event.preventDefault()
+		props.postProject(localStorage.getItem('token'), project, props.history)
 	}
 
 	const editForm = event => {
-		event.preventDefault();
-		props.saveEditProperty(localStorage.getItem("token"), project, props.history)
+		event.preventDefault()
+		props.saveEditProperty(localStorage.getItem('token'), project, props.history)
 	}
 
 	return (
@@ -172,14 +181,13 @@ const AddProjectForm = props => {
 }
 
 const mapStateToProps = state => ({
-  projects: state.projects,
-  postProjectError: state.postProjectError,
-  postProjectStart: state.postProjectStart,
-  editProjectStart: state.editProjectStart,
-  saveEditProjectStart: state.saveEditProjectStart,
-  saveEditProjectError: state.saveEditProjectError,
-  currentProject: state.currentProject,
-});
+	projects: state.projects,
+	postProjectError: state.postProjectError,
+	postProjectStart: state.postProjectStart,
+	editProjectStart: state.editProjectStart,
+	saveEditProjectStart: state.saveEditProjectStart,
+	saveEditProjectError: state.saveEditProjectError,
+	currentProject: state.currentProject,
+})
 
-export default connect(mapStateToProps, {postProject, saveEditProject })(
-	withRouter(AddProjectForm))
+export default connect(mapStateToProps, { postProject, saveEditProject })(withRouter(AddProjectForm))

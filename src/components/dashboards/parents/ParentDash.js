@@ -23,7 +23,7 @@ const Button = style.button`
 `;
 
 const ParentDash = () => {
-  const { id } = useParams()
+  
 
   return (
     <section>

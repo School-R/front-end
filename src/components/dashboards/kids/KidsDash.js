@@ -23,7 +23,7 @@ const Button = style.button`
 `;
 
 const KidsDash = () => {
-	const {id}= useParams()
+	
   return (
     <section>
       <MainNav />
