@@ -1,10 +1,9 @@
 // Catherine will add functionality and styles
-import React, { useState, useEffect } from 'react'
-import { connect, useDispatch } from 'react-redux'
-import { withRouter, useParams } from 'react-router-dom'
+import React, { useState} from 'react'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import { postProject, saveEditProject } from '../../redux/actions'
 // import { AvForm, AvField } from 'availity-reactstrap-validation'
-// import { Button } from 'reactstrap'
 import style from "styled-components";
 
 const AddEditContainer = style.div`
@@ -13,7 +12,7 @@ const AddEditContainer = style.div`
 `;
 
 const Form = style.div`
-	width: 80%;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -46,7 +45,7 @@ const Label = style.label`
 `;
 
 const Button = style.button`
-	background-color: #F99C1B;
+	background-color: #FCCB3D;
 	color: #fff;
 	padding: 10px;
 	width: 100%;
@@ -60,7 +59,7 @@ const Button = style.button`
       opacity: .5;
     }
     &:hover {
-      background-color: #FA7027;
+      background-color: #FFDB48;
     }
 `;
 
@@ -75,18 +74,7 @@ const FormInput = style.input`
   margin-top: 10px;
 `;
 
-// const FormRight = style.div`
-//   width: 66.66%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-direction: column;
-//   background-color: #2281bf;
-// `;
-
 const AddProjectForm = props => {
-	const dispatch = useDispatch();
-	const { id } = useParams();
 
 	const [project, setProject] = useState({
     project_id: 'project_id',
@@ -96,25 +84,21 @@ const AddProjectForm = props => {
     description: '',
     imgurl: ''
 	});
-
-	// useEffect(() => {
-	// 	dispatch(setProject())
-	// }, [dispatch])
 	
 	const handleChanges = event => {
 		setProject({ ...project, [event.target.name]: event.target.value })
 		console.log(event.target.name)
 	}
 
-	const handleNumbers = event => {
-		setProject({ ...project, [event.target.name]: parseInt(event.target.value) })
-		console.log(event.target.name)
-	}
+	// const handleNumbers = event => {
+	// 	setProject({ ...project, [event.target.name]: parseInt(event.target.value) })
+	// 	console.log(event.target.name)
+	// }
 
-	const handleClick = event => {
-		setProject({ ...project, [ event.target.name]: (event.target.checked ? 1 : 0) })
-		console.log(event.target.name)
-	}
+	// const handleClick = event => {
+	// 	setProject({ ...project, [ event.target.name]: (event.target.checked ? 1 : 0) })
+	// 	console.log(event.target.name)
+	// }
 
 	const submitForm = event => {
 		event.preventDefault();
@@ -129,13 +113,9 @@ const AddProjectForm = props => {
 	return (
     <AddEditContainer>
       <Form>
-        <FormTitle>
-          {props.editProjectStart ? "Edit" : "Add"} Project
-        </FormTitle>
-        <br />
+        <FormTitle>{props.editProjectStart ? "Edit" : "Add"} Project</FormTitle>
         <FormContainer
           onSubmit={props.editProjectStart ? editForm : submitForm}>
-          {/* <Label htmlFor="title">Title</Label> */}
           <FormInput
             required
             project_id="project_id"
@@ -144,6 +124,7 @@ const AddProjectForm = props => {
             value={project.title}
             placeholder="Project Name"
             onChange={handleChanges}
+            id="title"
           />
           <br />
           <Label htmlFor="subject">Subject</Label>
@@ -154,13 +135,14 @@ const AddProjectForm = props => {
             name="subject"
             value={project.subject}
             placeholder="Choose a Subject"
-            onChange={handleChanges}>
-            <option value="">Computer Education</option>
-            <option value="">Math</option>
-            <option value="">Science</option>
-            <option value="">History</option>
-            <option value="">Languages</option>
-            <option value="">Literature</option>
+            onChange={handleChanges}
+            id="subject">
+            <option value={"computer_education"}>Computer Education</option>
+            <option value="math">Math</option>
+            <option value="science">Science</option>
+            <option value="history">History</option>
+            <option value="language">Languages</option>
+            <option value="literature">Literature</option>
           </select>
           <br />
           <br />
@@ -177,10 +159,10 @@ const AddProjectForm = props => {
             required
             type="url"
             name="imageurl"
-            id="imageurl"
             value={project.imageurl}
             placeholder="Insert an Image URL"
             onChange={handleChanges}
+            id="imageurl"
           />
           {props.postProjectStart || props.saveEditProjectStart ? (
             <Button type="submit" disabled>
