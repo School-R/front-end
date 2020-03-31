@@ -15,8 +15,8 @@ export const login = (credentials, props) => dispatch => {
 			return (
 				localStorage.setItem('token', res.data.token),
 				res.data.isParent === true
-					? props.history.push(`/parent-dash/${res.data.id}`)
-					: props.history.push(`/kid-dash/${res.data.id}`)
+					? props.history.push(`/parents-dash/${res.data.id}`)
+					: props.history.push(`/kids-dash/${res.data.id}`)
 			)
 		})
 		.catch(err => {
@@ -31,8 +31,8 @@ export const postNewUser = (userToPost, props) => dispatch => {
 		.then(res => {
 			localStorage.setItem('token', res.data.token)
 			res.data.isParent === true
-				? props.history.push(`/parent-dash/${res.data.id}`)
-				: props.history.push(`/kid-dash/${res.data.id}`)
+				? props.history.push(`/parents-dash/${res.data.id}`)
+				: props.history.push(`/kids-dash/${res.data.id}`)
 		})
 		.catch(err => {
 			console.log('NOOOOO!!!!', err)

@@ -1,15 +1,14 @@
 import React from 'react';
 
 
-const ParentDash = () => {
+const NewsFeed = () => {
   
+
 
   return (
     <section>
-
-      
+      PlaceHolder
     </section>
   )
 }
-
-export default ParentDash
+export default NewsFeed

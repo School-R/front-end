@@ -6,16 +6,12 @@ import { Navbar, NavbarBrand, Button } from 'reactstrap'
 import { useHistory } from 'react-router-dom'
 
 const MainNav = () => {
-
-
-
-
-const history = useHistory()
-
+	const history = useHistory()
 	const logout = () => {
 		localStorage.removeItem('token')
 		history.push('/login')
 	}
+	const url = window.location.href
 
 	return (
 		<Navbar className='App-header'>
@@ -24,24 +20,38 @@ const history = useHistory()
 					<img src={Logo} alt='logo' className='logo' />
 				</NavbarBrand>
 			</Link>
-			<span>
-				<Button
-					onClick={() => history.push('/register')}
-					outline
-					color='danger'
-					style={{ color: '#f99c1b', border: '1px solid #f99c1b' }}
-					className='school-r2'>
-					Register
-				</Button>
-				<Button
-					onClick={logout}
-					outline
-					color='danger'
-					style={{ color: '#f99c1b', border: '1px solid #f99c1b' }}
-					className='school-r2'>
-					Log Out
-				</Button>
-			</span>
+
+			{url.match(/login/gi) ? (
+				<span>
+					<Button
+						onClick={() => history.push('/register')}
+						outline
+						color='danger'
+						style={{ color: '#f99c1b', border: '1px solid #f99c1b' }}
+						className='school-r2'>
+						Register
+					</Button>
+					<Button
+						onClick={logout}
+						outline
+						color='danger'
+						style={{ color: '#f99c1b', border: '1px solid #f99c1b' }}
+						className='school-r2'>
+						Log Out
+					</Button>
+				</span>
+			) : (
+				<span>
+					<Button
+						onClick={logout}
+						outline
+						color='danger'
+						style={{ color: '#f99c1b', border: '1px solid #f99c1b' }}
+						className='school-r2'>
+						Log Out
+					</Button>
+				</span>
+			)}
 		</Navbar>
 	)
 }

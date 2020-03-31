@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProjectForm = () => {
+const AddProjectForm = () => {
 	return (
 		<form>
 			<input type='text' value='' placeholder='Project Name' />
@@ -13,9 +13,9 @@ const ProjectForm = () => {
 				<option value=''>Literature</option>
 			</select>
 			<textarea type='text' value='' placeholder='Instructions & Notes' />
-			<input type='file' id='image' />
+			<input type='url' id='image' placeholder='Insert an Image URL' />
 		</form>
 	)
 }
 
-export default ProjectForm
+export default AddProjectForm
