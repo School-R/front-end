@@ -61,7 +61,7 @@ const LandingPage = () => {
 								Ideas you can use for extra-credit or to study further outside of class can be found through the feed. Pick a
 								few talk to your teachers if you go to a school. You can even use our sister website.
 								<span>
-									<a href='https://goldentutors.netlify.com/'>Golden Tutors</a> or <a href='https://outschool.com'>OutSchool</a>{' '}
+									<a href='https://goldentutors.netlify.com'>Golden Tutors</a> or <a href='https://outschool.com'>OutSchool</a>{' '}
 									Providing tutors and classes both helping to reach your student goals.
 								</span>
 							</p>
