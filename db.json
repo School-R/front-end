@@ -139,6 +139,15 @@
       "password": "1234",
       "isParent": false,
       "token": "67a8e780-5224-4d47-8b53-6a284ca01fa9"
+    },
+    {
+      "id": 11,
+      "user_id": 1137612767,
+      "fullname": "Catherine Kim",
+      "email": "cat@gmail.com",
+      "password": "123",
+      "isParent": true,
+      "token": "561c2fea-755a-4a4a-b566-95b1f641f463"
     }
   ],
   "projects": [
@@ -204,6 +213,13 @@
       "isParent": true,
       "token": "b7421f44-8a42-4b78-8477-c8b429a0fc28",
       "id": 2
+    },
+    {
+      "email": "cat@gmail.com",
+      "password": "123",
+      "isParent": true,
+      "token": "cba11ebd-212b-41c5-b467-a434f794a0ce",
+      "id": 3
     }
   ]
 }
