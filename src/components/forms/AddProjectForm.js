@@ -1,10 +1,8 @@
 // Catherine will add functionality and styles
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { connect, useDispatch } from 'react-redux'
 import { withRouter, useParams } from 'react-router-dom'
 import { postProject, saveEditProject } from '../../redux/actions'
-// import { AvForm, AvField } from 'availity-reactstrap-validation'
-// import { Button } from 'reactstrap'
 import style from 'styled-components'
 
 const AddEditContainer = style.div`
@@ -85,8 +83,8 @@ const FormInput = style.input`
 // `;
 
 const AddProjectForm = props => {
-	const dispatch = useDispatch()
-	const { id } = useParams()
+	/* const dispatch = useDispatch()
+	const { id } = useParams() */
 
 	const [project, setProject] = useState({
 		project_id: '',
@@ -106,7 +104,7 @@ const AddProjectForm = props => {
 		console.log(event.target.name)
 	}
 
-	const handleNumbers = event => {
+	/* const handleNumbers = event => {
 		setProject({ ...project, [event.target.name]: parseInt(event.target.value) })
 		console.log(event.target.name)
 	}
@@ -114,7 +112,7 @@ const AddProjectForm = props => {
 	const handleClick = event => {
 		setProject({ ...project, [event.target.name]: event.target.checked ? 1 : 0 })
 		console.log(event.target.name)
-	}
+	} */
 
 	const submitForm = event => {
 		event.preventDefault()
