@@ -36,15 +36,9 @@ const LandingPage = () => {
 						<Link to='/login'>
 							<Button color='warning'>Login</Button>
 						</Link>
-						<div>
-							<h4>Register Here</h4>
-							<Link to='/register'>
-								<Button color='warning'>Parents</Button>
-							</Link>
-							<Link to='/kids_register'>
-								<Button color='warning'>Kids</Button>
-							</Link>
-						</div>
+						<Link to='/register'>
+							<Button color='warning'>Register</Button>
+						</Link>
 					</div>
 				</section>
 
@@ -64,9 +58,11 @@ const LandingPage = () => {
 							<img src={gradcap} alt='icon' href='https://icons8.com' />
 							<h3>Success in School</h3>
 							<p>
-								For those Extra-Curricular Activities like Clubs and Science Fairs. Here you will find what projects kids before
-								you have enjoyed. Instructions, Ideas, Plans, Friends. See what other kids your age are doing. See what projects
-								you can do on a budget for Parents. Shared by Parents and Kids like you.
+								Ideas you can use for extra-credit or to study further outside of class can be found through the feed. Pick a
+								few talk to your teachers if you go to a school. You can even use our sister website.
+								<span>
+									<a href='https://golden-tutors.netlify.com'>Golden Tutors</a> or <a href='https://outschool.com'>OutSchool</a> Providing tutors and classes both helping to reach your student goals.
+								</span>
 							</p>
 						</span>
 
@@ -74,9 +70,7 @@ const LandingPage = () => {
 							<img src={history} alt='icon' href='https://icons8.com' />
 							<h3>History</h3>
 							<p>
-								For those Extra-Curricular Activities like Clubs and Science Fairs. Here you will find what projects kids before
-								you have enjoyed. Instructions, Ideas, Plans, Friends. See what other kids your age are doing. See what projects
-								you can do on a budget for Parents. Shared by Parents and Kids like you.
+								Find History Subjects, Whether you are a fan of  Social Studies, U.S. Government, and World History. You are sure to find projects that help you dive deeper into the world that brought us to where we are today.
 							</p>
 						</span>
 					</span>
@@ -87,9 +81,7 @@ const LandingPage = () => {
 								<img src={abc} alt='icon' href='https://icons8.com' />
 								<h3>Langauges</h3>
 								<p>
-									For those Extra-Curricular Activities like Clubs and Science Fairs. Here you will find what projects kids
-									before you have enjoyed. Instructions, Ideas, Plans, Friends. See what other kids your age are doing. See what
-									projects you can do on a budget for Parents. Shared by Parents and Kids like you.
+									English, Spanish, Italian, French. We encompass and encourage students of all fluency to find more in depth things to help them have fun learning to be even more fluent in both writing and reading languages.
 								</p>
 							</div>
 						</div>
@@ -98,9 +90,7 @@ const LandingPage = () => {
 								<img src={numbers} alt='icon' href='https://icons8.com' />
 								<h3>Math</h3>
 								<p>
-									For those Extra-Curricular Activities like Clubs and Science Fairs. Here you will find what projects kids
-									before you have enjoyed. Instructions, Ideas, Plans, Friends. See what other kids your age are doing. See what
-									projects you can do on a budget for Parents. Shared by Parents and Kids like you.
+									Math is an all encompassing subject, from simple arithmetic to advanced calculus feel free to share methods to help others learn. Find methods to help you gain a deeper understanding of all things number-related. Parents not familiar with the new Math styles may even find tips to help them help their kids.
 								</p>
 							</div>
 						</div>
@@ -109,9 +99,7 @@ const LandingPage = () => {
 								<img src={periodictable} alt='icon' href='https://icons8.com' />
 								<h3>Science</h3>
 								<p>
-									For those Extra-Curricular Activities like Clubs and Science Fairs. Here you will find what projects kids
-									before you have enjoyed. Instructions, Ideas, Plans, Friends. See what other kids your age are doing. See what
-									projects you can do on a budget for Parents. Shared by Parents and Kids like you.
+									Although computers are extracted out on their own because their are so many things to study when it comes to the computer. This category is for you basic sciences from geology to biology all things science can be found here. Experiments to Science Fair Ideas Abound in this Category.
 								</p>
 							</div>
 						</div>

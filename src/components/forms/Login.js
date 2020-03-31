@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import MainNav from '../navs/MainNav'
 import { useDispatch } from 'react-redux'
 import { login } from '../../redux/actions'
+import{v4 as uuid} from 'uuid'
 
 const Login = props => {
 	const dispatch = useDispatch()
 	const [credentials, setCredentials] = useState({
 		email: '',
 		password: '',
+		isParent:false,
+		token: uuid()
 	})
 
 	const handleChange = e => {
@@ -17,7 +20,8 @@ const Login = props => {
 		})
 	}
 
-	const handleSubmit = () => {
+	const handleSubmit = e => {
+		e.preventDefault()
 		dispatch(login(credentials, props))
 	}
 	return (
@@ -32,6 +36,12 @@ const Login = props => {
 					placeholder='Password'
 					onChange={handleChange}
 				/>
+				<br />
+				<span>
+					<input type='checkbox' onChange={e => setCredentials({ ...credentials, isParent: true })} />
+					<br />
+					<h5>Parent</h5>
+				</span>
 				<button>Log In</button>
 			</form>
 		</section>

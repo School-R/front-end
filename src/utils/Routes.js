@@ -9,7 +9,7 @@ import ParentsDash from '../components/parents/ParentDash'
 import ProjectForm from '../components/forms/ProjectForm'
 import UpdateProject from '../components/forms/UpdateProject'
 import ProtectedRoute from './ProtectedRoute'
-import KidsRegister from '../components/forms/KidsRegister'
+
 
 const Routes = () => {
 	return (
@@ -22,7 +22,6 @@ const Routes = () => {
 			<Route path='/about' component={AboutPage} />
 			<Route path='/login' component={Login} />
 			<Route path='/register' component={Registration} />
-			{/* <Route path='/kids_register' component={KidsRegister} /> */}
 		</div>
 	)
 }

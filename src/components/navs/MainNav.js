@@ -1,12 +1,40 @@
 // Nav for the react app - Logout, Parents, Kids Projects?
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Logo from '../../images/School_R.png'
+import { Navbar, NavbarBrand, Button } from 'reactstrap'
+import { useHistory } from 'react-router-dom'
 
 const MainNav = () => {
+
+
+
+
+const history = useHistory()
+
+	const logout = () => {
+		localStorage.removeItem('token')
+		history.push('/login')
+	}
+
 	return (
-		<nav className='App-header'>
-			<Link to='/register'>PlaceHolder</Link>
-		</nav>
+		<Navbar className='App-header'>
+				<Link to="/"><NavbarBrand className='school-r'>
+					<img src={Logo} alt='logo' className='logo' />
+				</NavbarBrand></Link>
+				<span>
+					<Button
+						onClick={() => history.push('/register')}
+						outline
+						style={{ color: '#f99c1b', border: '1px solid #f99c1b' }}
+						className='school-r2'>
+						Register
+					</Button>
+					<Button onClick={logout} outline style={{ color: '#f99c1b', border: '1px solid #f99c1b' }} className='school-r2'>
+						Log Out
+					</Button>
+				</span>
+			</Navbar>
 	)
 }
 

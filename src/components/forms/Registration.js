@@ -5,6 +5,7 @@ import RegistNav from '../navs/RegistNav'
 import { useDispatch } from 'react-redux'
 import { postNewUser, getUsers } from '../../redux/actions'
 
+
 const Registration = props => {
 	const dispatch = useDispatch()
 	const [userToPost, setUserToPost] = useState({
@@ -23,11 +24,10 @@ const Registration = props => {
 	const handleChange = e => {
 		setUserToPost({
 			...userToPost,
-			[e.target.name]: e.target.value,
-	
+			[e.target.name]: e.target.value
 		})
 	}
-	const isTrue = JSON.parse('true')
+  
 
 	const handleSubmit = e => {
 		e.preventDefault()
@@ -41,7 +41,15 @@ const Registration = props => {
 				<input type='text' name='fullname' value={userToPost.fullname} placeholder='Full Name' onChange={handleChange} />
 				<input type='email' name='email' value={userToPost.email} placeholder='Email' onChange={handleChange} />
 				<input type='password' name='password' value={userToPost.password} placeholder='Password' onChange={handleChange} />
-				<input type='radio' name='isParent' value={isTrue} onChange={handleChange} />
+				<br />
+				<span>
+				<input
+					type='checkbox'
+					onChange={e => setUserToPost({ ...userToPost, isParent: true })}/>
+					<br/>
+					<h5>Parent</h5>
+				</span>
+					
 				<button>Submit</button>
 			</form>
 		</section>
