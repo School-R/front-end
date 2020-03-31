@@ -1,12 +1,8 @@
-import React from 'react';
-
+import React from 'react'
 
 const NewsFeed = () => {
-  
-
-
-  return (
-    <section>
+  return(
+  <section>
       PlaceHolder
     </section>
   )
