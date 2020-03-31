@@ -10,7 +10,7 @@ export const GET_USERS = 'GET_USERS'
 
 export const login = (credentials, props) => dispatch => {
 	axiosWithAuth()
-		.get('/users' , credentials)
+		.post('/login', credentials)
 		.then(res => {
 			return (
 				localStorage.setItem('token', res.data.token),

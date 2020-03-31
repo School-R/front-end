@@ -1,6 +1,7 @@
 // Registration for the react app - Only for Registration & Login
 import React from 'react'
 import Logo from '../../images/School_R.png'
+import {Link} from 'react-router-dom'
 import { Navbar, NavbarBrand, Button } from 'reactstrap'
 import { useHistory } from 'react-router-dom'
 
@@ -16,9 +17,11 @@ const RegistNav = () => {
 	return (
 		<div>
 			<Navbar className='App-header'>
-				<NavbarBrand href='Deployed Marketing Page Goes Here' className='school-r'>
-					<img src={Logo} alt='logo' className='logo' />
-				</NavbarBrand>
+				<Link to='/'>
+					<NavbarBrand className='school-r'>
+						<img src={Logo} alt='logo' className='logo' />
+					</NavbarBrand>
+				</Link>
 				<span>
 					<Button
 						onClick={() => history.push('/login')}
