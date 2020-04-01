@@ -2,6 +2,7 @@ import React from 'react'
 import LandingNav from '../navs/LandingNav'
 import Cat from '../../images/Catherine.jpg'
 import Kara from '../../images/Kara.jpg'
+import Jesus from '../../images/Jesus.jpg'
 import {
   UncontrolledCarousel
 } from 'reactstrap';
@@ -9,22 +10,22 @@ import {
 const team = [
   {
     src: `${Cat}`,
-    altText: "Slide 1",
-    caption: "Sliede 1",
-    header: "Slide 1 Header",
+    altText: "",
+    caption: "YAAAY!",
+    header: "",
     key: "1"
   },
   {
     src: `${Kara}`,
     altText: "",
-    caption: "",
+    caption: "Success consists of going from failure to failure without loss of enthusiasm. ~~Sir Winston Churchill",
     header: "",
     key: "2"
   },
   {
-    src: "",
+    src: `${Jesus}`,
     altText: "",
-    caption: "",
+    caption: "More Errors Again!",
     header: "",
     key: "3"
   },
