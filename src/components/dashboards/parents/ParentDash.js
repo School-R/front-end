@@ -1,6 +1,7 @@
 import React from 'react';
 import MainNav from '../../navs/MainNav';
 import { NavLink, useParams } from 'react-router-dom'
+import UpdateProject from '../../forms/UpdateProject'
 import style from "styled-components";
 
 const Button = style.button`
@@ -13,7 +14,7 @@ const Button = style.button`
 	font-size: 14px;
 	font-weight: bold;
   margin-top: 10px;
-  margin: 1%;
+  margin: 0.5%;
 	cursor: pointer;
 	&:disabled {
       opacity: .5;
@@ -26,7 +27,6 @@ const Button = style.button`
 const ParentDash = () => {
   const {id} = useParams()
   
-
   return (
     <section>
       <MainNav />
@@ -36,6 +36,8 @@ const ParentDash = () => {
         </NavLink>
         <NavLink to={`/parents-dash/${id}/newProject`}>
           <Button>Add New Project</Button>
+        </NavLink>
+        <NavLink to={`/parents-dash/${id}/newEditProject`}>
         </NavLink>
       </div>
     </section>

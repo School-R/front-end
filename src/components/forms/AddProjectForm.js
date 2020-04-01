@@ -9,9 +9,6 @@ import {
   Input
 } from "reactstrap"
 
-
-
-
 const AddContainer = style.div`
   display: flex;
   height: 100%;
@@ -120,7 +117,6 @@ const AddProjectForm = () => {
 	// 	props.saveEditProperty(localStorage.getItem('token'), project, props.history)
   // }
 
-
 	return (
 		<AddContainer>
 			<Form>
@@ -156,8 +152,6 @@ const AddProjectForm = () => {
               <option value="literature">Literature</option>
 						</Input>
 					</FormGroup>
-					<br />
-					<br />
 					<Label htmlFor='description'>Description</Label>
 					<FormInput
 						required
