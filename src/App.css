@@ -50,13 +50,17 @@
 	margin-top: 2%;
 }
 .img-lion {
+  border-radius: 50%;
+  margin: 0 3%;
 	height: 100px;
-	width: 100px;
+  width: 100px;
+  border: 5px double #b51118
 }
 .landing-card-row {
 	display: flex;
-	justify-content: space-evenly;
-	margin: 1%;
+  justify-content: space-evenly;
+  padding: 1%;
+	margin: 2%;
 }
 
 .landing-container-card {
@@ -86,10 +90,18 @@
 .about_carousel{
 	margin: 0 auto;
 	height: 500px;
-	margin-top: 5%;
+	margin-top: 2%;
 	width: 50%;
 	/* border: 2px double #b51118; */
 
+}
+.carousel-text{
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  border: 5px solid #b51118
+}
+.about-para{
+  width: 75%;
+  margin: 0 auto;
 }
 
 /* ### NEWS FEED NAV ### */
@@ -103,14 +115,14 @@
     display: inline-block;
     text-decoration: none;
     margin-bottom: 10px;
-    color: #fff;
+    color: wheat;
     transition: color 0.2s;
   }
   
   .bm-item:hover {
     text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
+    color: wheat;
+    border: 1px solid wheat;
     border-radius: 4px;
   }
   
@@ -123,7 +135,7 @@
   }
   
   .bm-burger-bars {
-    background: #f9a023;
+    background: #fa7027;
   }
   
   .bm-cross-button {
@@ -132,7 +144,7 @@
   }
   
   .bm-cross {
-    background: #f9a023;
+    background: #fa7027;
   }
   
   .bm-menu {

@@ -11,30 +11,30 @@ import {
 const team = [
   {
     src: `${Cat}`,
-    altText: "",
+    altText: "Catherine",
     caption: "YAAAY!",
-    header: "",
+    header: "Catherine Kim",
     key: "1"
   },
   {
     src: `${Kara}`,
-    altText: "",
+    altText: "Kara",
     caption: "Success consists of going from failure to failure without loss of enthusiasm. ~~Sir Winston Churchill",
-    header: "",
+    header: "Kara",
     key: "2"
   },
   {
     src: `${Jesus}`,
-    altText: "",
+    altText: "Jesus",
     caption: "More Errors Again!",
-    header: "",
+    header: "Jesus",
     key: "3"
   },
   {
     src: "",
-    altText: "",
-    caption: "",
-    header: "",
+    altText: "Conary",
+    caption: "Now we are cooking with grease",
+    header: "Conary",
     key: "4"
   }
 ];
@@ -45,14 +45,11 @@ const AboutPage = () => {
 
       <div>
         <h2>About US</h2>
-        <p>loreDuo at consetetur lorem erat eos, tempor no voluptua elitr sit gubergren stet ipsum dolor consetetur. Labore ipsum ea est.m</p>
-
-
+        <p className='about-para'>Every team member contributed to the project with young children in mind but the App has potential to grow into something from small children to Technical Schools and College Students would love to use. Every member contributed to all elements of both the Front-End and BackEnd</p>
       </div>
       <div className='about_carousel'>
-        <UncontrolledCarousel items={team} />
+        <UncontrolledCarousel items={team} className='carousel-text' />
       </div>
-    <Footer/>
     </section>
   );
 }
