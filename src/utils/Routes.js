@@ -11,26 +11,40 @@ import AddProjectForm from '../components/forms/AddProjectForm'
 import UpdateProject from '../components/forms/UpdateProject'
 import NewsFeed from '../components/dashboards/Newsfeed'
 import MemoryGame from '../components/dashboards/kids/Game3/MemoryGame'
+import SlidePuzzle from '../components/dashboards/kids/Game4/SlidePuzzle'
 
 
 const Routes = () => {
 	return (
-		<div>
-			<ProtectedRoute path='/parents-dash/:id' component={ParentDash} />
-			<ProtectedRoute path='/parents-dash/:id/editProject' component={UpdateProject} />
-			<ProtectedRoute path='/parents-dash/:id/newProject' component={AddProjectForm} />
-			<ProtectedRoute path='/parents-dash/:id/newsfeed' component={NewsFeed} />
-			<ProtectedRoute path='/kids-dash/:id' component={KidsDash} />
-			<ProtectedRoute path='/kids-dash/:id/editProject' component={UpdateProject} />
-			<ProtectedRoute path='/kids-dash/:id/newProject' component={AddProjectForm} />
-			<ProtectedRoute path='/kids-dash/:id/newsfeed' component={NewsFeed} />
-			<Route exact path='/' component={LandingPage} />
-			<Route path='/about' component={AboutPage} />
-			<Route path='/login' component={Login} />
-			<Route path='/register' component={Registration} />
-			<Route path='/memoryGame' component={MemoryGame}/>
-		</div>
-	)
+    <div>
+      <ProtectedRoute path="/parents-dash/:id" component={ParentDash} />
+      <ProtectedRoute
+        path="/parents-dash/:id/editProject"
+        component={UpdateProject}
+      />
+      <ProtectedRoute
+        path="/parents-dash/:id/newProject"
+        component={AddProjectForm}
+      />
+      <ProtectedRoute path="/parents-dash/:id/newsfeed" component={NewsFeed} />
+      <ProtectedRoute path="/kids-dash/:id" component={KidsDash} />
+      <ProtectedRoute
+        path="/kids-dash/:id/editProject"
+        component={UpdateProject}
+      />
+      <ProtectedRoute
+        path="/kids-dash/:id/newProject"
+        component={AddProjectForm}
+      />
+      <ProtectedRoute path="/kids-dash/:id/newsfeed" component={NewsFeed} />
+      <Route exact path="/" component={LandingPage} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/login" component={Login} />
+      <Route path="/register" component={Registration} />
+      <Route path="/memoryGame" component={MemoryGame} />
+      <Route path="/slidePuzzle" component={SlidePuzzle} />
+    </div>
+  );
 }
 
 export default Routes

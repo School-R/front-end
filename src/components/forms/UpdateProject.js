@@ -1,7 +1,16 @@
-import React from 'react'
+// Catherine 
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { editProject } from '../../redux/actions'
 
-/*
-const AddContainer = style.div`
+import style from 'styled-components'
+import {
+  FormGroup, 
+  FormText,
+  Input
+} from 'reactstrap'
+
+const AddEditContainer = style.div`
   display: flex;
   height: 100%;
 `;
@@ -67,95 +76,83 @@ const FormInput = style.input`
   box-sizing: border-box;
   margin-top: 10px;
 `;
-*/
 
 const UpdateProject = () => {
+  const dispatch = useDispatch();
+
+  const [newEditProject, setNewEditProject] = useState({
+    id: "",
+    title: "",
+    subject: "",
+    favorite: "five stars",
+    description: "",
+    imageurl: "",
+  });
+
+  const handleChanges = event => {
+    setNewEditProject({ ...newEditProject, [event.target.name]: event.target.value });
+  };
+
+  const submitEditForm = (e) => {
+    e.preventDefault()
+    dispatch(editProject(newEditProject)) // will use useHistory hook later
+    
 	return (
-		<form>
-			<input type='text' value='' placeholder='Updated Project Name' />
-			<select type='dropdown' value='' placeholder='Choose a Subject'>
-				<option value=''>Math</option>
-				<option value=''>Science</option>
-				<option value=''>History</option>
-				<option value=''>Languages</option>
-				<option value=''>Literature</option>
-			</select>
-			<textarea type='text' value='' placeholder='Instructions & Notes' />
-			<input type='file' id='image' />
-		</form>
-	)
+      <AddEditContainer>
+        <Form>
+          <FormTitle>Update Project</FormTitle>
+          <FormContainer onSubmit={submitEditForm}>
+          <FormInput
+            required
+            type="text"
+            name="title"
+            value={newEditProject.title}
+            placeholder="Updated Project Name"
+            onChange={handleChanges}
+            id="title"
+          />
+          <FormGroup>
+            <Label htmlFor='subject'>Updated Subjects</Label>
+            <Input 
+              required
+              type='select'
+              name='subject'
+              value={newEditProject.subject}
+              onChange={handleChanges}
+            >
+              <option disable>
+                Choose an Updated Subject
+              </option>
+              <option value="computer_education">Computer Education</option>
+              <option value="math">Math</option>
+              <option value="science">Science</option>
+              <option value="history">History</option>
+              <option value="languages">Languages</option>
+              <option value="literature">Literature</option>
+            </Input>
+          </FormGroup>
+          <FormText
+            required 
+            type="text" 
+            value="" 
+            placeholder="Instructions & Notes" 
+          />
+          <FormInput
+            required 
+            type="url"
+            name="imageurl"
+            value={newEditProject.imageurl}
+            placeholder='Insert an Image URL'
+            onChange={handleChanges} 
+            id="imageurl" 
+          />
+          <Button type='submit'>Submit</Button>
+          </FormContainer>
+        </Form>
+      </AddEditContainer>
+    );
+  }
 }
 
 export default UpdateProject
 
-/*
-<AddEditContainer>
-      <Form>
-        <FormTitle>{props.editProjectStart ? "Edit" : "Add"} Project</FormTitle>
-        <FormContainer
-          onSubmit={props.editProjectStart ? editForm : submitForm}>
-          <FormInput
-            required
-            project_id="project_id"
-            type="text"
-            name="title"
-            value={project.title}
-            placeholder="Project Name"
-            onChange={handleChanges}
-            id="title"
-          />
-          <br />
-          <Label htmlFor="subject">Subject</Label>
-          <br />
-          <select
-            required
-            type="dropdown"
-            name="subject"
-            value={project.subject}
-            placeholder="Choose a Subject"
-            onChange={handleChanges}
-            id="subject">
-            <option value={"computer_education"}>Computer Education</option>
-            <option value="math">Math</option>
-            <option value="science">Science</option>
-            <option value="history">History</option>
-            <option value="language">Languages</option>
-            <option value="literature">Literature</option>
-          </select>
-          <br />
-          <br />
-          <Label htmlFor="description">Description</Label>
-          <FormInput
-            required
-            type="text"
-            name="description"
-            value={project.description}
-            placeholder="Instructions & Notes"
-            onChange={handleChanges}
-          />
-          <FormInput
-            required
-            type="url"
-            name="imageurl"
-            value={project.imageurl}
-            placeholder="Insert an Image URL"
-            onChange={handleChanges}
-            id="imageurl"
-          />
-          {props.postProjectStart || props.saveEditProjectStart ? (
-            <Button type="submit" disabled>
-              Submitting...
-            </Button>
-          ) : (
-            <Button type="submit">Submit</Button>
-          )}
-          {(props.postProjectError || props.saveEditProjectError) && (
-            <p style={{ color: "red", textAlign: "center", marginTop: "10px" }}>
-              Well, looks like the Project was Not saved
-            </p>
-          )}
-        </FormContainer>
-      </Form>
-		</AddEditContainer>
-	);
-*/
