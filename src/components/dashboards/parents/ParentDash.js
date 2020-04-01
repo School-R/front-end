@@ -12,7 +12,8 @@ const Button = style.button`
 	border-radius: 4px;
 	font-size: 14px;
 	font-weight: bold;
-	margin-top: 10px;
+  margin-top: 10px;
+  margin: 1%;
 	cursor: pointer;
 	&:disabled {
       opacity: .5;
@@ -23,17 +24,18 @@ const Button = style.button`
 `;
 
 const ParentDash = () => {
+  const {id} = useParams()
   
 
   return (
     <section>
       <MainNav />
       <div>
-        <NavLink to="/parents-dash/id/newsfeed">
-          <Button>Parents News Feed</Button>
+        <NavLink to={`/parents-dash/${id}/newsfeed`}>
+          <Button>News Feed</Button>
         </NavLink>
-        <NavLink to="/parents-dash/id/newProject">
-          <Button>Parents Add New Project</Button>
+        <NavLink to={`/parents-dash/${id}/newProject`}>
+          <Button>Add New Project</Button>
         </NavLink>
       </div>
     </section>

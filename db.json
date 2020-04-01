@@ -157,11 +157,20 @@
       "password": "abcd",
       "isParent": true,
       "token": "229a4cb6-d405-4ee7-b62f-0a27fe603c3e"
+    },
+    {
+      "id": 13,
+      "user_id": 1059421960,
+      "fullname": "Bobby Porter",
+      "email": "bobby@gmail.com",
+      "password": "abcd",
+      "isParent": true,
+      "token": "da34cca6-d749-4930-bb4f-895d80f1858a"
     }
   ],
   "projects": [
     {
-      "project_id": 1,
+      "id": 1,
       "title": "Basic Front End Languages",
       "subject": "Computer Education",
       "favorite": "5 stars",
@@ -169,7 +178,7 @@
       "imgurl": "https://www.pexels.com/photo/working-pattern-internet-abstract-1089438/"
     },
     {
-      "project_id": 2,
+      "id": 2,
       "title": "Math Scavenger Hunt",
       "subject": "Math",
       "favorite": "5 stars",
@@ -177,7 +186,7 @@
       "imgurl": "src/images/Math.png"
     },
     {
-      "project_id": 3,
+      "id": 3,
       "title": "Lightening Dancer",
       "subject": "Science",
       "favorite": "five stars",
@@ -185,7 +194,7 @@
       "imgurl": "https://pixabay.com/photos/paper-dolls-paper-girls-background-14611/"
     },
     {
-      "project_id": 4,
+      "id": 4,
       "title": "Virtual Tour - Great Wall of China",
       "subject": "History",
       "favorite": "five stars",
@@ -193,7 +202,7 @@
       "imgurl": "https://www.pexels.com/photo/great-wall-of-china-2412603/"
     },
     {
-      "project_id": 5,
+      "id": 5,
       "title": "Free Language Lessons",
       "subject": "Languages",
       "favorite": "five stars",
@@ -201,12 +210,20 @@
       "imgurl": "https://www.pexels.com/photo/man-drawing-on-floor-2927599/"
     },
     {
-      "project_id": 6,
+      "id": 6,
       "title": "Volunteer to Read to the Seniors",
       "subject": "Literature",
       "favorite": "five stars",
       "description": "Visit a nursing home and see if they would allow you to read to non-visited patients and take turn reading your favorite book and their favorite book and keep a journal of what you learn",
       "imgurl": "https://www.pexels.com/photo/old-woman-sitting-on-chair-near-girl-while-reading-a-book-3087878/"
+    },
+    {
+      "id": 7,
+      "title": "Build a Replica of the Mayflower",
+      "subject": "history",
+      "favorite": "five stars",
+      "description": "Instructions can be found here http://www.stirthewonder.com/milk-carton-mayflower/",
+      "imageurl": "https://www.stirthewonder.com/wp-content/uploads/2013/11/Milk-Carton-Mayflower.jpg"
     }
   ],
   "login": [

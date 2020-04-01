@@ -1,14 +1,16 @@
 // Catherine will add functionality and styles
 import React, { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { /* useSelector, */ useDispatch } from 'react-redux'
 import { postProject } from '../../redux/actions'
+
 import style from 'styled-components'
 import {
   FormGroup,
   Input
 } from "reactstrap"
 
-const subjects = ['Computer Education', 'Science', 'Math', 'History', 'Languages', 'Literature']
+
+
 
 const AddContainer = style.div`
   display: flex;
@@ -77,24 +79,23 @@ const FormInput = style.input`
   margin-top: 10px;
 `
 
-const AddProjectForm = props => {
+const AddProjectForm = () => {
 
-  const project = useSelector(state => state.projects)
+  /* const project = useSelector(state => state.projects) */
 
   const dispatch = useDispatch()
 
 	const [newProject, setNewProject] = useState({
-    project_id: '',
+    id:'',
     title: '',
     subject: '',
-    favorite: '',
+    favorite: 'five stars',
     description: '',
-    imgurl: ''
+    imageurl: ''
 	});
 	
 	const handleChanges = event => {
 		setNewProject({ ...newProject, [event.target.name]: event.target.value })
-		console.log(event.target.name)
 	}
 
   // Jesus might need them later 
@@ -109,9 +110,9 @@ const AddProjectForm = props => {
 	} */
 
   // postProject
-	const submitForm = event => {
-		event.preventDefault()
-		props.postProject(localStorage.getItem('token'), project, props.history) // will use useHistory hook later
+	const submitForm = (e) => {
+    e.preventDefault()
+		dispatch(postProject(newProject)) // will use useHistory hook later
 	}
 
 	// const editForm = event => {
@@ -119,90 +120,67 @@ const AddProjectForm = props => {
 	// 	props.saveEditProperty(localStorage.getItem('token'), project, props.history)
   // }
 
-  /* 
-<FormGroup>
-        <Label for="exampleSelect">Select</Label>
-        <Input type="select" name="select" id="exampleSelect">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </Input>
-      </FormGroup>
-  */
+
 	return (
-    <AddContainer>
-      <Form>
-        <FormTitle>Add New Project</FormTitle>
-        <FormContainer onSubmit={submitForm}>
-          <FormInput
-            required
-            project_id="project_id"
-            type="text"
-            name="title"
-            value={newProject.title}
-            placeholder="Project Name"
-            onChange={handleChanges}
-            id="title"
-          />
-          <br />
-          <FormGroup>
-            <Label htmlFor="subject">Subjects</Label>
-            <br />
-            <Input
-              required
-              type="select"
-              defaultValue="DEFAULT"
-              name="subject"
+		<AddContainer>
+			<Form>
+				<FormTitle>Add New Project</FormTitle>
+				<FormContainer onSubmit={submitForm}>
+					<FormInput
+						required
+						type='text'
+						name='title'
+						value={newProject.title}
+						placeholder='Project Name'
+						onChange={handleChanges}
+						id='title'
+					/>
+					<br />
+					<FormGroup>
+						<Label htmlFor='subject'>Subjects</Label>
+						<br />
+						<Input
+							required
+							type='select'
+              name='subject'
               value={newProject.subject}
-              onChange={handleChanges}
-              multiple
-              >
-              <option disabled value="DEFAULT">
-                Choose A Subject
-              </option>
-              {subjects.map(subject => {
-                return <option>{subject}</option>;
-              })}
-            </Input>
-          </FormGroup>
-          <br />
-          <br />
-          <Label htmlFor="description">Description</Label>
-          <FormInput
-            required
-            type="text"
-            name="description"
-            value={project.description}
-            placeholder="Instructions & Notes"
-            onChange={handleChanges}
-          />
-          <FormInput
-            required
-            type="url"
-            name="imageurl"
-            value={project.imageurl}
-            placeholder="Insert an Image URL"
-            onChange={handleChanges}
-            id="imageurl"
-          />
-          {props.postProjectStart || props.saveEditProjectStart ? (
-            <Button type="submit" disabled>
-              Submitting...
-            </Button>
-          ) : (
-            <Button type="submit">Submit</Button>
-          )}
-          {(props.postProjectError || props.saveEditProjectError) && (
-            <p style={{ color: "red", textAlign: "center", marginTop: "10px" }}>
-              Well, looks like the Project was Not saved
-            </p>
-          )}
-        </FormContainer>
-      </Form>
-    </AddContainer>
-  );
+              onChange={handleChanges}>
+							<option disabled>
+								Choose A Subject
+							</option>
+							<option value="computer_education">Computer Education</option>
+              <option value="science">Science</option>
+              <option value="math">Math</option>
+              <option value="history">History</option>
+              <option value="languages">Languages</option>
+              <option value="literature">Literature</option>
+						</Input>
+					</FormGroup>
+					<br />
+					<br />
+					<Label htmlFor='description'>Description</Label>
+					<FormInput
+						required
+						type='text'
+						name='description'
+						value={newProject.description}
+						placeholder='Instructions & Notes'
+						onChange={handleChanges}
+					/>
+					<FormInput
+						required
+						type='url'
+						name='imageurl'
+						value={newProject.imageurl}
+						placeholder='Insert an Image URL'
+						onChange={handleChanges}
+						id='imageurl'
+					/>
+						<Button type='submit'>Submit</Button>
+				</FormContainer>
+			</Form>
+		</AddContainer>
+	)
 }
 
 export default AddProjectForm

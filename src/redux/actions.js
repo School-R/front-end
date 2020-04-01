@@ -49,14 +49,11 @@ export const getUsers = () => dispatch => {
 		})
 }
 
-export const postProject = (project, history) => dispatch => {
-	console.log(project)
+export const postProject = (project) => dispatch => {
 	axiosWithAuth()
     .post("/projects", project)
     .then(res => {
-      console.log(res);
       dispatch({ type: POST_NEW_PROJECT, payload: res.data });
-      history.push("/projects");
     })
     .catch(err => {
       console.log("NOOOOO!!!!", err);

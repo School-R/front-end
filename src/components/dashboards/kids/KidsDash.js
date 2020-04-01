@@ -23,20 +23,20 @@ const Button = style.button`
 `;
 
 const KidsDash = () => {
-	
+	const {id}=useParams()
   return (
-    <section>
-      <MainNav />
-      <div>
-        <NavLink to="/kids-dash/id/newsfeed">
-          <Button>Students News Feed</Button>
-        </NavLink>
-        <NavLink to="/kids-dash/id/newProject">
-          <Button>Students Add New Project</Button>
-        </NavLink>
-      </div>
-    </section>
-  );
+			<section>
+				<MainNav />
+				<div>
+					<NavLink to={`/kids-dash/${id}/newsfeed`}>
+						<Button> News Feed</Button>
+					</NavLink>
+					<NavLink to={`/kids-dash/${id}/newProject`}>
+						<Button>Add New Project</Button>
+					</NavLink>
+				</div>
+			</section>
+		)
 }
 
 export default KidsDash
