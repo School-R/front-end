@@ -1,11 +1,16 @@
 // Catherine will add functionality and styles
 import React, { useState } from 'react'
-import { connect } from 'react-redux'
-import { withRouter } from 'react-router-dom'
-import { postProject, saveEditProject } from '../../redux/actions'
+import { useSelector, useDispatch } from 'react-redux'
+import { postProject } from '../../redux/actions'
 import style from 'styled-components'
+import {
+  FormGroup,
+  Input
+} from "reactstrap"
 
-const AddEditContainer = style.div`
+const subjects = ['Computer Education', 'Science', 'Math', 'History', 'Languages', 'Literature']
+
+const AddContainer = style.div`
   display: flex;
   height: 100%;
 `
@@ -74,8 +79,12 @@ const FormInput = style.input`
 
 const AddProjectForm = props => {
 
-	const [project, setProject] = useState({
-    project_id: 'project_id',
+  const project = useSelector(state => state.projects)
+
+  const dispatch = useDispatch()
+
+	const [newProject, setNewProject] = useState({
+    project_id: '',
     title: '',
     subject: '',
     favorite: '',
@@ -84,10 +93,11 @@ const AddProjectForm = props => {
 	});
 	
 	const handleChanges = event => {
-		setProject({ ...project, [event.target.name]: event.target.value })
+		setNewProject({ ...newProject, [event.target.name]: event.target.value })
 		console.log(event.target.name)
 	}
 
+  // Jesus might need them later 
 	/* const handleNumbers = event => {
 		setProject({ ...project, [event.target.name]: parseInt(event.target.value) })
 		console.log(event.target.name)
@@ -98,50 +108,65 @@ const AddProjectForm = props => {
 		console.log(event.target.name)
 	} */
 
+  // postProject
 	const submitForm = event => {
 		event.preventDefault()
-		props.postProject(localStorage.getItem('token'), project, props.history)
+		props.postProject(localStorage.getItem('token'), project, props.history) // will use useHistory hook later
 	}
 
-	const editForm = event => {
-		event.preventDefault()
-		props.saveEditProperty(localStorage.getItem('token'), project, props.history)
-	}
+	// const editForm = event => {
+	// 	event.preventDefault()
+	// 	props.saveEditProperty(localStorage.getItem('token'), project, props.history)
+  // }
 
+  /* 
+<FormGroup>
+        <Label for="exampleSelect">Select</Label>
+        <Input type="select" name="select" id="exampleSelect">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </Input>
+      </FormGroup>
+  */
 	return (
-    <AddEditContainer>
+    <AddContainer>
       <Form>
-        <FormTitle>{props.editProjectStart ? "Edit" : "Add"} Project</FormTitle>
-        <FormContainer
-          onSubmit={props.editProjectStart ? editForm : submitForm}>
+        <FormTitle>Add New Project</FormTitle>
+        <FormContainer onSubmit={submitForm}>
           <FormInput
             required
             project_id="project_id"
             type="text"
             name="title"
-            value={project.title}
+            value={newProject.title}
             placeholder="Project Name"
             onChange={handleChanges}
             id="title"
           />
           <br />
-          <Label htmlFor="subject">Subject</Label>
-          <br />
-          <select
-            required
-            type="dropdown"
-            name="subject"
-            value={project.subject}
-            placeholder="Choose a Subject"
-            onChange={handleChanges}
-            id="subject">
-            <option value={"computer_education"}>Computer Education</option>
-            <option value="math">Math</option>
-            <option value="science">Science</option>
-            <option value="history">History</option>
-            <option value="language">Languages</option>
-            <option value="literature">Literature</option>
-          </select>
+          <FormGroup>
+            <Label htmlFor="subject">Subjects</Label>
+            <br />
+            <Input
+              required
+              type="select"
+              defaultValue="DEFAULT"
+              name="subject"
+              value={newProject.subject}
+              onChange={handleChanges}
+              multiple
+              >
+              <option disabled value="DEFAULT">
+                Choose A Subject
+              </option>
+              {subjects.map(subject => {
+                return <option>{subject}</option>;
+              })}
+            </Input>
+          </FormGroup>
           <br />
           <br />
           <Label htmlFor="description">Description</Label>
@@ -176,18 +201,8 @@ const AddProjectForm = props => {
           )}
         </FormContainer>
       </Form>
-    </AddEditContainer>
+    </AddContainer>
   );
 }
 
-const mapStateToProps = state => ({
-	projects: state.projects,
-	postProjectError: state.postProjectError,
-	postProjectStart: state.postProjectStart,
-	editProjectStart: state.editProjectStart,
-	saveEditProjectStart: state.saveEditProjectStart,
-	saveEditProjectError: state.saveEditProjectError,
-	currentProject: state.currentProject,
-})
-
-export default connect(mapStateToProps, { postProject, saveEditProject })(withRouter(AddProjectForm))
+export default AddProjectForm
