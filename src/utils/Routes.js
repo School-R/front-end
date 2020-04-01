@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
+import ProtectedRoute from './ProtectedRoute'
 import LandingPage from '../components/marketing/LandingPage'
 import AboutPage from '../components/marketing/AboutPage'
 import Login from '../components/forms/Login'
@@ -9,7 +10,7 @@ import ParentDash from '../components/dashboards/parents/ParentDash'
 import AddProjectForm from '../components/forms/AddProjectForm'
 import UpdateProject from '../components/forms/UpdateProject'
 import NewsFeed from '../components/dashboards/Newsfeed'
-import ProtectedRoute from './ProtectedRoute'
+import MemoryGame from '../components/dashboards/kids/Game3/MemoryGame'
 
 
 const Routes = () => {
@@ -27,6 +28,7 @@ const Routes = () => {
 			<Route path='/about' component={AboutPage} />
 			<Route path='/login' component={Login} />
 			<Route path='/register' component={Registration} />
+			<Route path='/memoryGame' component={MemoryGame}/>
 		</div>
 	)
 }
