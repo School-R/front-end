@@ -1,5 +1,6 @@
 import React from 'react'
 import LandingNav from '../navs/LandingNav'
+import Footer from '../navs/Footer'
 import Cat from '../../images/Catherine.jpg'
 import Kara from '../../images/Kara.jpg'
 import Jesus from '../../images/Jesus.jpg'
@@ -51,6 +52,7 @@ const AboutPage = () => {
       <div className='about_carousel'>
         <UncontrolledCarousel items={team} />
       </div>
+    <Footer/>
     </section>
   );
 }
