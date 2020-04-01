@@ -23,6 +23,11 @@ const LandingNav = () => {
 						About
 					</Button>
 				</Link>
+				<Link to='/memoryGame'>
+					<Button outline color='danger' style={{ color: '#f99c1b', border: '1px solid #f99c1b' }}>
+						Game 3 Temp
+					</Button>
+				</Link>
 			</span>
 		</nav>
 	)
