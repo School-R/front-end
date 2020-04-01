@@ -11,19 +11,11 @@ const NewsFeedNav = () => {
 
     <Menu id='hambrgbtn'>
       <Link className="menu-item" to="/">
-        School Activities
+        Computer Education
       </Link>
 
       <Link className="menu-item" to="/">
-        Success in School
-      </Link>
-
-      <Link className="menu-item" to="/">
-        History
-      </Link>
-
-      <Link className="menu-item" to="/">
-        Langauges
+        Science
       </Link>
 
       <Link className="menu-item" to="/">
@@ -31,7 +23,15 @@ const NewsFeedNav = () => {
       </Link>
 
       <Link className="menu-item" to="/">
-        Science
+        History
+      </Link>
+
+      <Link className="menu-item" to="/">
+        Languages
+      </Link>
+
+      <Link className="menu-item" to="/">
+        Literature
       </Link>
 
     </Menu>
