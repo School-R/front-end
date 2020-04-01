@@ -2,7 +2,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../images/School_R.png'
-import { Navbar, NavbarBrand, Button } from 'reactstrap'
+import { Navbar, Button } from 'reactstrap'
 import { useHistory } from 'react-router-dom'
 
 const MainNav = () => {
@@ -16,10 +16,11 @@ const MainNav = () => {
 	return (
 		<Navbar className='App-header'>
 			<Link to='/'>
-				<NavbarBrand className='school-r'>
+			<div className='school-r'>
 					<img src={Logo} alt='logo' className='logo' />
-				</NavbarBrand>
+			</div>	
 			</Link>
+			
 
 			{url.match(/login/gi) ? (
 				<span>
