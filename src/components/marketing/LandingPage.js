@@ -61,7 +61,7 @@ const LandingPage = () => {
 								Ideas you can use for extra-credit or to study further outside of class can be found through the feed. Pick a
 								few talk to your teachers if you go to a school. You can even use our sister website.
 								<span>
-									<a href='https://goldentutors.netlify.com'>Golden Tutors</a> or <a href='https://outschool.com'>OutSchool</a>{' '}
+									<a href='https://goldentutors.netlify.com'> Golden Tutors</a> or <a href='https://outschool.com'>OutSchool</a>{' '}
 									Providing tutors and classes both helping to reach your student goals.
 								</span>
 							</p>
@@ -81,10 +81,13 @@ const LandingPage = () => {
 						<div className='landing-container-card'>
 							<div className='lc-card-img'>
 								<img src={abc} alt='icon' href='https://icons8.com' />
-								<h3>Langauges</h3>
+								<h3>Languages</h3>
 								<p>
 									English, Spanish, Italian, French. We encompass and encourage students of all fluency to find more in depth
-									things to help them have fun learning to be even more fluent in both writing and reading languages.
+									things to help them have fun learning to be even more fluent in both writing and reading languages. You can be
+									lead to many resources to help learn many languages. Sites like this one that help kids learn Chinese{' '}
+									<span>
+										<a href='https://outschool.com/classes/chinese-beginning-level-pinyin-class-V4I6nRK0#abk8hh51y0'> Pinyin Class</a></span>
 								</p>
 							</div>
 						</div>
@@ -94,8 +97,12 @@ const LandingPage = () => {
 								<h3>Math</h3>
 								<p>
 									Math is an all encompassing subject, from simple arithmetic to advanced calculus feel free to share methods to
-									help others learn. Find methods to help you gain a deeper understanding of all things number-related. Parents
-									not familiar with the new Math styles may even find tips to help them help their kids.
+									help others learn. Find methods to help you gain a deeper understanding of all things number-related.For
+									Example Cooking is a great way to learn different math aspects check out to keep up with
+									<span>
+										<a href='https://kind-benz-efe632.netlify.com/'>Stash</a>
+									</span>
+									Recipes Parents not familiar with the new Math styles may even find tips to help them help their kids.
 								</p>
 							</div>
 						</div>
@@ -106,7 +113,11 @@ const LandingPage = () => {
 								<p>
 									Although computers are extracted out on their own because their are so many things to study when it comes to
 									the computer. This category is for you basic sciences from geology to biology all things science can be found
-									here. Experiments to Science Fair Ideas Abound in this Category.
+									here. Experiments to Science Fair Ideas Abound in this Category. Going to use Plants for Science or Biology
+									Keep Track of when to water with this water your plants tracker
+									<span>
+										<a href='https://watermyplants-fe.netlify.com/'> Water My Plants</a>
+									</span>
 								</p>
 							</div>
 						</div>
