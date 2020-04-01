@@ -224,6 +224,14 @@
       "favorite": "five stars",
       "description": "Instructions can be found here http://www.stirthewonder.com/milk-carton-mayflower/",
       "imageurl": "https://www.stirthewonder.com/wp-content/uploads/2013/11/Milk-Carton-Mayflower.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Create a Beautiful Diagram Using Math Formula",
+      "subject": "math",
+      "favorite": "five stars",
+      "description": "What's the name of the math formula that was recently discovered and creates infinite beautiful diagrams?",
+      "imageurl": "https://en.wikipedia.org/wiki/Mandelbrot_set#/media/File:Mandelbrot_set_image.png"
     }
   ],
   "login": [
@@ -297,11 +305,13 @@
       "id": 10
     },
     {
+
       "email": "kara@kara.com",
       "password": "1234",
       "isParent": true,
       "token": "8019891a-3f7e-41b0-9ac9-6cf4adc4752a",
       "id": 11
+
     }
   ]
 }
