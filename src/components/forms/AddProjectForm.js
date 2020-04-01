@@ -1,8 +1,8 @@
 // Catherine will add functionality and styles
 import React, { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { /* useSelector, */ useDispatch } from 'react-redux'
 import { postProject } from '../../redux/actions'
-import getUid from 'get-uid'
+
 import style from 'styled-components'
 import {
   FormGroup,
@@ -79,9 +79,9 @@ const FormInput = style.input`
   margin-top: 10px;
 `
 
-const AddProjectForm = props => {
+const AddProjectForm = () => {
 
-  const project = useSelector(state => state.projects)
+  /* const project = useSelector(state => state.projects) */
 
   const dispatch = useDispatch()
 
