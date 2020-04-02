@@ -101,7 +101,8 @@ const UpdateProject = () => {
   const submitEditForm = (e) => {
     e.preventDefault()
     dispatch(editProject(newEditProject)) // will use useHistory hook later
-    
+  }
+  
 	return (
       <AddEditContainer>
         <Form>
@@ -158,7 +159,7 @@ const UpdateProject = () => {
       </AddEditContainer>
     );
   }
-}
+
 
 export default UpdateProject
 
