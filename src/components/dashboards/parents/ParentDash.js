@@ -36,9 +36,6 @@ const ParentDash = () => {
         <NavLink to={`/parents-dash/${id}/newProject`}>
           <Button>Add New Project</Button>
         </NavLink>
-        <NavLink to={`/parents-dash/${id}/newEditProject`}>
-          <Button>Update Project</Button>
-        </NavLink>
       </div>
     </section>
   );

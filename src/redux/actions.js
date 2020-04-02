@@ -80,13 +80,13 @@ export const postProject = (project) => dispatch => {
 
 export const editProject = (project) => dispatch => {
   axiosWithAuth()
-    .put('/projects', project)
+    .put('/projects/:id', project)
     .then(res => {
 			dispatch({ type: EDIT_PROJECT, payload: res.data })
 	})
 		.catch(err => {
 			console.log('NOOOOO!!!!', err);
-			dispatch({ type: SET_ERROR, payload: 'error edding a project' });
+			dispatch({ type: SET_ERROR, payload: 'error editing a project' });
 		});
 };
 

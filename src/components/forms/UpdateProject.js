@@ -1,13 +1,16 @@
 // Catherine 
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { editProject } from '../../redux/actions'
+import { editProject, getProjects } from '../../redux/actions'
 
 import style from 'styled-components'
 import {
   FormGroup, 
   FormText,
-  Input
+  Input,
+  CardFooter, 
+  Card,
+  Button
 } from 'reactstrap'
 
 const AddEditContainer = style.div`
@@ -49,27 +52,6 @@ const Label = style.label`
 	margin-top: 10px;
 `
 
-const Button = style.button`
-  text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
-	background-color: #FCCB3D;
-	color: #fff;
-	padding: 10px;
-	width: 98%;
-	border: none;
-	border-radius: 4px;
-	font-size: 14px;
-	font-weight: bold;
-	margin-top: 10px;
-	cursor: pointer;
-	margin-bottom: 10px;
-	&:disabled {
-      opacity: .5;
-    }
-    &:hover {
-      background-color: #FFDB48;
-    }
-`
-
 const FormInput = style.input`
   border: 1px solid #a9a9a9;
   padding: 10px;
@@ -79,21 +61,11 @@ const FormInput = style.input`
   background-color: #f3f3f3;
 	box-sizing: border-box;
 	margin-top: 10px;
-	
 `
 
-
-const UpdateProject = () => {
+const UpdateProject = ({ setEditFlip, newEditProject, setNewEditProject }) => {
+  
   const dispatch = useDispatch();
-
-  const [newEditProject, setNewEditProject] = useState({
-    id: "",
-    title: "",
-    subject: "",
-    favorite: "five stars",
-    description: "",
-    imageurl: "",
-  });
 
   const handleChanges = event => {
     setNewEditProject({ ...newEditProject, [event.target.name]: event.target.value });
@@ -102,65 +74,84 @@ const UpdateProject = () => {
   const submitEditForm = (e) => {
     e.preventDefault()
     dispatch(editProject(newEditProject)) // will use useHistory hook later
+    dispatch(getProjects())
+    setEditFlip(false)
+  }
+
+  const cancelUpdate = () => {
+    setEditFlip(false)
   }
   
 	return (
+    <Card>
       <AddEditContainer>
         <Form>
-          
-        <FormContainer onSubmit={submitEditForm}>
-        <FormTitle>Update Project</FormTitle>
-          <FormInput
-            required
-            type="text"
-            name="title"
-            value={newEditProject.title}
-            placeholder="Updated Project Name"
-            onChange={handleChanges}
-            id="title"
-          />
-          <FormGroup>
-            <Label htmlFor='subject'>Updated Subjects</Label>
-            <Input 
+          <FormContainer onSubmit={submitEditForm}>
+            <FormTitle>Update Project</FormTitle>
+            <FormInput
               required
-              type='select'
-              name='subject'
-              value={newEditProject.subject}
+              type="text"
+              name="title"
+              value={newEditProject.title}
+              placeholder="Updated Project Name"
               onChange={handleChanges}
-            >
-              <option disable>
-                Choose an Updated Subject
-              </option>
-              <option value="computer_education">Computer Education</option>
-              <option value="math">Math</option>
-              <option value="science">Science</option>
-              <option value="history">History</option>
-              <option value="languages">Languages</option>
-              <option value="literature">Literature</option>
-            </Input>
-          </FormGroup>
-          <FormText
-            required 
-            type="text" 
-            value="" 
-            placeholder="Instructions & Notes" 
-          />
-          <FormInput
-            required 
-            type="url"
-            name="imageurl"
-            value={newEditProject.imageurl}
-            placeholder='Insert an Image URL'
-            onChange={handleChanges} 
-            id="imageurl" 
-          />
-          <Button type='submit'>Submit</Button>
+              id="title"
+            />
+            <FormGroup>
+              <Label htmlFor="subject">Updated Subjects</Label>
+              <Input
+                required
+                type="select"
+                name="subject"
+                value={newEditProject.subject}
+                onChange={handleChanges}>
+                <option disabled>Choose an Updated Subject</option>
+                <option value="computer_education">Computer Education</option>
+                <option value="math">Math</option>
+                <option value="science">Science</option>
+                <option value="history">History</option>
+                <option value="languages">Languages</option>
+                <option value="literature">Literature</option>
+              </Input>
+            </FormGroup>
+            <Label htmlFor="description">Description</Label>
+            <FormInput
+              required
+              type="text"
+              name="description"
+              value={newEditProject.description}
+              placeholder="Instructions & Notes"
+              onChange={handleChanges}
+            />
+            <FormInput
+              required
+              type="url"
+              name="imgurl"
+              value={newEditProject.imgurl}
+              placeholder="Insert an Image URL"
+              onChange={handleChanges}
+              id="imgurl"
+            />
+            <CardFooter>
+              <Button
+                outline
+                type="submit"
+                className="edit-button"
+                color="warning"
+                style={{ color: "#fff" }}
+              >
+                Submit
+              </Button>
+              <Button onClick={cancelUpdate} outline className="delete-button" color="danger">
+                Cancel
+              </Button>
+            </CardFooter>
           </FormContainer>
         </Form>
       </AddEditContainer>
-    );
-  }
-
+    </Card>
+  );
+}
 
 export default UpdateProject
 
