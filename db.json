@@ -232,6 +232,14 @@
       "favorite": "five stars",
       "description": "What's the name of the math formula that was recently discovered and creates infinite beautiful diagrams? This picture uses a Voronoi Formula",
       "imgurl": "https://static.packt-cdn.com/products/9781786463494/graphics/image_07_011.png"
+    },
+    {
+      "id": 9,
+      "title": "Make a Leaf Identification Book",
+      "subject": "science",
+      "favorite": "five stars",
+      "description": "Use a Computer to Draw or Use Art Supplies to Draw or Trace Images of Leaves with names of the plants they came from as you get more pages put them together in a book.",
+      "imgurl": "https://ecdn.teacherspayteachers.com/thumbitem/Leaf-Collection-Project-Book-3433950-1507674151/original-3433950-3.jpg"
     }
   ],
   "login": [
@@ -324,6 +332,13 @@
       "isParent": true,
       "token": "0248c79d-f3f7-49d3-8f5c-849ca139ad90",
       "id": 13
+    },
+    {
+      "email": "kara@kara.com",
+      "password": "1234",
+      "isParent": true,
+      "token": "1fbbd30f-4ba8-4f15-97bc-b5e83434028b",
+      "id": 14
     }
   ]
 }
