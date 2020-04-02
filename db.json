@@ -305,13 +305,18 @@
       "id": 10
     },
     {
-
       "email": "kara@kara.com",
       "password": "1234",
       "isParent": true,
       "token": "8019891a-3f7e-41b0-9ac9-6cf4adc4752a",
       "id": 11
-
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "test",
+      "isParent": true,
+      "token": "348f77e5-55eb-48f7-8146-3a56ffc9d5dd",
+      "id": 12
     }
   ]
 }
