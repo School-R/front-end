@@ -33,7 +33,7 @@ const reducer = (state = initialState, action) => {
     case POST_NEW_PROJECT:
       return {
         ...state,
-        projects: action.payload,
+        projects: [...state.projects, action.payload]
       };
     default:
       return state;

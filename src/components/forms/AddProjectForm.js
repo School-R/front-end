@@ -1,8 +1,8 @@
 // Catherine will add functionality and styles
 import React, { useState } from 'react'
 import { /* useSelector, */ useDispatch } from 'react-redux'
-import { postProject } from '../../redux/actions'
-
+import { postProject, getProjects } from '../../redux/actions'
+import {useHistory, useParams} from 'react-router-dom'
 import style from 'styled-components'
 import {
   FormGroup,
@@ -81,7 +81,9 @@ const AddProjectForm = () => {
   /* const project = useSelector(state => state.projects) */
 
   const dispatch = useDispatch()
-
+	const history = useHistory()
+	const { id } = useParams()
+	
 	const [newProject, setNewProject] = useState({
     id:'',
     title: '',
@@ -109,7 +111,9 @@ const AddProjectForm = () => {
   // postProject
 	const submitForm = (e) => {
     e.preventDefault()
-		dispatch(postProject(newProject)) // will use useHistory hook later
+		dispatch(postProject(newProject))
+		dispatch(getProjects())
+		history.push(`/parents-dash/${id}/newsfeed`) // will use useHistory hook later
 	}
 
 	// const editForm = event => {
@@ -164,11 +168,11 @@ const AddProjectForm = () => {
 					<FormInput
 						required
 						type='url'
-						name='imageurl'
+						name='imgurl'
 						value={newProject.imgurl}
 						placeholder='Insert an Image URL'
 						onChange={handleChanges}
-						id='imageurl'
+						id='imgurl'
 					/>
 						<Button type='submit'>Submit</Button>
 				</FormContainer>
