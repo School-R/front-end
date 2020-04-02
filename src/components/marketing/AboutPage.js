@@ -3,6 +3,7 @@ import LandingNav from '../navs/LandingNav'
 import Cat from '../../images/Catherine.jpg'
 import Kara from '../../images/Kara.jpg'
 import Jesus from '../../images/Jesus.jpg'
+import Conary from '../../images/Conary.jpg'
 import {
   UncontrolledCarousel
 } from 'reactstrap';
@@ -30,7 +31,7 @@ const team = [
     key: "3"
   },
   {
-    src: "",
+    src: `${Conary}`,
     altText: "Conary",
     caption: "Now we are cooking with grease",
     header: "Conary",
