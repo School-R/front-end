@@ -170,6 +170,10 @@ function usePuzzleState() {
 
     // expose the state and the update functions for the components 
     return [state.board, state.moves, state.solved, newGame, undo, move];
+
+    
+
+    
 }
 
 export default usePuzzleState;
