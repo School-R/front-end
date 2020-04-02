@@ -8,8 +8,7 @@ import Registration from '../components/forms/Registration'
 import KidsDash from '../components/dashboards/kids/KidsDash'
 import ParentDash from '../components/dashboards/parents/ParentDash'
 import AddProjectForm from '../components/forms/AddProjectForm'
-import UpdateProject from '../components/forms/UpdateProject'
-import NewsFeed from '../components/dashboards/Newsfeed'
+import NewsFeed from '../components/dashboards/newsfeed/NewsFeed'
 import MemoryGame from '../components/dashboards/kids/Game3/MemoryGame'
 import SlidePuzzle from '../components/dashboards/kids/Game4/SlidePuzzle'
 
@@ -19,19 +18,11 @@ const Routes = () => {
     <div>
       <ProtectedRoute path="/parents-dash/:id" component={ParentDash} />
       <ProtectedRoute
-        path="/parents-dash/:id/editProject"
-        component={UpdateProject}
-      />
-      <ProtectedRoute
         path="/parents-dash/:id/newProject"
         component={AddProjectForm}
       />
       <ProtectedRoute path="/parents-dash/:id/newsfeed" component={NewsFeed} />
       <ProtectedRoute path="/kids-dash/:id" component={KidsDash} />
-      <ProtectedRoute
-        path="/kids-dash/:id/editProject"
-        component={UpdateProject}
-      />
       <ProtectedRoute
         path="/kids-dash/:id/newProject"
         component={AddProjectForm}

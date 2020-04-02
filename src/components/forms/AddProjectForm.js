@@ -1,8 +1,8 @@
 // Catherine will add functionality and styles
 import React, { useState } from 'react'
 import { /* useSelector, */ useDispatch } from 'react-redux'
-import { postProject } from '../../redux/actions'
-
+import { postProject, getProjects } from '../../redux/actions'
+import {useHistory, useParams} from 'react-router-dom'
 import style from 'styled-components'
 import {
   FormGroup,
@@ -11,7 +11,8 @@ import {
 
 const AddContainer = style.div`
   display: flex;
-  height: 100%;
+	height: 100%;
+	margin-top: 2%;
 `
 const Form = style.div`
 	width: 100%;
@@ -27,6 +28,7 @@ const FormContainer = style.form`
 	overflow: auto;
 	flex: 1;
 	margin-bottom: 80px;
+	border: 5px solid silver;
 `
 
 const FormTitle = style.h1`
@@ -47,16 +49,18 @@ const Label = style.label`
 `
 
 const Button = style.button`
+	text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
 	background-color: #FCCB3D;
 	color: #fff;
 	padding: 10px;
-	width: 100%;
+	width: 98%;
 	border: none;
 	border-radius: 4px;
 	font-size: 14px;
 	font-weight: bold;
 	margin-top: 10px;
 	cursor: pointer;
+	margin-bottom: 10px;
 	&:disabled {
       opacity: .5;
     }
@@ -68,12 +72,13 @@ const Button = style.button`
 const FormInput = style.input`
   border: 1px solid #a9a9a9;
   padding: 10px;
-  width: 100%;
+  width: 98%;
   border-radius: 3px;
   border: solid 1px #e2e0e0;
   background-color: #f3f3f3;
-  box-sizing: border-box;
-  margin-top: 10px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	
 `
 
 const AddProjectForm = () => {
@@ -81,14 +86,16 @@ const AddProjectForm = () => {
   /* const project = useSelector(state => state.projects) */
 
   const dispatch = useDispatch()
-
+	const history = useHistory()
+	const { id } = useParams()
+	
 	const [newProject, setNewProject] = useState({
     id:'',
     title: '',
     subject: '',
     favorite: 'five stars',
     description: '',
-    imageurl: ''
+    imgurl: ''
 	});
 	
 	const handleChanges = event => {
@@ -109,7 +116,9 @@ const AddProjectForm = () => {
   // postProject
 	const submitForm = (e) => {
     e.preventDefault()
-		dispatch(postProject(newProject)) // will use useHistory hook later
+		dispatch(postProject(newProject))
+		dispatch(getProjects())
+		history.push(`/parents-dash/${id}/newsfeed`) // will use useHistory hook later
 	}
 
 	// const editForm = event => {
@@ -120,8 +129,8 @@ const AddProjectForm = () => {
 	return (
 		<AddContainer>
 			<Form>
-				<FormTitle>Add New Project</FormTitle>
 				<FormContainer onSubmit={submitForm}>
+					<FormTitle>Add New Project</FormTitle>
 					<FormInput
 						required
 						type='text'
@@ -164,11 +173,11 @@ const AddProjectForm = () => {
 					<FormInput
 						required
 						type='url'
-						name='imageurl'
-						value={newProject.imageurl}
+						name='imgurl'
+						value={newProject.imgurl}
 						placeholder='Insert an Image URL'
 						onChange={handleChanges}
-						id='imageurl'
+						id='imgurl'
 					/>
 						<Button type='submit'>Submit</Button>
 				</FormContainer>

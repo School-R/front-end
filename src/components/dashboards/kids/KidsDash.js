@@ -1,7 +1,6 @@
 import React from 'react'
 import MainNav from '../../navs/MainNav'
 import { NavLink, useParams } from 'react-router-dom'
-import UpdateProject from "../../forms/UpdateProject";
 import style from 'styled-components'
 
 const Button = style.button`
@@ -35,9 +34,6 @@ const KidsDash = () => {
         </NavLink>
         <NavLink to={`/kids-dash/${id}/newProject`}>
           <Button>Add New Project</Button>
-        </NavLink>
-        <NavLink to={`/kids-dash/${id}/newEditProject`}>
-          <Button>Update Project</Button>
         </NavLink>
       </div>
     </section>

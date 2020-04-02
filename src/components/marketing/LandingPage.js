@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Button } from 'reactstrap'
 import LandingNav from '../navs/LandingNav'
 import lion from '../../images/lion.bmp'
 import lion2 from '../../images/lion2.jpg'
@@ -11,16 +10,38 @@ import numbers from '../../images/numbers.png'
 import periodictable from '../../images/periodictable.png'
 import school from '../../images/school.png'
 import Footer from '../navs/Footer'
+import style from 'styled-components'
 
 const LandingPage = () => {
+
+
+	const Button = style.button`
+	background-color: #F99C1B;
+	color: #fff;
+	padding: 10px;
+	width: 20%;
+	border: none;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: bold;
+  margin-top: 10px;
+  margin: 0.5%;
+	cursor: pointer;
+	&:disabled {
+      opacity: .5;
+    }
+    &:hover {
+      background-color: #FA7027;
+    }
+`
 	return (
 		<section>
 			<LandingNav />
 			<section className='landing-container'>
 				<span className='landing-header'>
-					<img src={lion2} alt='lion-right-facing' className='img-lion' />
-					<h1>School'R</h1>
 					<img src={lion} alt='lion-left-facing' className='img-lion' />
+					<h1>School'R</h1>
+					<img src={lion2} alt='lion-right-facing' className='img-lion' />
 				</span>
 				<section className='landing-container-content'>
 					<h3>Welcome to the School'R App</h3>
@@ -34,10 +55,10 @@ const LandingPage = () => {
 					</span>
 					<div>
 						<Link to='/login'>
-							<Button color='warning'>Login</Button>
+							<Button>Login</Button>
 						</Link>
 						<Link to='/register'>
-							<Button color='warning'>Register</Button>
+							<Button>Register</Button>
 						</Link>
 					</div>
 				</section>
@@ -98,11 +119,10 @@ const LandingPage = () => {
 								<p>
 									Math is an all encompassing subject, from simple arithmetic to advanced calculus feel free to share methods to
 									help others learn. Find methods to help you gain a deeper understanding of all things number-related.For
-									Example Cooking is a great way to learn different math aspects check out to keep up with
-									<span>
+									Example Cooking is a great way to learn different math aspects check out 	<span>
 										<a href='https://kind-benz-efe632.netlify.com/'>Stash</a>
-									</span>
-									Recipes Parents not familiar with the new Math styles may even find tips to help them help their kids.
+									</span> to keep up with
+									recipes. Parents not familiar with the new Math styles may even find tips to help them help their kids.
 								</p>
 							</div>
 						</div>
