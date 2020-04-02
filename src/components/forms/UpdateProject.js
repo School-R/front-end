@@ -50,6 +50,7 @@ const Label = style.label`
 `
 
 const Button = style.button`
+  text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
 	background-color: #FCCB3D;
 	color: #fff;
 	padding: 10px;

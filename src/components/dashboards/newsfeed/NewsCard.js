@@ -4,6 +4,13 @@ import { Card, CardImg, CardTitle, CardBody, Button, CardText, CardFooter } from
 import StarRating from './StarRating'
 import UpdateProject from '../../forms/UpdateProject'
 
+
+
+
+
+   
+
+
 const NewsCard = ({ imgurl, title, subject, description }) => {
 	const [editFlip, setEditFlip] = useState(false)
 
@@ -11,14 +18,16 @@ const NewsCard = ({ imgurl, title, subject, description }) => {
     setEditFlip: false
   }) */
 
-	const handleEditClick = () => {
+	const handleEditClick = (flipper) => {
+		return (
 		setEditFlip(true)
+		)
 	}
 
 	return (
 		<section>
 			{editFlip === true ? (
-				<Card className='projectsCard'>
+				<Card className='projectsCard' id='flipper'>
 					<UpdateProject editFlip={editFlip} setEditFlip={setEditFlip} />
 				</Card>
 			) : (
@@ -34,10 +43,17 @@ const NewsCard = ({ imgurl, title, subject, description }) => {
 					</CardBody>
 
 					<CardFooter>
-						<Button color='secondary' onClick={handleEditClick}>
+						<Button
+							outline
+							className='edit-button'
+							color='warning'
+							style={{ color: '#fff' }}
+							onClick={handleEditClick}>
 							Edit
 						</Button>
-						<Button color='danger'>Delete</Button>
+						<Button outline className='delete-button' color='danger'>
+							Delete
+						</Button>
 					</CardFooter>
 				</Card>
 			)}

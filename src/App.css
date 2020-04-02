@@ -188,7 +188,7 @@ p{
 	position: relative;
 	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
 	padding: 10px;
-	height: 600px;
+	height: 620px;
 	margin: 1%;
 	background: white;
 }
@@ -199,6 +199,48 @@ p{
 	height: 250px;
 	border: 5px double #b51118;
 }
+
+.delete-button{
+	text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+	background-color: #b51118;
+	color: #fff;
+	margin: 1%;
+	padding: 10px;
+	width: 25%;
+	border: none;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 10px;
+	cursor: pointer;
+	margin-bottom: 10px;
+	
+}
+
+:disabled {
+      opacity: .5;
+}
+
+
+
+.edit-button{
+text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+background-color: #FCCB3D;
+color: #fff;
+margin: 1%;
+padding: 10px;
+width: 25%;
+border: none;
+border-radius: 4px;
+font-size: 14px;
+font-weight: bold;
+margin-top: 10px;
+cursor: pointer;
+margin-bottom: 10px;
+}
+	:disabled {
+      opacity: .5;
+		}
 /* MEDIA RESPONSIVE */
 
 @media screen and (max-width: 550px) {
