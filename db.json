@@ -175,7 +175,7 @@
       "subject": "Computer Education",
       "favorite": "5 stars",
       "description": "Go to this website for free projects: https://www.frontendmentor.io",
-      "imgurl": "https://www.pexels.com/photo/working-pattern-internet-abstract-1089438/"
+      "imgurl": "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg"
     },
     {
       "id": 2,
@@ -183,7 +183,7 @@
       "subject": "Math",
       "favorite": "5 stars",
       "description": "Plan a scavenger hunt that uses any kind of numbers. See picture for a good sample for elementary students",
-      "imgurl": "src/images/Math.png"
+      "imgurl": "https://i.ytimg.com/vi/SYW39pMZa-s/maxresdefault.jpg"
     },
     {
       "id": 3,
@@ -191,7 +191,7 @@
       "subject": "Science",
       "favorite": "five stars",
       "description": "Materials: 1 Pie Tin, 1 Balloon, 1 Piece of Tissue Paper, Scissors, Seran Wrap. Steps: cut out a person from the tissue paper, place in covered pie tin in seran wrap, blown up balloon, rubbed on carpet or hair, place on pie tin to make a tissue person, dance with static electricity",
-      "imgurl": "https://pixabay.com/photos/paper-dolls-paper-girls-background-14611/"
+      "imgurl": "https://i.pinimg.com/236x/13/e2/c3/13e2c3c518c62a47c06abf2217c850e6--make-paper-paper-art.jpg"
     },
     {
       "id": 4,
@@ -199,7 +199,7 @@
       "subject": "History",
       "favorite": "five stars",
       "description": "Museums and cultural centers are coming together to help fill our at-home entertainment needs, and now, The China Guide is offering intrepid internet travelers the chance to take a virtual hike on the Great Wall of China: https://www.thechinaguide.com/destination/great-wall-of-china",
-      "imgurl": "https://www.pexels.com/photo/great-wall-of-china-2412603/"
+      "imgurl": "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg"
     },
     {
       "id": 5,
@@ -207,7 +207,7 @@
       "subject": "Languages",
       "favorite": "five stars",
       "description": "Go to this URL: https://www.duolingo.com/",
-      "imgurl": "https://www.pexels.com/photo/man-drawing-on-floor-2927599/"
+      "imgurl": "https://images.pexels.com/photos/2927599/pexels-photo-2927599.jpeg"
     },
     {
       "id": 6,
@@ -215,7 +215,7 @@
       "subject": "Literature",
       "favorite": "five stars",
       "description": "Visit a nursing home and see if they would allow you to read to non-visited patients and take turn reading your favorite book and their favorite book and keep a journal of what you learn",
-      "imgurl": "https://www.pexels.com/photo/old-woman-sitting-on-chair-near-girl-while-reading-a-book-3087878/"
+      "imgurl": "https://images.pexels.com/photos/3087878/pexels-photo-3087878.jpeg"
     },
     {
       "id": 7,
@@ -223,15 +223,15 @@
       "subject": "history",
       "favorite": "five stars",
       "description": "Instructions can be found here http://www.stirthewonder.com/milk-carton-mayflower/",
-      "imageurl": "https://www.stirthewonder.com/wp-content/uploads/2013/11/Milk-Carton-Mayflower.jpg"
+      "imgurl": "https://www.stirthewonder.com/wp-content/uploads/2013/11/Milk-Carton-Mayflower.jpg"
     },
     {
       "id": 8,
       "title": "Create a Beautiful Diagram Using Math Formula",
       "subject": "math",
       "favorite": "five stars",
-      "description": "What's the name of the math formula that was recently discovered and creates infinite beautiful diagrams?",
-      "imageurl": "https://en.wikipedia.org/wiki/Mandelbrot_set#/media/File:Mandelbrot_set_image.png"
+      "description": "What's the name of the math formula that was recently discovered and creates infinite beautiful diagrams? This picture uses a Voronoi Formula",
+      "imgurl": "https://static.packt-cdn.com/products/9781786463494/graphics/image_07_011.png"
     }
   ],
   "login": [
@@ -317,6 +317,13 @@
       "isParent": true,
       "token": "348f77e5-55eb-48f7-8146-3a56ffc9d5dd",
       "id": 12
+    },
+    {
+      "email": "kara@kara.com",
+      "password": "1234",
+      "isParent": true,
+      "token": "0248c79d-f3f7-49d3-8f5c-849ca139ad90",
+      "id": 13
     }
   ]
 }

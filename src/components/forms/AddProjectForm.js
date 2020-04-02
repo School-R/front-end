@@ -88,7 +88,7 @@ const AddProjectForm = () => {
     subject: '',
     favorite: 'five stars',
     description: '',
-    imageurl: ''
+    imgurl: ''
 	});
 	
 	const handleChanges = event => {
@@ -165,7 +165,7 @@ const AddProjectForm = () => {
 						required
 						type='url'
 						name='imageurl'
-						value={newProject.imageurl}
+						value={newProject.imgurl}
 						placeholder='Insert an Image URL'
 						onChange={handleChanges}
 						id='imageurl'

@@ -211,11 +211,15 @@ p{
 	margin: 2px;
 }
 
-#cardBody{
-	margin: 30px;
-	
+.cardBody{
+  margin: 30px;
 }
-
+.card-img{
+  width: 98%;
+  margin:1%;
+  height: 50vh;
+  
+}
 #cardDes{
 	padding: 10px;
 }
