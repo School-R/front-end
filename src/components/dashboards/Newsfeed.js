@@ -49,8 +49,8 @@ const NewsFeed = () => {
         // </div>
       <div id='projectsCard'>
         <div key={info.id}>
-        <img src={info.imgurl} alt="imageobject" />
-        <div id='cardBody'>
+              <img src={info.imgurl} alt="imageobject" className='card-img' />
+        <div className='cardBody'>
           
           <h4>{info.title}</h4>
           <h6>{info.subject}</h6>
