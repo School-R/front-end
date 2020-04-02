@@ -22,8 +22,20 @@
 	align-items: center;
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
-	color: white;
+	color: #f99c1b;
 	padding: 2%;
+}
+.footer > h6{
+  width: 75%;
+  margin: 0 auto;
+}
+.footer-span {
+  width: 25%;
+  height: 25px;
+  
+}
+.footer-img{
+  width: 2%;
 }
 /* Navigation CSS */
 .school-r {
