@@ -128,8 +128,8 @@ const AddProjectForm = () => {
 	return (
 		<AddContainer>
 			<Form>
-				<FormTitle>Add New Project</FormTitle>
 				<FormContainer onSubmit={submitForm}>
+					<FormTitle>Add New Project</FormTitle>
 					<FormInput
 						required
 						type='text'
