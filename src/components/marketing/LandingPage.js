@@ -98,11 +98,10 @@ const LandingPage = () => {
 								<p>
 									Math is an all encompassing subject, from simple arithmetic to advanced calculus feel free to share methods to
 									help others learn. Find methods to help you gain a deeper understanding of all things number-related.For
-									Example Cooking is a great way to learn different math aspects check out to keep up with
-									<span>
+									Example Cooking is a great way to learn different math aspects check out 	<span>
 										<a href='https://kind-benz-efe632.netlify.com/'>Stash</a>
-									</span>
-									Recipes Parents not familiar with the new Math styles may even find tips to help them help their kids.
+									</span> to keep up with
+									recipes. Parents not familiar with the new Math styles may even find tips to help them help their kids.
 								</p>
 							</div>
 						</div>
