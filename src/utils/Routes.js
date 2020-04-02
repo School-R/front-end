@@ -42,7 +42,7 @@ const Routes = () => {
       <Route path="/login" component={Login} />
       <Route path="/register" component={Registration} />
       <Route path="/memoryGame" component={MemoryGame} />
-      <Route path="/slidePuzzle" component={SlidePuzzle} />
+      <Route path="/slidePuzzleB" component={SlidePuzzle} />
     </div>
   );
 }

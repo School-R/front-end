@@ -305,13 +305,46 @@
       "id": 10
     },
     {
-
       "email": "kara@kara.com",
       "password": "1234",
       "isParent": true,
       "token": "8019891a-3f7e-41b0-9ac9-6cf4adc4752a",
       "id": 11
-
+    },
+    {
+      "email": "catherinesjkim@gmail.com",
+      "password": "123",
+      "isParent": false,
+      "token": "17ebd381-d642-46a5-8437-a6dd65422acb",
+      "id": 12
+    },
+    {
+      "email": "cat@gmail.com",
+      "password": "123",
+      "isParent": true,
+      "token": "1d36a330-0cdf-435d-af46-30f43dcc1a27",
+      "id": 13
+    },
+    {
+      "email": "cat@gmail.com",
+      "password": "123",
+      "isParent": true,
+      "token": "f05c881e-9d9f-4b5c-87e4-40a08a02b1d3",
+      "id": 14
+    },
+    {
+      "email": "cat@gmail.com",
+      "password": "123",
+      "isParent": true,
+      "token": "796b5a71-d643-45db-81aa-8e982d0c44d3",
+      "id": 15
+    },
+    {
+      "email": "catherinesjkim@gmail.com",
+      "password": "123",
+      "isParent": false,
+      "token": "7174af52-bca1-4176-83b3-fbf36dc6c344",
+      "id": 16
     }
   ]
 }
