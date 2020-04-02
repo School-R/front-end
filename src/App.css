@@ -14,6 +14,11 @@
 	padding: 2%;
 }
 
+p{ 
+ font-family: 'Roboto';
+ font-size: 14px;
+}
+
 .footer {
 	background-color: #b51118;
 	width: 100%;
@@ -103,7 +108,7 @@
 	margin: 0 auto;
 }
 
-/* ### NEWS FEED NAV ### */
+/* ### NEWS FEED NAVIGATION/BRGR ### */
 
 #page-wrap {
 	text-align: center;
@@ -164,9 +169,48 @@
 	background: rgba(0, 0, 0, 0.3);
 }
 
+
+/* ### Projects Card ### */
+
+#projects{
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	margin: auto;
+	margin-top: 30px;
+}
+
+#projectsCard{
+	width: 30%;
+	margin: 10px;
+	border: 1px solid lightgrey;
+	border-radius: 10px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.08), 
+                0 2px 2px rgba(0,0,0,0.12), 
+                0 4px 4px rgba(0,0,0,0.16), 
+                0 8px 8px rgba(0,0,0,0.20);
+}
+
+#cardBtns{
+	margin-bottom: 40px;
+
+}
+.btn{
+	margin: 2px;
+}
+
+#cardBody{
+	margin: 30px;
+	
+}
+
+#cardDes{
+	padding: 10px;
+}
+
 /* MEDIA RESPONSIVE */
 
-@media screen and (max-height: 450px) {
+@media screen and (max-width: 550px) {
 	.bm-burger-button {
 		position: fixed;
 		width: 26px;
@@ -174,4 +218,24 @@
 		left: 36px;
 		top: 160px;
 	}
+
+	#projects{
+		display: flex;
+		flex-flow: row wrap;
+		width: 100%;
+		margin: auto;
+	}
+
+	#projectsCard{
+		width: 90%;
+		margin: 10px;
+		border: 1px solid lightgrey;
+		border-radius: 10px;
+	}
+
+	#cardBtns{
+		margin-top: 40px;
+	}
+
+	
 }

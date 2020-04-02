@@ -5,6 +5,7 @@ export const SET_ERROR = 'SET_ERROR'
 export const GET_USERS = 'GET_USERS'
 export const POST_NEW_PROJECT = 'POST_NEW_PROJECT'
 export const EDIT_PROJECT = 'EDIT_PROJECT'
+export const GET_PROJECTS = 'GET_PROJECTS'
 
 export const login = (credentials, props) => dispatch => {
 	axiosWithAuth()
@@ -48,6 +49,21 @@ export const getUsers = () => dispatch => {
 			console.log('NOOOOO!!!!', err)
 			dispatch({ type: SET_ERROR, payload: 'error getting parents' })
 		})
+}
+
+
+// ### GET Projects
+
+export const getProjects = () => dispatch => {
+
+	axiosWithAuth().get('/projects')
+	.then(res => {
+		dispatch({ type: GET_PROJECTS, payload: res.data})
+	})
+	.catch(err => {
+		console.log('NOOOOO!!!!', err);
+		dispatch({ type: SET_ERROR, payload: 'error getting the projects'});
+	})
 }
 
 export const postProject = (project) => dispatch => {

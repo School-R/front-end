@@ -3,7 +3,8 @@ import thunk from 'redux-thunk'
 import { 
 	SET_ERROR,  
 	GET_USERS,
-	POST_NEW_PROJECT
+	POST_NEW_PROJECT,
+  GET_PROJECTS
 } from './actions'
 
 const initialState = {
@@ -24,6 +25,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         users: action.payload,
       };
+    case GET_PROJECTS:
+      return {
+        ...state,
+        projects: action.payload
+      };  
     case POST_NEW_PROJECT:
       return {
         ...state,
