@@ -94,78 +94,6 @@
       "password": "123",
       "isParent": true,
       "token": "adslkjkdjjkasdkl;j"
-    },
-    {
-      "id": 6,
-      "user_id": 847402279,
-      "fullname": "Brandi Jordan",
-      "email": "brandi@gmail.com",
-      "password": "1234",
-      "isParent": true,
-      "token": "654fd69f-22c2-4d2c-a35e-d07d910f4fc0"
-    },
-    {
-      "id": 7,
-      "user_id": 1278776550,
-      "fullname": "Sally Tungstew",
-      "email": "sally@gmail.com",
-      "password": "1234",
-      "isParent": true,
-      "token": "08c969ac-d0fc-460b-b3fe-21e955fec268"
-    },
-    {
-      "id": 8,
-      "user_id": 1352282745,
-      "fullname": "Don Terrell",
-      "email": "don@gmail.com",
-      "password": "1234",
-      "isParent": true,
-      "token": "aa6f884f-e28a-4047-9998-0773790266b9"
-    },
-    {
-      "id": 9,
-      "user_id": 1140210541,
-      "fullname": "Jimmy Long",
-      "email": "jimmy@gmail.com",
-      "password": "1234",
-      "isParent": false,
-      "token": "0f422a37-1e15-467b-9757-1b80102bcaf7"
-    },
-    {
-      "id": 10,
-      "user_id": 1461740034,
-      "fullname": "Johnnie Remini",
-      "email": "jn@gmail.com",
-      "password": "1234",
-      "isParent": false,
-      "token": "67a8e780-5224-4d47-8b53-6a284ca01fa9"
-    },
-    {
-      "id": 11,
-      "user_id": 1137612767,
-      "fullname": "Catherine Kim",
-      "email": "cat@gmail.com",
-      "password": "123",
-      "isParent": true,
-      "token": "561c2fea-755a-4a4a-b566-95b1f641f463"
-    },
-    {
-      "id": 12,
-      "user_id": 857169448,
-      "fullname": "Teresa Barblin",
-      "email": "barbline@yahoo.com",
-      "password": "abcd",
-      "isParent": true,
-      "token": "229a4cb6-d405-4ee7-b62f-0a27fe603c3e"
-    },
-    {
-      "id": 13,
-      "user_id": 1059421960,
-      "fullname": "Bobby Porter",
-      "email": "bobby@gmail.com",
-      "password": "abcd",
-      "isParent": true,
-      "token": "da34cca6-d749-4930-bb4f-895d80f1858a"
     }
   ],
   "projects": [
@@ -250,102 +178,11 @@
       "token": "564sdaf654-asdf54"
     },
     {
-      "email": "brandi@gmail.com",
+      "email": "kara@kara.com",
       "password": "1234",
       "isParent": true,
-      "token": "b7421f44-8a42-4b78-8477-c8b429a0fc28",
+      "token": "88127d7a-355e-4f55-b939-8db564675aea",
       "id": 2
-    },
-    {
-      "email": "cat@gmail.com",
-      "password": "123",
-      "isParent": true,
-      "token": "cba11ebd-212b-41c5-b467-a434f794a0ce",
-      "id": 3
-    },
-    {
-      "email": "cat@gmail.com",
-      "password": "123",
-      "isParent": true,
-      "token": "66a8729b-d542-454b-8cbd-9b23498a9969",
-      "id": 4
-    },
-    {
-      "email": "catherinesjkim@gmail.com",
-      "password": "123",
-      "isParent": false,
-      "token": "f7c3e8ec-18d1-48f8-b4ab-97722aae27d9",
-      "id": 5
-    },
-    {
-      "email": "cat@gmail.com",
-      "password": "123",
-      "isParent": true,
-      "token": "b00172a7-2d54-4cfe-b98f-8983051e90cb",
-      "id": 6
-    },
-    {
-      "email": "catherinesjkim@gmail.com",
-      "password": "123",
-      "isParent": false,
-      "token": "71c5f051-ff23-4212-87db-24370db856e3",
-      "id": 7
-    },
-    {
-      "email": "cat@gmail.com",
-      "password": "123",
-      "isParent": true,
-      "token": "b07c7850-7ff1-49c0-9b43-9eba3f250b1c",
-      "id": 8
-    },
-    {
-      "email": "cat@gmail.com",
-      "password": "123",
-      "isParent": true,
-      "token": "e01f8106-a507-4088-994b-8511fe1d1b74",
-      "id": 9
-    },
-    {
-      "email": "cat@gmail.com",
-      "password": "123",
-      "isParent": true,
-      "token": "bd66c72d-8832-441c-8798-9c1a57696aa9",
-      "id": 10
-    },
-    {
-      "email": "kara@kara.com",
-      "password": "1234",
-      "isParent": true,
-      "token": "8019891a-3f7e-41b0-9ac9-6cf4adc4752a",
-      "id": 11
-    },
-    {
-      "email": "test@gmail.com",
-      "password": "test",
-      "isParent": true,
-      "token": "348f77e5-55eb-48f7-8146-3a56ffc9d5dd",
-      "id": 12
-    },
-    {
-      "email": "kara@kara.com",
-      "password": "1234",
-      "isParent": true,
-      "token": "0248c79d-f3f7-49d3-8f5c-849ca139ad90",
-      "id": 13
-    },
-    {
-      "email": "kara@kara.com",
-      "password": "1234",
-      "isParent": true,
-      "token": "1fbbd30f-4ba8-4f15-97bc-b5e83434028b",
-      "id": 14
-    },
-    {
-      "email": "kara@kara.com",
-      "password": "1234",
-      "isParent": false,
-      "token": "4bd5d062-4f39-4e9d-aefe-90b5b2bbfbfb",
-      "id": 15
     }
   ]
 }

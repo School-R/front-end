@@ -1,7 +1,6 @@
 import React from 'react';
 import MainNav from '../../navs/MainNav';
 import { NavLink, useParams } from 'react-router-dom'
-import UpdateProject from '../../forms/UpdateProject'
 import style from "styled-components";
 
 const Button = style.button`
