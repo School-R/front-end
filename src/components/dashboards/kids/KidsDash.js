@@ -13,6 +13,7 @@ const Button = style.button`
 	font-size: 14px;
 	font-weight: bold;
 	margin-top: 10px;
+	margin: 0.5%;
 	cursor: pointer;
 	&:disabled {
       opacity: .5;
@@ -20,23 +21,23 @@ const Button = style.button`
     &:hover {
       background-color: #FA7027;
     }
-`;
+`
 
 const KidsDash = () => {
 	const {id}=useParams()
   return (
-			<section>
-				<MainNav />
-				<div>
-					<NavLink to={`/kids-dash/${id}/newsfeed`}>
-						<Button> News Feed</Button>
-					</NavLink>
-					<NavLink to={`/kids-dash/${id}/newProject`}>
-						<Button>Add New Project</Button>
-					</NavLink>
-				</div>
-			</section>
-		)
+    <section>
+      <MainNav />
+      <div>
+        <NavLink to={`/kids-dash/${id}/newsfeed`}>
+          <Button> News Feed</Button>
+        </NavLink>
+        <NavLink to={`/kids-dash/${id}/newProject`}>
+          <Button>Add New Project</Button>
+        </NavLink>
+      </div>
+    </section>
+  );
 }
 
 export default KidsDash

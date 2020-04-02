@@ -94,78 +94,6 @@
       "password": "123",
       "isParent": true,
       "token": "adslkjkdjjkasdkl;j"
-    },
-    {
-      "id": 6,
-      "user_id": 847402279,
-      "fullname": "Brandi Jordan",
-      "email": "brandi@gmail.com",
-      "password": "1234",
-      "isParent": true,
-      "token": "654fd69f-22c2-4d2c-a35e-d07d910f4fc0"
-    },
-    {
-      "id": 7,
-      "user_id": 1278776550,
-      "fullname": "Sally Tungstew",
-      "email": "sally@gmail.com",
-      "password": "1234",
-      "isParent": true,
-      "token": "08c969ac-d0fc-460b-b3fe-21e955fec268"
-    },
-    {
-      "id": 8,
-      "user_id": 1352282745,
-      "fullname": "Don Terrell",
-      "email": "don@gmail.com",
-      "password": "1234",
-      "isParent": true,
-      "token": "aa6f884f-e28a-4047-9998-0773790266b9"
-    },
-    {
-      "id": 9,
-      "user_id": 1140210541,
-      "fullname": "Jimmy Long",
-      "email": "jimmy@gmail.com",
-      "password": "1234",
-      "isParent": false,
-      "token": "0f422a37-1e15-467b-9757-1b80102bcaf7"
-    },
-    {
-      "id": 10,
-      "user_id": 1461740034,
-      "fullname": "Johnnie Remini",
-      "email": "jn@gmail.com",
-      "password": "1234",
-      "isParent": false,
-      "token": "67a8e780-5224-4d47-8b53-6a284ca01fa9"
-    },
-    {
-      "id": 11,
-      "user_id": 1137612767,
-      "fullname": "Catherine Kim",
-      "email": "cat@gmail.com",
-      "password": "123",
-      "isParent": true,
-      "token": "561c2fea-755a-4a4a-b566-95b1f641f463"
-    },
-    {
-      "id": 12,
-      "user_id": 857169448,
-      "fullname": "Teresa Barblin",
-      "email": "barbline@yahoo.com",
-      "password": "abcd",
-      "isParent": true,
-      "token": "229a4cb6-d405-4ee7-b62f-0a27fe603c3e"
-    },
-    {
-      "id": 13,
-      "user_id": 1059421960,
-      "fullname": "Bobby Porter",
-      "email": "bobby@gmail.com",
-      "password": "abcd",
-      "isParent": true,
-      "token": "da34cca6-d749-4930-bb4f-895d80f1858a"
     }
   ],
   "projects": [
@@ -175,7 +103,7 @@
       "subject": "Computer Education",
       "favorite": "5 stars",
       "description": "Go to this website for free projects: https://www.frontendmentor.io",
-      "imgurl": "https://www.pexels.com/photo/working-pattern-internet-abstract-1089438/"
+      "imgurl": "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg"
     },
     {
       "id": 2,
@@ -183,7 +111,7 @@
       "subject": "Math",
       "favorite": "5 stars",
       "description": "Plan a scavenger hunt that uses any kind of numbers. See picture for a good sample for elementary students",
-      "imgurl": "src/images/Math.png"
+      "imgurl": "https://i.ytimg.com/vi/SYW39pMZa-s/maxresdefault.jpg"
     },
     {
       "id": 3,
@@ -191,7 +119,7 @@
       "subject": "Science",
       "favorite": "five stars",
       "description": "Materials: 1 Pie Tin, 1 Balloon, 1 Piece of Tissue Paper, Scissors, Seran Wrap. Steps: cut out a person from the tissue paper, place in covered pie tin in seran wrap, blown up balloon, rubbed on carpet or hair, place on pie tin to make a tissue person, dance with static electricity",
-      "imgurl": "https://pixabay.com/photos/paper-dolls-paper-girls-background-14611/"
+      "imgurl": "https://i.pinimg.com/236x/13/e2/c3/13e2c3c518c62a47c06abf2217c850e6--make-paper-paper-art.jpg"
     },
     {
       "id": 4,
@@ -199,7 +127,7 @@
       "subject": "History",
       "favorite": "five stars",
       "description": "Museums and cultural centers are coming together to help fill our at-home entertainment needs, and now, The China Guide is offering intrepid internet travelers the chance to take a virtual hike on the Great Wall of China: https://www.thechinaguide.com/destination/great-wall-of-china",
-      "imgurl": "https://www.pexels.com/photo/great-wall-of-china-2412603/"
+      "imgurl": "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg"
     },
     {
       "id": 5,
@@ -207,7 +135,7 @@
       "subject": "Languages",
       "favorite": "five stars",
       "description": "Go to this URL: https://www.duolingo.com/",
-      "imgurl": "https://www.pexels.com/photo/man-drawing-on-floor-2927599/"
+      "imgurl": "https://images.pexels.com/photos/2927599/pexels-photo-2927599.jpeg"
     },
     {
       "id": 6,
@@ -215,7 +143,7 @@
       "subject": "Literature",
       "favorite": "five stars",
       "description": "Visit a nursing home and see if they would allow you to read to non-visited patients and take turn reading your favorite book and their favorite book and keep a journal of what you learn",
-      "imgurl": "https://www.pexels.com/photo/old-woman-sitting-on-chair-near-girl-while-reading-a-book-3087878/"
+      "imgurl": "https://images.pexels.com/photos/3087878/pexels-photo-3087878.jpeg"
     },
     {
       "id": 7,
@@ -223,7 +151,23 @@
       "subject": "history",
       "favorite": "five stars",
       "description": "Instructions can be found here http://www.stirthewonder.com/milk-carton-mayflower/",
-      "imageurl": "https://www.stirthewonder.com/wp-content/uploads/2013/11/Milk-Carton-Mayflower.jpg"
+      "imgurl": "https://www.stirthewonder.com/wp-content/uploads/2013/11/Milk-Carton-Mayflower.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Create a Beautiful Diagram Using Math Formula",
+      "subject": "math",
+      "favorite": "five stars",
+      "description": "What's the name of the math formula that was recently discovered and creates infinite beautiful diagrams? This picture uses a Voronoi Formula",
+      "imgurl": "https://static.packt-cdn.com/products/9781786463494/graphics/image_07_011.png"
+    },
+    {
+      "id": 9,
+      "title": "Make a Leaf Identification Book",
+      "subject": "science",
+      "favorite": "five stars",
+      "description": "Use a Computer to Draw or Use Art Supplies to Draw or Trace Images of Leaves with names of the plants they came from as you get more pages put them together in a book.",
+      "imgurl": "https://ecdn.teacherspayteachers.com/thumbitem/Leaf-Collection-Project-Book-3433950-1507674151/original-3433950-3.jpg"
     }
   ],
   "login": [
@@ -234,74 +178,12 @@
       "token": "564sdaf654-asdf54"
     },
     {
-      "email": "brandi@gmail.com",
+      "email": "kara@kara.com",
       "password": "1234",
       "isParent": true,
-      "token": "b7421f44-8a42-4b78-8477-c8b429a0fc28",
+      "token": "88127d7a-355e-4f55-b939-8db564675aea",
       "id": 2
-    },
-    {
-      "email": "cat@gmail.com",
-      "password": "123",
-      "isParent": true,
-      "token": "cba11ebd-212b-41c5-b467-a434f794a0ce",
-      "id": 3
-    },
-    {
-      "email": "cat@gmail.com",
-      "password": "123",
-      "isParent": true,
-      "token": "66a8729b-d542-454b-8cbd-9b23498a9969",
-      "id": 4
-    },
-    {
-      "email": "catherinesjkim@gmail.com",
-      "password": "123",
-      "isParent": false,
-      "token": "f7c3e8ec-18d1-48f8-b4ab-97722aae27d9",
-      "id": 5
-    },
-    {
-      "email": "cat@gmail.com",
-      "password": "123",
-      "isParent": true,
-      "token": "b00172a7-2d54-4cfe-b98f-8983051e90cb",
-      "id": 6
-    },
-    {
-      "email": "catherinesjkim@gmail.com",
-      "password": "123",
-      "isParent": false,
-      "token": "71c5f051-ff23-4212-87db-24370db856e3",
-      "id": 7
-    },
-    {
-      "email": "cat@gmail.com",
-      "password": "123",
-      "isParent": true,
-      "token": "b07c7850-7ff1-49c0-9b43-9eba3f250b1c",
-      "id": 8
-    },
-    {
-      "email": "cat@gmail.com",
-      "password": "123",
-      "isParent": true,
-      "token": "e01f8106-a507-4088-994b-8511fe1d1b74",
-      "id": 9
-    },
-    {
-      "email": "cat@gmail.com",
-      "password": "123",
-      "isParent": true,
-      "token": "bd66c72d-8832-441c-8798-9c1a57696aa9",
-      "id": 10
-    },
-    {
-      "email": "",
-      "password": "",
-      "isParent": false,
-      "token": "1381aa85-9f71-422a-bc5c-743b2043ffea",
-      "id": 11
+  
     }
   ]
 }
