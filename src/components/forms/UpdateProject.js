@@ -105,8 +105,9 @@ const UpdateProject = () => {
 	return (
       <AddEditContainer>
         <Form>
-          <FormTitle>Update Project</FormTitle>
-          <FormContainer onSubmit={submitEditForm}>
+          
+        <FormContainer onSubmit={submitEditForm}>
+        <FormTitle>Update Project</FormTitle>
           <FormInput
             required
             type="text"
