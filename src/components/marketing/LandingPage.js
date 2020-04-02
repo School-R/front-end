@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Button } from 'reactstrap'
 import LandingNav from '../navs/LandingNav'
 import lion from '../../images/lion.bmp'
 import lion2 from '../../images/lion2.jpg'
@@ -11,8 +10,30 @@ import numbers from '../../images/numbers.png'
 import periodictable from '../../images/periodictable.png'
 import school from '../../images/school.png'
 import Footer from '../navs/Footer'
+import style from 'styled-components'
 
 const LandingPage = () => {
+
+
+	const Button = style.button`
+	background-color: #F99C1B;
+	color: #fff;
+	padding: 10px;
+	width: 20%;
+	border: none;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: bold;
+  margin-top: 10px;
+  margin: 0.5%;
+	cursor: pointer;
+	&:disabled {
+      opacity: .5;
+    }
+    &:hover {
+      background-color: #FA7027;
+    }
+`
 	return (
 		<section>
 			<LandingNav />
@@ -34,10 +55,10 @@ const LandingPage = () => {
 					</span>
 					<div>
 						<Link to='/login'>
-							<Button color='warning'>Login</Button>
+							<Button>Login</Button>
 						</Link>
 						<Link to='/register'>
-							<Button color='warning'>Register</Button>
+							<Button>Register</Button>
 						</Link>
 					</div>
 				</section>

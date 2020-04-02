@@ -11,7 +11,8 @@ import {
 
 const AddContainer = style.div`
   display: flex;
-  height: 100%;
+	height: 100%;
+	margin-top: 2%;
 `
 const Form = style.div`
 	width: 100%;
@@ -27,6 +28,7 @@ const FormContainer = style.form`
 	overflow: auto;
 	flex: 1;
 	margin-bottom: 80px;
+	border: 5px solid silver;
 `
 
 const FormTitle = style.h1`
@@ -50,13 +52,14 @@ const Button = style.button`
 	background-color: #FCCB3D;
 	color: #fff;
 	padding: 10px;
-	width: 100%;
+	width: 98%;
 	border: none;
 	border-radius: 4px;
 	font-size: 14px;
 	font-weight: bold;
 	margin-top: 10px;
 	cursor: pointer;
+	margin-bottom: 10px;
 	&:disabled {
       opacity: .5;
     }
@@ -68,12 +71,13 @@ const Button = style.button`
 const FormInput = style.input`
   border: 1px solid #a9a9a9;
   padding: 10px;
-  width: 100%;
+  width: 98%;
   border-radius: 3px;
   border: solid 1px #e2e0e0;
   background-color: #f3f3f3;
-  box-sizing: border-box;
-  margin-top: 10px;
+	box-sizing: border-box;
+	margin-top: 10px;
+	
 `
 
 const AddProjectForm = () => {

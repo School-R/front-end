@@ -12,15 +12,16 @@ import {
 
 const AddEditContainer = style.div`
   display: flex;
-  height: 100%;
-`;
+	height: 100%;
+	margin-top: 2%;
+`
 const Form = style.div`
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-`;
+`
 
 const FormContainer = style.form`
 	width: 100%
@@ -28,7 +29,8 @@ const FormContainer = style.form`
 	overflow: auto;
 	flex: 1;
 	margin-bottom: 80px;
-`;
+	border: 5px solid silver;
+`
 
 const FormTitle = style.h1`
 	font-size: 30px;
@@ -38,44 +40,47 @@ const FormTitle = style.h1`
   align-items: center;
   justify-content: center;
   flex-directions: column;
-`;
+`
 
 const Label = style.label`
 	font-size: 15px;
 	font-weight: 600;
 	color: #8f8d8d;
 	margin-top: 10px;
-`;
+`
 
 const Button = style.button`
 	background-color: #FCCB3D;
 	color: #fff;
 	padding: 10px;
-	width: 100%;
+	width: 98%;
 	border: none;
 	border-radius: 4px;
 	font-size: 14px;
 	font-weight: bold;
 	margin-top: 10px;
 	cursor: pointer;
+	margin-bottom: 10px;
 	&:disabled {
       opacity: .5;
     }
     &:hover {
       background-color: #FFDB48;
     }
-`;
+`
 
 const FormInput = style.input`
   border: 1px solid #a9a9a9;
   padding: 10px;
-  width: 100%;
+  width: 98%;
   border-radius: 3px;
   border: solid 1px #e2e0e0;
   background-color: #f3f3f3;
-  box-sizing: border-box;
-  margin-top: 10px;
-`;
+	box-sizing: border-box;
+	margin-top: 10px;
+	
+`
+
 
 const UpdateProject = () => {
   const dispatch = useDispatch();
