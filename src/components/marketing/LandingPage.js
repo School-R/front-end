@@ -39,9 +39,9 @@ const LandingPage = () => {
 			<LandingNav />
 			<section className='landing-container'>
 				<span className='landing-header'>
-					<img src={lion2} alt='lion-right-facing' className='img-lion' />
-					<h1>School'R</h1>
 					<img src={lion} alt='lion-left-facing' className='img-lion' />
+					<h1>School'R</h1>
+					<img src={lion2} alt='lion-right-facing' className='img-lion' />
 				</span>
 				<section className='landing-container-content'>
 					<h3>Welcome to the School'R App</h3>
