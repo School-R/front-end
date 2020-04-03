@@ -8,7 +8,7 @@ import style from 'styled-components'
 
 	const RegisterContainer = style.div`
   display: flex;
-	height: 100%;
+	height: 500;
 	margin-top: 2%;
 `
 	const Form = style.div`
@@ -55,7 +55,7 @@ const Button = style.button`
 	border-radius: 4px;
 	font-size: 14px;
 	font-weight: bold;
-	margin-top: 10px;
+	margin-top: 30px;
 	cursor: pointer;
 	margin-bottom: 10px;
 	&:disabled {
@@ -135,7 +135,7 @@ const Registration = props => {
 							onChange={handleChange}
 						/>
 						<br />
-						<span>
+						<span >
 							<Label>
 								Parent
 								<br />

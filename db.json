@@ -183,6 +183,14 @@
       "favorite": "five stars",
       "description": "Generate Electricity while Using Lemon or Potato for a Science Project",
       "imgurl": "https://i.pinimg.com/236x/a2/49/b3/a249b3007a391c65d5a519fe38983561--science-labs-science-education.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Card for Deleting to Check Delete Function or See Delete Function",
+      "subject": "Languages",
+      "favorite": "five stars",
+      "description": "Here is the Note Field",
+      "imgurl": "http://www.twitrcovers.com/wp-content/themes/twitrcovers/images/cover-preview11.png"
     }
   ],
   "login": [
@@ -198,6 +206,27 @@
       "isParent": true,
       "token": "88127d7a-355e-4f55-b939-8db564675aea",
       "id": 2
+    },
+    {
+      "email": "kara@kara.com",
+      "password": "1234",
+      "isParent": true,
+      "token": "a8126606-be01-4164-9094-c0d5d5f6ec9c",
+      "id": 3
+    },
+    {
+      "email": "kara@kara.com",
+      "password": "1234",
+      "isParent": true,
+      "token": "c3c4ff3d-c5f4-4290-a9f1-0d3f2a8069c3",
+      "id": 4
+    },
+    {
+      "email": "bing@bing.com",
+      "password": "kara",
+      "isParent": true,
+      "token": "bba529f4-65ad-440d-ac3f-59bfe86427a4",
+      "id": 5
     }
   ]
 }

@@ -1,13 +1,13 @@
 // Catherine 
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { editProject, getProjects } from '../../redux/actions'
+import { getProjects } from '../../redux/actions'
 import { axiosWithAuth } from '../../utils/axiosWithAuth'
 
 import style from 'styled-components'
 import {
   FormGroup, 
-  FormText,
+  CardBody,
   Input,
   CardFooter, 
   Card,
@@ -16,11 +16,12 @@ import {
 
 const AddEditContainer = style.div`
   display: flex;
-	height: 100%;
+	height: 595px;
 	margin-top: 2%;
 `
 const Form = style.div`
-	width: 100%;
+  width: 100%;
+  height: 675px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -91,70 +92,67 @@ const UpdateProject = ({ setEditFlip, newEditProject, setNewEditProject }) => {
   }
   
 	return (
-    <Card>
-      <AddEditContainer>
-        <Form>
-          <FormContainer onSubmit={submitEditForm}>
-            <FormTitle>Update Project</FormTitle>
-            <FormInput
-              type="text"
-              name="title"
-              value={newEditProject.title}
-              placeholder="Updated Project Name"
-              onChange={handleChanges}
-              id="title"
-            />
-            <FormGroup>
-              <Label htmlFor="subject">Updated Subjects</Label>
-              <Input
-                type="select"
-                name="subject"
-                value={newEditProject.subject}
-                onChange={handleChanges}>
-                <option disabled>Choose an Updated Subject</option>
-                <option value="Computer Education">Computer Education</option>
-                <option value="Math">Math</option>
-                <option value="Science">Science</option>
-                <option value="History">History</option>
-                <option value="Languages">Languages</option>
-                <option value="Literature">Literature</option>
-              </Input>
-            </FormGroup>
-            <Label htmlFor="description">Description</Label>
-            <FormInput
-              type="text"
-              name="description"
-              value={newEditProject.description}
-              placeholder="Instructions & Notes"
-              onChange={handleChanges}
-            />
-            <FormInput
-              type="url"
-              name="imgurl"
-              value={newEditProject.imgurl}
-              placeholder="Insert an Image URL"
-              onChange={handleChanges}
-              id="imgurl"
-            />
-            <CardFooter>
-              <Button
-                outline
-                type="submit"
-                className="edit-button"
-                color="warning"
-                style={{ color: "#fff" }}
-              >
-                Submit
-              </Button>
-              <Button onClick={cancelUpdate} outline className="delete-button" color="danger">
-                Cancel
-              </Button>
-            </CardFooter>
-          </FormContainer>
-        </Form>
-      </AddEditContainer>
-    </Card>
-  );
+		<Card>
+			<AddEditContainer>
+				<Form>
+					<FormContainer onSubmit={submitEditForm}>
+						<FormTitle>Update Project</FormTitle>
+						<CardBody>
+							<FormInput
+								type='text'
+								name='title'
+								value={newEditProject.title}
+								placeholder='Updated Project Name'
+								onChange={handleChanges}
+								id='title'
+							/>
+							<FormGroup>
+								<Label htmlFor='subject'>Updated Subjects</Label>
+								<Input type='select' name='subject' value={newEditProject.subject} onChange={handleChanges}>
+									<option disabled>Choose an Updated Subject</option>
+									<option value='Computer Education'>Computer Education</option>
+									<option value='Math'>Math</option>
+									<option value='Science'>Science</option>
+									<option value='History'>History</option>
+									<option value='Languages'>Languages</option>
+									<option value='Literature'>Literature</option>
+								</Input>
+							</FormGroup>
+							<Label htmlFor='description'>Description</Label>
+							<FormInput
+								type='text'
+								name='description'
+								value={newEditProject.description}
+								placeholder='Instructions & Notes'
+								onChange={handleChanges}
+							/>
+							<FormInput
+								type='url'
+								name='imgurl'
+								value={newEditProject.imgurl}
+								placeholder='Insert an Image URL'
+								onChange={handleChanges}
+								id='imgurl'
+							/>
+						</CardBody>
+						<CardFooter style={{ marginTop: '30%' }}>
+							<Button
+								outline
+								type='submit'
+								className='edit-button'
+								color='warning'
+								style={{ color: '#fff', marginTop: '3%' }}>
+								Submit
+							</Button>
+							<Button onClick={cancelUpdate} outline className='delete-button' color='danger' style={{  marginTop: '3%' }}>
+								Cancel
+							</Button>
+						</CardFooter>
+					</FormContainer>
+				</Form>
+			</AddEditContainer>
+		</Card>
+	)
 }
 
 export default UpdateProject

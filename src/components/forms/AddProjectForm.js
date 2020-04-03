@@ -11,7 +11,7 @@ import {
 
 const AddContainer = style.div`
   display: flex;
-	height: 100%;
+	height: 500px;
 	margin-top: 2%;
 `
 const Form = style.div`

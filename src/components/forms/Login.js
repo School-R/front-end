@@ -6,7 +6,7 @@ import { v4 as uuid } from 'uuid'
 import style from 'styled-components'
 const LogInContainer = style.div`
   display: flex;
-	height: 100%;
+	height: 500px;
 	margin-top: 2%;
 `
 const Form = style.div`
@@ -53,7 +53,7 @@ const Button = style.button`
 	border-radius: 4px;
 	font-size: 14px;
 	font-weight: bold;
-	margin-top: 10px;
+	margin-top: 35px;
 	cursor: pointer;
 	margin-bottom: 10px;
 	&:disabled {
@@ -104,29 +104,36 @@ const Login = props => {
 					<FormContainer>
 						<FormTitle>Log In</FormTitle>
 						<Label htmlFor='email'>Email</Label>
-						<FormInput required type='email' name='email' value={credentials.email} placeholder='Email' onChange={handleChange} />
+						<FormInput
+							required
+							type='email'
+							name='email'
+							value={credentials.email}
+							placeholder='Email'
+							onChange={handleChange}
+						/>
 						<Label htmlFor='password'>Password</Label>
 						<FormInput
 							required
-					type='password'
-					name='password'
-					value={credentials.password}
-					placeholder='Password'
-					onChange={handleChange}
-				/>
-				<br />
+							type='password'
+							name='password'
+							value={credentials.password}
+							placeholder='Password'
+							onChange={handleChange}
+						/>
+						<br />
+						<br />
 						<span>
-							<Label>Parent
-							<br/>
+							<Label>
+								Parent
+								<br />
 								<input type='checkbox' onChange={e => setCredentials({ ...credentials, isParent: true })} />
 							</Label>
-					<br/>
-					
-				</span>
+							<br />
+						</span>
 						<Button>Log In</Button>
-						</FormContainer>
+					</FormContainer>
 				</Form>
-				
 			</LogInContainer>
 		</section>
 	)
