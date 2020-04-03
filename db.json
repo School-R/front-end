@@ -199,13 +199,6 @@
       "isParent": true,
       "token": "88127d7a-355e-4f55-b939-8db564675aea",
       "id": 2
-    },
-    {
-      "email": "cat@gmail.com",
-      "password": "123",
-      "isParent": true,
-      "token": "bc421075-e16f-42af-804d-cab539938215",
-      "id": 3
     }
   ]
 }
