@@ -32,9 +32,6 @@ const KidsDash = () => {
         <NavLink to={`/kids-dash/${id}/newsfeed`}>
           <Button> News Feed</Button>
         </NavLink>
-        <NavLink to={`/kids-dash/${id}/newProject`}>
-          <Button>Add New Project</Button>
-        </NavLink>
       </div>
     </section>
   );

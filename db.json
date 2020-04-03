@@ -168,6 +168,22 @@
       "favorite": "five stars",
       "description": "Use a Computer to Draw or Use Art Supplies to Draw or Trace Images of Leaves with names of the plants they came from as you get more pages put them together in a book.",
       "imgurl": "https://ecdn.teacherspayteachers.com/thumbitem/Leaf-Collection-Project-Book-3433950-1507674151/original-3433950-3.jpg"
+    },
+    {
+      "id": 10,
+      "title": "NEW PROJECT AWESOME",
+      "subject": "",
+      "favorite": "five stars",
+      "description": "BUILD A SLIDE PUZZLE GAME WITH DYNAMIC ART UPDATES",
+      "imgurl": "https://en.wikipedia.org/wiki/Sliding_puzzle#/media/File:15-Puzzle.jpg"
+    },
+    {
+      "id": 11,
+      "title": "NEW PROJECT ",
+      "subject": "computer_education",
+      "favorite": "five stars",
+      "description": "NEW SCIENCE PROJECT ",
+      "imgurl": "https://i.pinimg.com/236x/a2/49/b3/a249b3007a391c65d5a519fe38983561--science-labs-science-education.jpg"
     }
   ],
   "login": [
@@ -183,7 +199,6 @@
       "isParent": true,
       "token": "88127d7a-355e-4f55-b939-8db564675aea",
       "id": 2
-  
     }
   ]
 }
