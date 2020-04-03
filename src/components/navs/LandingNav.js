@@ -18,7 +18,8 @@ const LandingNav = () => {
           <Button
             outline
             color="danger"
-            style={{ color: "#f99c1b", border: "1px solid #f99c1b" }}>
+            style={{ color: "#f99c1b", border: "1px solid #f99c1b" }}
+          >
             Home
           </Button>
         </Link>
@@ -26,7 +27,8 @@ const LandingNav = () => {
           <Button
             outline
             color="danger"
-            style={{ color: "#f99c1b", border: "1px solid #f99c1b" }}>
+            style={{ color: "#f99c1b", border: "1px solid #f99c1b" }}
+          >
             About
           </Button>
         </Link>
@@ -34,16 +36,18 @@ const LandingNav = () => {
           <Button
             outline
             color="danger"
-            style={{ color: "#f99c1b", border: "1px solid #f99c1b" }}>
+            style={{ color: "#f99c1b", border: "1px solid #f99c1b" }}
+          >
             Game 3 Temp
           </Button>
         </Link>
-        <Link to="/slidePuzzleB">
+        <Link to="/rock_paper_scissors">
           <Button
             outline
             color="danger"
-            style={{ color: "#f99c1b", border: "1px solid #f99c1b" }}>
-            Game 4 Temp
+            style={{ color: "#f99c1b", border: "1px solid #f99c1b" }}
+          >
+            Game 1 Temp
           </Button>
         </Link>
       </span>

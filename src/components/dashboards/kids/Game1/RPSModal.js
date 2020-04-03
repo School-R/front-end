@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import '../Game1/rock_paper_scissors/images'
+import Rules from './rock_paper_scissors/images/image-rules.svg'
+import {Modal} from 'reactstrap'
 
-function rpsModal() {
+function RPSModal() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -13,7 +14,7 @@ function rpsModal() {
                 <Modal.Title>Rules</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <image src="front-end/src/components/dashboards/kids/Game1/rock_paper_scissors/images/image-rules.svg"/>
+                <image src={Rules}/>
 
             </Modal.Body>
         
@@ -21,4 +22,4 @@ function rpsModal() {
     )
 }
 
-export default rpsModal;
+export default RPSModal;

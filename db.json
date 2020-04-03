@@ -208,25 +208,11 @@
       "id": 2
     },
     {
-      "email": "kara@kara.com",
-      "password": "1234",
-      "isParent": true,
-      "token": "a8126606-be01-4164-9094-c0d5d5f6ec9c",
+      "email": "crossingwaters@icloud.com",
+      "password": "123",
+      "isParent": false,
+      "token": "89b0142b-9fd2-42ca-b0b2-4503a1553014",
       "id": 3
-    },
-    {
-      "email": "kara@kara.com",
-      "password": "1234",
-      "isParent": true,
-      "token": "c3c4ff3d-c5f4-4290-a9f1-0d3f2a8069c3",
-      "id": 4
-    },
-    {
-      "email": "bing@bing.com",
-      "password": "kara",
-      "isParent": true,
-      "token": "bba529f4-65ad-440d-ac3f-59bfe86427a4",
-      "id": 5
     }
   ]
 }
