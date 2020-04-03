@@ -115,7 +115,7 @@
     },
     {
       "id": 3,
-      "title": "Lightening Dancer",
+      "title": "Lightning Dancer",
       "subject": "Science",
       "favorite": "five stars",
       "description": "Materials: 1 Pie Tin, 1 Balloon, 1 Piece of Tissue Paper, Scissors, Seran Wrap. Steps: cut out a person from the tissue paper, place in covered pie tin in seran wrap, blown up balloon, rubbed on carpet or hair, place on pie tin to make a tissue person, dance with static electricity",
@@ -148,7 +148,7 @@
     {
       "id": 7,
       "title": "Build a Replica of the Mayflower",
-      "subject": "history",
+      "subject": "History",
       "favorite": "five stars",
       "description": "Instructions can be found here http://www.stirthewonder.com/milk-carton-mayflower/",
       "imgurl": "https://www.stirthewonder.com/wp-content/uploads/2013/11/Milk-Carton-Mayflower.jpg"
@@ -156,7 +156,7 @@
     {
       "id": 8,
       "title": "Create a Beautiful Diagram Using Math Formula",
-      "subject": "math",
+      "subject": "Math",
       "favorite": "five stars",
       "description": "What's the name of the math formula that was recently discovered and creates infinite beautiful diagrams? This picture uses a Voronoi Formula",
       "imgurl": "https://static.packt-cdn.com/products/9781786463494/graphics/image_07_011.png"
@@ -164,25 +164,24 @@
     {
       "id": 9,
       "title": "Make a Leaf Identification Book",
-      "subject": "science",
+      "subject": "Science",
       "favorite": "five stars",
       "description": "Use a Computer to Draw or Use Art Supplies to Draw or Trace Images of Leaves with names of the plants they came from as you get more pages put them together in a book.",
       "imgurl": "https://ecdn.teacherspayteachers.com/thumbitem/Leaf-Collection-Project-Book-3433950-1507674151/original-3433950-3.jpg"
     },
     {
       "id": 10,
-      "title": "NEW PROJECT AWESOME",
-      "subject": "",
-      "favorite": "five stars",
-      "description": "BUILD A SLIDE PUZZLE GAME WITH DYNAMIC ART UPDATES",
-      "imgurl": "https://en.wikipedia.org/wiki/Sliding_puzzle#/media/File:15-Puzzle.jpg"
+      "title": "MAKE A PAIR-PROGRAMMING GROUP FOR CODING",
+      "subject": "Computer Education",
+      "description": "THE BEST TO LEARN TO READ AND WRITE CODE IS WITH FRIENDS! SO GET A FRIEND TOGETHER AND CODE.",
+      "imgurl": "https://employmenthero.com/wp-content/uploads/2019/02/Employment_Hero_Find_A_Partner.jpg"
     },
     {
       "id": 11,
-      "title": "NEW PROJECT ",
-      "subject": "computer_education",
+      "title": "Create a Battery ",
+      "subject": "Science",
       "favorite": "five stars",
-      "description": "NEW SCIENCE PROJECT ",
+      "description": "Generate Electricity while Using Lemon or Potato for a Science Project",
       "imgurl": "https://i.pinimg.com/236x/a2/49/b3/a249b3007a391c65d5a519fe38983561--science-labs-science-education.jpg"
     }
   ],
@@ -206,6 +205,20 @@
       "isParent": true,
       "token": "bc421075-e16f-42af-804d-cab539938215",
       "id": 3
+    },
+    {
+      "email": "cat@gmail.com",
+      "password": "123",
+      "isParent": true,
+      "token": "37d3b8db-1644-4aec-8b7f-2527be7d748f",
+      "id": 4
+    },
+    {
+      "email": "cat@gmail.com",
+      "password": "123",
+      "isParent": true,
+      "token": "af93da89-ce8a-4837-914c-bfbb504efadd",
+      "id": 5
     }
   ]
 }

@@ -1,7 +1,8 @@
 // Catherine 
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch } from 'react-redux'
 import { editProject, getProjects } from '../../redux/actions'
+import { axiosWithAuth } from '../../utils/axiosWithAuth'
 
 import style from 'styled-components'
 import {
@@ -73,9 +74,16 @@ const UpdateProject = ({ setEditFlip, newEditProject, setNewEditProject }) => {
 
   const submitEditForm = (e) => {
     e.preventDefault()
-    dispatch(editProject(newEditProject)) // will use useHistory hook later
-    dispatch(getProjects())
-    setEditFlip(false)
+    axiosWithAuth()
+      .put(`/projects/${newEditProject.id}`, newEditProject)
+      .then(res => {
+        console.log(res);
+        setNewEditProject(newEditProject);
+        setEditFlip(false)
+        
+        return dispatch(getProjects())
+      })
+      .catch(err => console.log("There is an error", err));
   }
 
   const cancelUpdate = () => {
@@ -89,7 +97,6 @@ const UpdateProject = ({ setEditFlip, newEditProject, setNewEditProject }) => {
           <FormContainer onSubmit={submitEditForm}>
             <FormTitle>Update Project</FormTitle>
             <FormInput
-              required
               type="text"
               name="title"
               value={newEditProject.title}
@@ -100,23 +107,21 @@ const UpdateProject = ({ setEditFlip, newEditProject, setNewEditProject }) => {
             <FormGroup>
               <Label htmlFor="subject">Updated Subjects</Label>
               <Input
-                required
                 type="select"
                 name="subject"
                 value={newEditProject.subject}
                 onChange={handleChanges}>
                 <option disabled>Choose an Updated Subject</option>
-                <option value="computer_education">Computer Education</option>
-                <option value="math">Math</option>
-                <option value="science">Science</option>
-                <option value="history">History</option>
-                <option value="languages">Languages</option>
-                <option value="literature">Literature</option>
+                <option value="Computer Education">Computer Education</option>
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+                <option value="Languages">Languages</option>
+                <option value="Literature">Literature</option>
               </Input>
             </FormGroup>
             <Label htmlFor="description">Description</Label>
             <FormInput
-              required
               type="text"
               name="description"
               value={newEditProject.description}
@@ -124,7 +129,6 @@ const UpdateProject = ({ setEditFlip, newEditProject, setNewEditProject }) => {
               onChange={handleChanges}
             />
             <FormInput
-              required
               type="url"
               name="imgurl"
               value={newEditProject.imgurl}
