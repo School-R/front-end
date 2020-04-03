@@ -1,7 +1,7 @@
 /* Updating an Issue:
 Add a route at the path /update-issue/:id
 Create a component with a form to update the chosen issue
-Add a button in the issue component that routes you to your new route with the issues's id as the URL param
+Add a button in the issue component that routes you to your new route with the issues' id as the URL param
 1. The form should make a PUT request to the server when submitted
 2. When the call comes back successfully, reset your form state and route the user to /issues where they will see the updated issue in the list
 3. Pre-populate with all of the data - You usually need a PUT request to update a form
@@ -16,8 +16,6 @@ Tasks:
   - in the handler function navigate the user to the updateForm with the id of that item in the params.
 */
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux' // useSelector = connect
-import { getProjectId } from '../../../redux/actions'
 import UpdateProject from "../../forms/UpdateProject"
 import StarRating from "./StarRating";
 import { axiosWithAuth } from "../../../utils/axiosWithAuth"
@@ -27,7 +25,6 @@ import { Card, CardImg, CardTitle, CardBody, Button, CardText, CardFooter } from
 
 const NewsCard = ({ imgurl, title, subject, description, id }) => {
 
-  const projects = useSelector(state => state.projects)
   const [editFlip, setEditFlip] = useState(false); // local state
 	const [newEditProject, setNewEditProject] = useState({}); // local state
 

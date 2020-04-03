@@ -9,7 +9,6 @@ import history from '../../images/history.png'
 import numbers from '../../images/numbers.png'
 import periodictable from '../../images/periodictable.png'
 import school from '../../images/school.png'
-import Footer from '../navs/Footer'
 import style from 'styled-components'
 
 const LandingPage = () => {
@@ -144,7 +143,6 @@ const LandingPage = () => {
 					</div>
 				</section>
 			</section>
-			<Footer />
 		</section>
 	)
 }
