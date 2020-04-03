@@ -15,86 +15,54 @@ Tasks:
   - in Item.js add a click handler for the update button
   - in the handler function navigate the user to the updateForm with the id of that item in the params.
 */
-import React, { useState } from 'react'
-import { Link } from 'react-router'
-import { useDispatch, useSelector, connect } from 'react-redux'
-import { editProject } from '../../../redux/actions'
+import React, { useState, useEffect } from 'react'
+import { useDispatch } from 'react-redux' // useSelector = connect
+import { getProjects } from '../../../redux/actions'
 
 // ### REACTSTRAP ###
-import { Card, CardImg, CardTitle, CardBody, Button, CardText, CardFooter, ButtonToggle } from 'reactstrap'
+import { Card, CardImg, CardTitle, CardBody, Button, CardText, CardFooter } from 'reactstrap'
 import StarRating from './StarRating'
 import UpdateProject from '../../forms/UpdateProject'
-import { axiosWithAuth } from '../../../utils/axiosWithAuth'
 
 const NewsCard = ({ imgurl, title, subject, description, project_id }) => {
-	const [editFlip, setEditFlip] = useState(false);
 
-	const projects = useSelector(state => state.projects)
+	const dispatch = useDispatch();
+  const [editFlip, setEditFlip] = useState(false); // local state
+  const [editOpen, setEditOpen] = useState({}); // local state
+  const [newEditProject, setNewEditProject] = useState({}); // local state
+  
+  const toggleEditForm = index => {
+    setEditOpen({ [index]: !editOpen[index] }); // function
+  }; 
 
-	const [newEditProject, setNewEditProject] = useState({
-    id: "",
-    title: "",
-    subject: "",
-    favorite: "five stars",
-    description: "",
-    imgurl: "",
-	});
+	useEffect(() => {
+		dispatch(getProjects())
+	}, [dispatch])
+
+
+  // Cat will add functionality code here
+  // grab project by id here '/projects/:id' GET BY ID PROJECT TO POPULATE THE ORIGINAL POST
+  const handleEditClick = (posts, index) => {
+    const arrayWithProjectToEdit = posts.filter(
+      project => project.id === posts.project_id,
+    );
+    const [extractedProjectObject] = arrayWithProjectToEdit;
+    setNewEditProject(extractedProjectObject);
+    setEditFlip(true); // flip the card over so that you can see the form
+    toggleEditForm(index);
+  };
 	
+  // local state is going to manipulate the global state.
 
-	/* const showFront = () => ({
-    setEditFlip: false
-  }) */
-
-	// Cat will add functionality code here
-	// grab project by id here '/projects/:id' GET BY ID PROJECT TO POPULATE THE ORIGINAL POST
-	const handleEditClick = e => {
-		setNewEditProject(projects.filter(project => (project.project_id) === projects.project_id)); 
-
-		return (
-			setEditFlip(true)
-
-		)		
-	};
-
-	/*
-		const projectArr = newEditProject.filter(proj => parseInt(proj.id) === parseInt(id))
-		const [extractedProject] = projectArr;
-			setNewEditProject(extractedProject);
-			editFlip(id);
-			console.log("FETCH ISSUE!", extractedProject);
-	*/
-
-	const handleChange = ev => {
-		ev.persist();
-		let value = ev.target.value;
-		if (ev.target.name === 'favorite') {
-			value = parseInt(value, 10);
-		} else {
-			setNewEditProject({ ...projects, 
-				[ev.target.name]: value
-			});
-			console.log("TARGET VALUE!", value)
-		}
-	};
-
-	const handleSubmit = e => {
-		// make a PUT request to edit an issue
-		e.preventDefault()
-		axiosWithAuth()
-			.put(`/api/projects/${projects.id}`, newEditProject)
-			.then(res => {
-				console.log("RES FROM SERVER!", res)
-				window.location.reload(false);
-			})
-			.catch(err => console.log("That's an error!", err));
-	};
-
-
-	return (
+  return (
     <section>
       {editFlip === true ? (
         <Card className="projectsCard" id="flipper">
-          <UpdateProject setEditFlip={setEditFlip} newEditProject={newEditProject} setNewEditProject={setNewEditProject} />
+          <UpdateProject
+            setEditFlip={setEditFlip}
+            newEditProject={newEditProject}
+            setNewEditProject={setNewEditProject}
+          />
         </Card>
       ) : (
         <Card className="projectsCard">
@@ -119,8 +87,8 @@ const NewsCard = ({ imgurl, title, subject, description, project_id }) => {
               color="warning"
               style={{ color: "#fff" }}
               onClick={handleEditClick}
-							// `/projects/${projects.id}`
-						>
+              // `/projects/${projects.id}`
+            >
               Edit
             </Button>
             <Button outline className="delete-button" color="danger">
@@ -131,6 +99,6 @@ const NewsCard = ({ imgurl, title, subject, description, project_id }) => {
       )}
     </section>
   );
-}
+};
 
 export default NewsCard

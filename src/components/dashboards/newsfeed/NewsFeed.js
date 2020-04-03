@@ -20,22 +20,29 @@ const NewsFeed = () => {
   useEffect(() => {
     dispatch(getProjects())
   }, [dispatch])
+
+  
   
   return (
     <Row>
-			<section>
-				<NewsFeedNav />
-			</section>	
-        {projects.map(info => (
-          <Col lg='4'>
-              <div key={info.id}>
-                  <NewsCard imgurl={info.imgurl} title={info.title} subject={info.subject} description={info.description} />  
-            </div>
-          </Col>
-						))}
-					
-      
+      <section>
+        <NewsFeedNav />
+      </section>
+      {projects.map((info, index) => (
+        <Col lg="4" key={index}>
+          <div>
+            <NewsCard
+              index={index}
+              project_id={info.project_id}
+              imgurl={info.imgurl}
+              title={info.title}
+              subject={info.subject}
+              description={info.description}
+            />
+          </div>
+        </Col>
+      ))}
     </Row>
-		)
+  );
 }
 export default NewsFeed

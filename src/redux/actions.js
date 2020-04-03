@@ -51,7 +51,6 @@ export const getUsers = () => dispatch => {
 		})
 }
 
-
 // ### GET Projects
 
 export const getProjects = () => dispatch => {
@@ -78,6 +77,7 @@ export const postProject = (project) => dispatch => {
     });
 }
 
+// payload: a data bundle
 export const editProject = (project) => dispatch => {
   axiosWithAuth()
     .put('/projects/:id', project)
