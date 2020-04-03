@@ -10,7 +10,8 @@ import ParentDash from '../components/dashboards/parents/ParentDash'
 import AddProjectForm from '../components/forms/AddProjectForm'
 import NewsFeed from '../components/dashboards/newsfeed/NewsFeed'
 import MemoryGame from '../components/dashboards/kids/Game3/MemoryGame'
-import SlidePuzzle from '../components/dashboards/kids/Game4/SlidePuzzle'
+import RPS from '../components/dashboards/kids/Game1/RPS'
+
 
 
 const Routes = () => {
@@ -33,7 +34,7 @@ const Routes = () => {
       <Route path="/login" component={Login} />
       <Route path="/register" component={Registration} />
       <Route path="/memoryGame" component={MemoryGame} />
-      <Route path="/slidePuzzleB" component={SlidePuzzle} />
+      <Route path="/rock_paper_scissors" component={RPS} />
     </div>
   );
 }

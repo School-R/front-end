@@ -6,16 +6,17 @@ const WeaponList = ({ weapons, onClickWeapon }) => (
 		<ul>
 			{weapons.map(item => (
 				<li key={item}>
-					<Button
+					<button
 						onClick={() => onClickWeapon(item)}
 					>
 						<Weapon
 							icon={item}
 						/>
-					</Button>
+					</button>
 				</li>
 			))}
 		</ul>
 		<span className="label">CHOOSE A WEAPON</span>
     </div>
 )
+export default WeaponList;
