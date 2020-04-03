@@ -33,7 +33,7 @@ const NewsFeed = () => {
           <div>
             <NewsCard
               index={index}
-              project_id={info.project_id}
+              id={info.id}
               imgurl={info.imgurl}
               title={info.title}
               subject={info.subject}

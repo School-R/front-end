@@ -153,12 +153,12 @@ const AddProjectForm = () => {
 							<option disabled>
 								Choose A Subject
 							</option>
-							<option value="computer_education">Computer Education</option>
-              <option value="science">Science</option>
-              <option value="math">Math</option>
-              <option value="history">History</option>
-              <option value="languages">Languages</option>
-              <option value="literature">Literature</option>
+							<option value="Computer Education">Computer Education</option>
+              <option value="Science">Science</option>
+              <option value="Math">Math</option>
+              <option value="History">History</option>
+              <option value="Languages">Languages</option>
+              <option value="Literature">Literature</option>
 						</Input>
 					</FormGroup>
 					<Label htmlFor='description'>Description</Label>

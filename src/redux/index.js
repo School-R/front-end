@@ -38,11 +38,13 @@ const reducer = (state = initialState, action) => {
         projects: [...state.projects, action.payload],
       };
     case EDIT_PROJECT:
-      const newProjectsArray = state.projects.filter(project => project.id !== action.payload.id);
-			return {
-				...state,
-				projects: [...newProjectsArray, action.payload],
-			};
+      // const newProjectsArray = state.projects.filter(
+      //   project => project.id !== action.payload.id,
+      // );
+      return {
+        ...state,
+        projects: [...state.projects, action.payload],
+      };
     default:
       return state;
   }

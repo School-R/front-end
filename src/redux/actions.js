@@ -77,7 +77,7 @@ export const postProject = (project) => dispatch => {
     });
 }
 
-// payload: a data bundle
+// payload: a data bundle - PUT projects/:id
 export const editProject = (project) => dispatch => {
   axiosWithAuth()
     .put('/projects/:id', project)
@@ -89,5 +89,10 @@ export const editProject = (project) => dispatch => {
 			dispatch({ type: SET_ERROR, payload: 'error editing a project' });
 		});
 };
+
+
+
+
+
 
 
