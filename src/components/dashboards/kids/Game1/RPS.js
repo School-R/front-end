@@ -1,20 +1,13 @@
-import React, {Component}from 'react'
-///MAIN APP////
-///STILL WORKING.//////////
-import Game from './gameState/GameIndex';
+import React from 'react'
 import RPSModal from './RPSModal'
-
-class RPS extends Component {
-    render(){
-        
+import './rock_paper_scissors/design/rps.css'
+const RPS = ()=> {
+    
         return(
             <div>
-                <Game/>
                 <RPSModal/>
             </div>
         )
-    
-    }
 }
 
 export default RPS;
