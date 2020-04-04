@@ -2,7 +2,6 @@
   width: 98%;
   height: 225px;
 	margin: 5%;
-	font-family: 'Liu Jian Mao Cao', cursive;
 }
 
 .game-card::after {
@@ -22,15 +21,15 @@
   /* font-family: 'Liu Jian Mao Cao', cursive; */
 /* } */
 
-.english-word1 {
-	font-family: 'Special Elite', cursive;
-	font-style: italic; 
-}
-
-.english-word2 {
-	font-family: 'Cabin Sketch', cursive;
-	font-style: italic;
-}
+/* .english-word1 { */
+	/* font-family: 'Special Elite', cursive; */
+	/* font-style: italic;  */
+/* } */
+/*  */
+/* .english-word2 { */
+	/* font-family: 'Cabin Sketch', cursive; */
+	/* font-style: italic; */
+/* } */
 
 .game-card {
   width: 98%;
