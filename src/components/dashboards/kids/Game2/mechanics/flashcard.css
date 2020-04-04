@@ -3,16 +3,18 @@
 }
 
 .english-word1 {
-  font-family: 'Special Elite', cursive; 
+	font-family: 'Special Elite', cursive;
+	font-style: italic; 
 }
 
 .english-word2 {
-  font-family: 'Cabin Sketch', cursive;
+	font-family: 'Cabin Sketch', cursive;
+	font-style: italic;
 }
 
 .game-card {
   width: 98%;
-  height: 150px;
+  height: 225px;
   margin: 5%;
 }
 
@@ -26,3 +28,42 @@
 	height: 100px;
 	bottom: 0;
 }
+
+.modal-body{
+	display: flex;
+}
+.meaning-button{
+text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+background-color: #FCCB3D;
+color: #fff;
+margin: 1%;
+padding: 10px;
+width: 98%;
+border: none;
+border-radius: 4px;
+font-size: 14px;
+font-weight: bold;
+margin-top: 10px;
+cursor: pointer;
+margin-bottom: 10px;
+}
+	:disabled {
+      opacity: .5;
+		}
+.cancel-button{
+	text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+	background-color: #b51118;
+	color: #fff;
+	margin: 1%;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 10px;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+:disabled {
+      opacity: .5;
+		}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Card, CardTitle, CardSubtitle, Button, Modal } from "reactstrap";
+import { Card, CardBody, CardFooter, Button, Modal } from "reactstrap";
 
 const GameCard = ({ word, def, string }) => {
 
@@ -8,22 +8,40 @@ const GameCard = ({ word, def, string }) => {
   const toggle = () => setModal(!modal);
 
   return (
-    <Card className="game-card">
-      <h1 className="chinese-char">{string}</h1>
-      <CardTitle className="english-word2">{word}</CardTitle>
-      <Button outline color="warning" onClick={toggle} >
-        Meaning
-      </Button>
-      <Modal isOpen={modal} toggle={toggle}>
-        <Card className="game-card">
-          <CardSubtitle className="english-word1">{def}</CardSubtitle>
-          <Button outline color="danger" onClick={toggle}>
-            X
-          </Button>
-        </Card>
-      </Modal>
-    </Card>
-  );
+			<Card className='game-card'>
+				<h1 className='chinese-char'>{string}</h1>
+				<CardBody className='english-word2'>
+					<h3>{word}</h3>
+				</CardBody>
+				<CardFooter>
+					<Button
+						outline
+						className='meaning-button'
+						color='warning'
+						style={{ color: '#fff', marginTop: '3%' }}
+						onClick={toggle}>
+						Meaning
+					</Button>
+				</CardFooter>
+				<Modal isOpen={modal} toggle={toggle}>
+					<Card className='game-card' style={{ width: '95%', margin: '5% auto' }}>
+						<CardBody className='modal-body'>
+							<Button
+								outline
+								className='cancel-button'
+								color='danger'
+								onClick={toggle}
+								style={{ height: '40px', margin: '0 5%' }}>
+								X
+							</Button>
+							<h1 className='english-word1' style={{ width: '70%' }}>
+								{def}
+							</h1>
+						</CardBody>
+					</Card>
+				</Modal>
+			</Card>
+		)
 }
 
 export default GameCard

@@ -6,7 +6,10 @@ import './mechanics/flashcard.css'
 const FlashCardGame = () => {
 
   return (
-    <List />
+    <section>
+      <h5>**The NUMBERS are Equal to the number of Strokes it takes to write the Chinese Character**</h5>
+      <List />
+    </section>
   )
 }
 
