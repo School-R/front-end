@@ -11,6 +11,7 @@ import AddProjectForm from '../components/forms/AddProjectForm'
 import NewsFeed from '../components/dashboards/newsfeed/NewsFeed'
 import MemoryGame from '../components/dashboards/kids/Game3/MemoryGame'
 import RPS from '../components/dashboards/kids/Game1/RPS'
+import FlashCardGame from '../components/dashboards/kids/Game2/FlashCardGame'
 
 
 
@@ -35,6 +36,7 @@ const Routes = () => {
       <Route path="/register" component={Registration} />
       <Route path="/memoryGame" component={MemoryGame} />
       <Route path="/rock_paper_scissors" component={RPS} />
+      <Route path="/flash_card" component={FlashCardGame} />
     </div>
   );
 }
