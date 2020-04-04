@@ -9,7 +9,7 @@ const List = () => {
   useEffect(() => {
     axios
       .get(
-        "http://ccdb.hemiola.com/characters/radicals/85?filter=gb&fields=kDefinition,kMandarin,string",
+        "https://cors-anywhere.herokuapp.com/http://ccdb.hemiola.com/characters/radicals/85?filter=gb&fields=kDefinition,kMandarin,string"
       )
       .then(res => {
         console.log(res.data);
@@ -36,3 +36,5 @@ const List = () => {
 }
 
 export default List
+
+//https://cors-anywhere.herokuapp.com/
