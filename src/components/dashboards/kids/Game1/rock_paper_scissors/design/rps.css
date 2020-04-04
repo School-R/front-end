@@ -1,0 +1,73 @@
+.body{
+  background: linear-gradient(#dc2e4e,#b51118);
+  width: 50%;
+  border: 4px groove rgb(59, 67, 99);
+  margin: 0 auto;
+  color:whitesmoke;
+  border-radius: 2%;
+  border-bottom:6px groove rgb(59, 67, 99) ;
+  text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+}
+header{
+  background:linear-gradient(#fa7027,#FCCB3D);
+  border-radius:3%;
+  border-top: 4px groove rgb(59, 67, 99);
+}
+
+.rps-h1{
+  text-align:center;
+  font-family: 'Indie Flower', cursive;
+}
+
+.scoreboard {
+  border: 3px double whitesmoke;
+  width: 20%;
+  margin: 2% auto;
+  font-size: 75px;
+  border-radius: 5px;
+  padding: 2% ;
+  font-family: 'VT323', monospace;
+  position: relative;
+}
+
+.badge{
+  background:linear-gradient(#fa7027,#FCCB3D);
+  padding: 1%;
+  font-size: 30px;
+}
+#user-label{
+position: absolute;
+top: 55px;
+left: -35px;
+}
+
+#computer-label{
+position: absolute;
+top: 55px;
+right: -35px;
+}
+
+.result-msg{
+  font-size: 50px;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+}
+
+.choice{
+  display: inline-block;
+  margin: 10%;
+  margin-top:5%;
+  padding: 2%;
+  border: 5px solid rgb(59, 67, 99);
+  border-radius: 50%;
+  background: linear-gradient(#FCCB3D,#fa7027);
+}
+
+.choice:hover{
+  background:linear-gradient(#b51118,#FCCB3D,#fa7027,#FCCB3D,#b51118);
+  border: 5px solid #FCCB3D;
+}
+#action-message{
+  font-family: 'VT323', monospace;
+  font-size: 45px;
+}
