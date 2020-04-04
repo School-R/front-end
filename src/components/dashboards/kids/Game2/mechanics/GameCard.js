@@ -9,7 +9,7 @@ const GameCard = ({ word, def, string }) => {
 
   return (
 			<Card className='game-card'>
-				<h1 className='chinese-char'>{string}</h1>
+				<h1 >{string}</h1>
 				<CardBody className='english-word2'>
 					<h3>{word}</h3>
 				</CardBody>
