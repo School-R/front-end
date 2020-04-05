@@ -1,13 +1,13 @@
 import React from 'react'
+import './rps.css'
 import RPSModal from './RPSModal'
-import './rock_paper_scissors/design/rps.css'
 const RPS = ()=> {
     
-        return(
-            <div>
-                <RPSModal/>
-            </div>
-        )
+	return (
+		<div className='screen-share'>
+		<RPSModal/>
+		</div>
+	)
 }
 
 export default RPS;
