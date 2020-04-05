@@ -3,14 +3,19 @@ import Rock from './images/icon-rock.svg'
 import Paper from './images/icon-paper.svg'
 import Scissors from './images/icon-scissors.svg'
 import Rules from './images/icon-rules.svg'
+import {Modal}from 'reactstrap'
 
 const RPSModal = () => {
+	let [playerScore, setPlayerScore] = useState(0)
+	let [compScore, setCompScore] = useState(0)
 	const [playerChoice, setPlayerChoice] = useState('')
 	const [compChoice, setCompChoice] = useState('')
 	const [result, setResult] = useState('Want to Play ?')
+	const [result2, setResult2]=useState('')
 	
-	let [playerScore, setPlayerScore] = useState(0)
-	let [compScore, setCompScore] = useState(0)
+	const [modal, setModal] = useState(false)
+
+	const toggle = () => setModal(!modal)
 
 	const getCompChoice = () => {
 		const randNum = Math.floor(Math.random() * 100)
@@ -25,47 +30,54 @@ const RPSModal = () => {
 		}
 	}
 
-	const getWinner = (playerChoice,compChoice) => {
+	const getWinner = () => {
+		getCompChoice()
 		switch (playerChoice + compChoice) {
-			case 'Rock Scissors':
-			case 'Paper Rock':
-			case 'Scissors Paper':
-			win(playerChoice, compChoice, playerScore)
+			case 'RockScissors':
+			case 'PaperRock':
+			case 'ScissorsPaper':
+			win(playerChoice, compChoice)
 				break
-			case 'Scissors Rock':
-				case 'Rock Paper':
-				case 'Paper Scissors':
-			lose(playerChoice, compChoice, compScore)
+			  case 'Scissors Rock':
+				case 'RockPaper':
+				case 'PaperScissors':
+			lose(playerChoice, compChoice)
 				break
-			case 'Rock Rock':
-			case 'Paper Paper':
-			case 'Scissors Scissors':
+			case 'RockRock':
+			case 'PaperPaper':
+			case 'ScissorsScissors':
 			draw(playerChoice)
-				break
+				break 
 			default:
+			
 		}		
 	}
 												
-	const win = (playerChoice, compChoice, playerScore) => {
+	const win = (playerChoice, compChoice) => {
 		setPlayerScore(playerScore + 1)
-		setResult(`${playerChoice} beats ${compChoice}.🎉🎉You Win 🎉🎉`)
+		setResult(`${playerChoice} beats ${compChoice}.`)
+		setResult2(`🎉🎉You Win 🎉🎉`)
 	}
 	
-	const lose = (playerChoice, compChoice, compScore) =>{
+	const lose = (playerChoice, compChoice) =>{
 		setCompScore(compScore + 1)
-		setResult(` ${compChoice} beats ${playerChoice}. 💩You Lost 💩`)
+		setResult(` ${compChoice} beats ${playerChoice}.`)
+    setResult2(`💩You Lose 💩`)
 	}
 
 	const draw = (playerChoice) => {
-		setResult(`You Both Chose ${playerChoice}.🥺You Tied 🥺`)
+		setCompScore(compScore + 0)
+		setPlayerScore(playerScore + 0)
+		setResult(`You Both Chose ${playerChoice}.`)
+    setResult2(`🥺You Tied 🥺`)
 	}
-	  
-	console.log(getWinner(), playerChoice, compChoice)
+	
+	
 	
 	const handleClick = (name) => {
 		setPlayerChoice(name)
-		getCompChoice(name)
-		getWinner(result, playerChoice, compChoice, playerScore, compScore)
+		getCompChoice()
+		getWinner(win(playerChoice, compChoice, playerScore), lose(playerChoice, compChoice), draw(playerChoice))
 		
 	}
 
@@ -78,20 +90,24 @@ const RPSModal = () => {
 			<div className='scoreboard'>
 				<span className='badge'>User {playerScore}</span>:<span className='badge'> {compScore} Comp</span>
 			</div>
-			<span className='result-msg'>{result}</span>
+			<span className='result-msg'>
+				{result}
+				<br />
+				{result2}
+			</span>
 
 			<div className='choices'>
 				<div
 					className='choice'
 					onClick={(e) => {
-							e.preventDefault()
-							handleClick('Rock')
+						e.preventDefault()
+						handleClick('Rock')
 					}}>
 					<img src={Rock} alt='rock' />
 				</div>
 				<div
 					className='choice'
-					onClick={e => {
+					onClick={(e) => {
 						e.preventDefault()
 						handleClick('Paper')
 					}}>
@@ -99,20 +115,23 @@ const RPSModal = () => {
 				</div>
 				<div
 					className='choice'
-					onClick={e => {
+					onClick={(e) => {
 						e.preventDefault()
 						handleClick('Scissors')
 					}}>
 					<img src={Scissors} alt='scissors' />
 				</div>
 			</div>
-			<p id='action-message'>
-				Make your Move <br />
-				<br />⬇ ⬇ ⬇ How To Win⬇ ⬇ ⬇{' '}
-			</p>
-			<footer>
-				<img src={Rules} alt='game-rules' />
-			</footer>
+			<p className='action-message'>Make your Move</p>
+					<br/>
+			<div onClick={toggle} className='action-message'>
+				⬇ ⬇ ⬇ How To Win ⬇ ⬇ ⬇
+			</div>
+			<Modal isOpen={modal} toggle={toggle}>
+				<footer style={{ margin: '0 auto' }}>
+					<img src={Rules} alt='game-rules' />
+				</footer>
+			</Modal>
 		</section>
 	)
 }

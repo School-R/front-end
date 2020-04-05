@@ -75,7 +75,7 @@ header{
 	background: linear-gradient(#b51118, #fccb3d, #fa7027, #fccb3d, #b51118);
 	border: 5px solid #fccb3d;
 }
-#action-message {
+.action-message {
 	font-family: 'VT323', monospace;
   font-size: 45px;
   margin-top: -5%;
