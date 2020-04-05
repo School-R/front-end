@@ -32,12 +32,8 @@ const Routes = () => {
 			<Route path='/rock_paper_scissors' component={RPS} />
 			<Route path='/flash_card' component={FlashCardGame} />
 
-			<Route
-				path='/rps'
-				render={() => {
-					window.location.href = 'rps.html'
-				}}
-			/>
+			
+		
 		</div>
 	)
 }
