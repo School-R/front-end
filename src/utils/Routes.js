@@ -17,28 +17,29 @@ import FlashCardGame from '../components/dashboards/kids/Game2/FlashCardGame'
 
 const Routes = () => {
 	return (
-    <div>
-      <ProtectedRoute path="/parents-dash/:id" component={ParentDash} />
-      <ProtectedRoute
-        path="/parents-dash/:id/newProject"
-        component={AddProjectForm}
-      />
-      <ProtectedRoute path="/parents-dash/:id/newsfeed" component={NewsFeed} />
-      <ProtectedRoute path="/kids-dash/:id" component={KidsDash} />
-      <ProtectedRoute
-        path="/kids-dash/:id/newProject"
-        component={AddProjectForm}
-      />
-      <ProtectedRoute path="/kids-dash/:id/newsfeed" component={NewsFeed} />
-      <Route exact path="/" component={LandingPage} />
-      <Route path="/about" component={AboutPage} />
-      <Route path="/login" component={Login} />
-      <Route path="/register" component={Registration} />
-      <Route path="/memoryGame" component={MemoryGame} />
-      <Route path="/rock_paper_scissors" component={RPS} />
-      <Route path="/flash_card" component={FlashCardGame} />
-    </div>
-  );
+		<div>
+			<ProtectedRoute path='/parents-dash/:id' component={ParentDash} />
+			<ProtectedRoute path='/parents-dash/:id/newProject' component={AddProjectForm} />
+			<ProtectedRoute path='/parents-dash/:id/newsfeed' component={NewsFeed} />
+			<ProtectedRoute path='/kids-dash/:id' component={KidsDash} />
+			<ProtectedRoute path='/kids-dash/:id/newProject' component={AddProjectForm} />
+			<ProtectedRoute path='/kids-dash/:id/newsfeed' component={NewsFeed} />
+			<Route exact path='/' component={LandingPage} />
+			<Route path='/about' component={AboutPage} />
+			<Route path='/login' component={Login} />
+			<Route path='/register' component={Registration} />
+			<Route path='/memoryGame' component={MemoryGame} />
+			<Route path='/rock_paper_scissors' component={RPS} />
+			<Route path='/flash_card' component={FlashCardGame} />
+
+			<Route
+				path='/rps'
+				render={() => {
+					window.location.href = 'rps.html'
+				}}
+			/>
+		</div>
+	)
 }
 
 export default Routes
