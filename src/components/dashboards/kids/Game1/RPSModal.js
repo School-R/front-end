@@ -76,7 +76,6 @@ const RPSModal = () => {
 	
 	const handleClick = (name) => {
 		setPlayerChoice(name)
-		getCompChoice()
 		getWinner(win(playerChoice, compChoice, playerScore), lose(playerChoice, compChoice), draw(playerChoice))
 		
 	}
