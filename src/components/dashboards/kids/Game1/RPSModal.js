@@ -3,7 +3,7 @@ import Rock from './images/icon-rock.svg'
 import Paper from './images/icon-paper.svg'
 import Scissors from './images/icon-scissors.svg'
 import Rules from './images/icon-rules.svg'
-import {Modal}from 'reactstrap'
+import { Modal } from 'reactstrap'
 
 const RPSModal = () => {
 	let [playerScore, setPlayerScore] = useState(0)
@@ -11,8 +11,8 @@ const RPSModal = () => {
 	const [playerChoice, setPlayerChoice] = useState('')
 	const [compChoice, setCompChoice] = useState('')
 	const [result, setResult] = useState('Want to Play ?')
-	const [result2, setResult2]=useState('')
-	
+	const [result2, setResult2] = useState('')
+
 	const [modal, setModal] = useState(false)
 
 	const toggle = () => setModal(!modal)
@@ -25,8 +25,6 @@ const RPSModal = () => {
 			setCompChoice('Paper')
 		} else if (randNum <= 99) {
 			setCompChoice('Scissors')
-		} else {
-			return
 		}
 	}
 
@@ -36,48 +34,44 @@ const RPSModal = () => {
 			case 'RockScissors':
 			case 'PaperRock':
 			case 'ScissorsPaper':
-			win(playerChoice, compChoice)
+				win(playerChoice, compChoice)
 				break
-			  case 'Scissors Rock':
-				case 'RockPaper':
-				case 'PaperScissors':
-			lose(playerChoice, compChoice)
+			case 'Scissors Rock':
+			case 'RockPaper':
+			case 'PaperScissors':
+				lose(playerChoice, compChoice)
 				break
 			case 'RockRock':
 			case 'PaperPaper':
 			case 'ScissorsScissors':
-			draw(playerChoice)
-				break 
+				draw(playerChoice)
+				break
 			default:
-			
-		}		
+		}
 	}
-												
+
 	const win = (playerChoice, compChoice) => {
 		setPlayerScore(playerScore + 1)
 		setResult(`${playerChoice} beats ${compChoice}.`)
 		setResult2(`🎉🎉You Win 🎉🎉`)
 	}
-	
-	const lose = (playerChoice, compChoice) =>{
+
+	const lose = (playerChoice, compChoice) => {
 		setCompScore(compScore + 1)
 		setResult(` ${compChoice} beats ${playerChoice}.`)
-    setResult2(`💩You Lose 💩`)
+		setResult2(`💩You Lose 💩`)
 	}
 
 	const draw = (playerChoice) => {
 		setCompScore(compScore + 0)
 		setPlayerScore(playerScore + 0)
 		setResult(`You Both Chose ${playerChoice}.`)
-    setResult2(`🥺You Tied 🥺`)
+		setResult2(`🥺You Tied 🥺`)
 	}
-	
-	
-	
+
 	const handleClick = (name) => {
 		setPlayerChoice(name)
 		getWinner(win(playerChoice, compChoice, playerScore), lose(playerChoice, compChoice), draw(playerChoice))
-		
 	}
 
 	return (
@@ -122,7 +116,7 @@ const RPSModal = () => {
 				</div>
 			</div>
 			<p className='action-message'>Make your Move</p>
-					<br/>
+			<br />
 			<div onClick={toggle} className='action-message'>
 				⬇ ⬇ ⬇ How To Win ⬇ ⬇ ⬇
 			</div>
