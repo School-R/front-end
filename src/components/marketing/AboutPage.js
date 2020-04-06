@@ -12,7 +12,7 @@ const team = [
   {
     src: `${Cat}`,
     altText: "Catherine",
-    caption: "YAAAY!",
+    caption: "Work Hard! Play Hard!",
     header: "Catherine Kim",
     key: "1"
   },
