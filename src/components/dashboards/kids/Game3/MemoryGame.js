@@ -1,7 +1,7 @@
 import React from 'react'
 import Board from './cardgame/Board'
 import './gamestyles/memory.css'
-import MainNav from '../../../navs/MainNav'
+import LandingNav from '../../../navs/LandingNav'
 import backImg from './gamestyles/cardimages/backImg.png'
 import duck from './gamestyles/cardimages/duck.png'
 import pig from './gamestyles/cardimages/pig.png'
@@ -46,7 +46,7 @@ const shuffle=(arr) =>{
 	const cards = buildCards()
   return (
     <section>
-      <MainNav/>
+      <LandingNav/>
 		<div style={{
   textAlign: 'center',
   padding: '50px'
