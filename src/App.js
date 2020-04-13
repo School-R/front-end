@@ -7,7 +7,7 @@ const App = () => {
 	return (
 		<section className='App'>
 			<div>
-				<Routes />
+			<Routes />
 			</div>
 			<Footer/>
 		</section>

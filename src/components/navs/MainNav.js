@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Logo from '../../images/School_R.png'
 import { Navbar, Button } from 'reactstrap'
 import { useHistory } from 'react-router-dom'
+import NewsFeedNav from '../dashboards/newsfeed/NewsFeedNav'
 
 const MainNav = () => {
 	const history = useHistory()
@@ -41,7 +42,7 @@ const MainNav = () => {
 						Log Out
 					</Button>
 				</span>
-			) : (
+			):(
 				<span>
 					<Button
 						onClick={logout}
