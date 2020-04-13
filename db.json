@@ -178,7 +178,7 @@
     },
     {
       "id": 11,
-      "title": "Create a Battery ",
+      "title": "Create a Battery with Vegetables or Fruit",
       "subject": "Science",
       "favorite": "five stars",
       "description": "Generate Electricity while Using Lemon or Potato for a Science Project",
@@ -186,7 +186,7 @@
     },
     {
       "id": 12,
-      "title": "Card for Deleting to Check Delete Function or See Delete Function",
+      "title": "Card to Check Deleting to Check Delete Function or See Delete Function",
       "subject": "Languages",
       "favorite": "five stars",
       "description": "Here is the Note Field",
@@ -213,6 +213,13 @@
       "isParent": false,
       "token": "89b0142b-9fd2-42ca-b0b2-4503a1553014",
       "id": 3
+    },
+    {
+      "email": "kara@kara.com",
+      "password": "1234",
+      "isParent": true,
+      "token": "71eb2695-7eb7-4276-9e1b-1fee6e23e75d",
+      "id": 4
     }
   ]
 }
