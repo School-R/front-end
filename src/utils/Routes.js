@@ -15,6 +15,7 @@ import FlashCardGame from '../components/dashboards/kids/Game2/FlashCardGame'
 
 
 
+
 const Routes = () => {
 	return (
 		<div>
@@ -31,9 +32,6 @@ const Routes = () => {
 			<Route path='/memoryGame' component={MemoryGame} />
 			<Route path='/rock_paper_scissors' component={RPS} />
 			<Route path='/flash_card' component={FlashCardGame} />
-
-			
-		
 		</div>
 	)
 }
