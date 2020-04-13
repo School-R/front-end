@@ -17,6 +17,17 @@ const RPSModal = () => {
 
 	const toggle = () => setModal(!modal)
 
+
+	console.log('global', playerChoice, compChoice)
+	
+	const start = () => {
+		setResult('Make Your Move')
+		setResult2('🍀Good Luck 🍀')
+	} 
+
+	
+
+
 	const getCompChoice = () => {
 		const randNum = Math.floor(Math.random() * 100)
 		if (randNum < 33) {
@@ -29,7 +40,6 @@ const RPSModal = () => {
 	}
 
 	const getWinner = () => {
-		getCompChoice()
 		switch (playerChoice + compChoice) {
 			case 'RockScissors':
 			case 'PaperRock':
@@ -44,9 +54,9 @@ const RPSModal = () => {
 			case 'RockRock':
 			case 'PaperPaper':
 			case 'ScissorsScissors':
-				draw(playerChoice)
+				draw(playerChoice, compChoice)
 				break
-			default:
+			 default:	/*document.querySelector('.game').click() */
 		}
 	}
 
@@ -54,25 +64,31 @@ const RPSModal = () => {
 		setPlayerScore(playerScore + 1)
 		setResult(`${playerChoice} beats ${compChoice}.`)
 		setResult2(`🎉🎉You Win 🎉🎉`)
+	
 	}
 
 	const lose = (playerChoice, compChoice) => {
 		setCompScore(compScore + 1)
 		setResult(` ${compChoice} beats ${playerChoice}.`)
-		setResult2(`💩You Lose 💩`)
+		setResult2(`💩You Lose 💩`) 
 	}
 
 	const draw = (playerChoice) => {
 		setCompScore(compScore + 0)
 		setPlayerScore(playerScore + 0)
 		setResult(`You Both Chose ${playerChoice}.`)
-		setResult2(`🥺You Tied 🥺`)
+		setResult2(`🥺You Tied 🥺`) 
+	}
+		
+	const handleClick =  (name) => {
+		setPlayerChoice(name)
+		 getCompChoice()
 	}
 
-	const handleClick = (name) => {
-		setPlayerChoice(name)
-		getWinner(win(playerChoice, compChoice, playerScore), lose(playerChoice, compChoice), draw(playerChoice))
-	}
+	const handleSubmit = (e) => {
+		e.preventDefault()
+	getWinner(win(playerChoice,compChoice,playerScore),lose(playerChoice, compChoice, compScore), draw(playerChoice))
+}
 
 	return (
 		<section className='body'>
@@ -89,34 +105,28 @@ const RPSModal = () => {
 				{result2}
 			</span>
 
-			<div className='choices'>
-				<div
-					className='choice'
-					onClick={(e) => {
-						e.preventDefault()
-						handleClick('Rock')
-					}}>
-					<img src={Rock} alt='rock' />
-				</div>
-				<div
-					className='choice'
-					onClick={(e) => {
-						e.preventDefault()
-						handleClick('Paper')
-					}}>
-					<img src={Paper} alt='paper' />
-				</div>
-				<div
-					className='choice'
-					onClick={(e) => {
-						e.preventDefault()
-						handleClick('Scissors')
-					}}>
-					<img src={Scissors} alt='scissors' />
-				</div>
+			<div>
+				{result === 'Want to Play ?' ? (
+					<div className='choices'>
+						<button className='choice' onClick={start}>
+							Start
+						</button>
+					</div>
+				) : (
+					<form className='choices' onSubmit={handleSubmit}>
+						<button  onClick={() => handleClick('Rock')} className='choice'>
+							<img src={Rock} alt='rock' />
+						</button>
+						<button className='choice'  onClick={() => handleClick('Paper')}>
+							<img src={Paper} alt='paper' />
+						</button>
+						<button className='choice' onClick={() => handleClick('Scissors')}>
+							<img src={Scissors} alt='scissors' />
+						</button>
+					</form>
+					)}
 			</div>
-			<p className='action-message'>Make your Move</p>
-			<br />
+
 			<div onClick={toggle} className='action-message'>
 				⬇ ⬇ ⬇ How To Win ⬇ ⬇ ⬇
 			</div>
