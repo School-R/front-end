@@ -1,4 +1,4 @@
-# [School'R]https://front-end-schoolr.now.sh/
+# [School'R](https://front-end-schoolr.now.sh/)
 
 ## Note for Forking and Running This Project
 
