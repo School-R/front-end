@@ -2,7 +2,7 @@
 
 ## Note for Forking and Running This Project
 
-To Run This Project as a Full Stack App Please start *npm package json-server* by runningthe command in the terminal:
+To Run This Project as a Full Stack App Please start NPM Package *[json-server](https://www.npmjs.com/package/json-server)* by running the command in the terminal:
 **_npm run mock:api or yarn mock:api_** 
 after installing the dependencies.
 This will allow CRUD Operations to be checked by posting to the db.json file that exists.
