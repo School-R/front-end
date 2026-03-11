@@ -31,13 +31,13 @@ This was a collaborative team project, and I served as the project organizer and
 
 My contributions included:
 
-- organizing and maintaining the GitHub frontend codebase
-- helping define the application structure and feature flow
-- delegating work based on teammate strengths and interests
-- pair programming to unblock development
-- guiding teammates through Redux concepts and application state flow
-- translating vanilla JavaScript game logic into React component logic using local state
-- supporting integration of features into one shared React application
+- Organizing and Maintaining the GitHub Frontend Codebase
+- Helping Define the Application Structure and Feature Flow
+- Delegating Work Based on Teammate Strengths and Interests
+- Pair Programming to Unblock Development
+- Guiding Teammates Through Redux Concepts and Application State Flow
+- Translating Vanilla JavaScript Game Logic Into React Component Logic Using Local State
+- Supporting Integration of Features Into One Shared React Application
 
 ## Team Collaboration
 
@@ -74,14 +74,14 @@ This was designed as an initial protective layer so that:
 - Reactstrap
 - Styled Components
 - Bootstrap
-- json-server / mock API workflows
+- json-server/Mock API Workflows
 
 ## Features
 
-- Parent dashboard
-- Kids dashboard
-- Protected routes
-- Registration and login flows
+- Parent Dashboard
+- Kids Dashboard
+- Protected Routes
+- Registration and Login Flows
 - Project Feed/News Feed
 - Add and Edit Project Forms
 - Flash Card Game
@@ -157,7 +157,7 @@ School'R is an important portfolio project because it demonstrates:
 - Role-Based Application Design  
 - Concept Translation through Pair-Programming  
 - Early Product Thinking around Learning, Safety, and Usability  
-- Hands-on Growth in React State Management and Component Structure  
+- Hands-On Growth in React State Management and Component Structure  
 
 ## Credits
 
