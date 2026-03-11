@@ -90,58 +90,30 @@ This was designed as an initial protective layer so that:
 
 ## Running the Project Locally
 
-### Prerequisites
+# Prerequisites
 
 - Node.js
 - npm or yarn
 
-## Install dependencies
+# Install Dependencies
 
-Choose one:
+Choose one: `npm install` or `yarn`
 
-**npm**
+# Start the Mock API
 
-```bash
-npm install
-``` 
-or
+Run `npm run mock:api` or `yarn mock:api`
 
-yarn
-```bash
-yarn
-```
+This starts the mock API used for CRUD operations through the local `db.json` workflow.
 
-## Start the mock API
-```
-npm run mock:api
-```
-or
-```
-yarn mock:api
-```
+# Start the React App
 
-This starts the mock API used for CRUD operations through the local db.json workflow.
+In a separate terminal, run `npm start` or `yarn start`
 
-## Start the React app
+# Notes
 
-**npm**
-```bash
-npm start
-```
-or
-
-yarn
-```bash
-yarn start
-```
-
-## Notes
-
-This repository represents the primary frontend application.
-
-During development, CRUD behavior was supported through a mock API workflow.
-
-Some planned backend structure was explored separately, but the strongest completed work in this project is the React frontend prototype.
+- If the UI loads but project data is missing, confirm the mock API is running.
+- If a port conflict occurs, update the script in `package.json` or stop the conflicting process.
+- If CRUD changes do not appear, verify that the local mock API process started successfully.
 
 ## Technical Challenge
 
