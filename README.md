@@ -13,17 +13,17 @@ Student-led side project developed alongside coursework during a temporary pause
 
 School'R was designed around three main ideas:
 
-- parents sharing educational projects and ideas
-- children accessing a separate learning experience
-- interactive tools supporting learning through play
+- Parents Sharing Educational Projects and Ideas
+- Children Accessing a Separate Learning Experience
+- Interactive Tools Supporting Learning through Play
 
 The prototype includes:
 
-- role-based routing
-- parent and child dashboards
-- project CRUD workflows
-- news feed/project display
-- interactive educational games
+- Role-Based Routing
+- Parent and Child Dashboards
+- Project CRUD Workflows
+- News Feed/Project Display
+- Interactive Educational Games
 
 ## My Role
 
