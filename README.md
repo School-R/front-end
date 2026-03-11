@@ -7,7 +7,7 @@ Created as a student-led side project alongside coursework, School'R explored ho
 ## Project Type
 
 Team Awesome collaboration  
-Lambda School / Build Week-era side project developed during a temporary coursework pause
+Student-led side project developed alongside coursework during a temporary pause in learning curriculum.
 
 ## Overview
 
@@ -22,7 +22,7 @@ The prototype includes:
 - role-based routing
 - parent and child dashboards
 - project CRUD workflows
-- news feed / project display
+- news feed/project display
 - interactive educational games
 
 ## My Role
@@ -48,9 +48,9 @@ We used pair programming, shared documentation reading, and collaborative debugg
 - React
 - Redux
 - Reactstrap
-- styled-components
-- component composition
-- state-driven UI behavior
+- Styled-Components
+- Component Composition
+- State-Driven UI Behavior
 
 ## Child Safety Design Considerations
 
@@ -60,9 +60,9 @@ Children were intended to be enrolled by a parent rather than independently join
 
 This was designed as an initial protective layer so that:
 
-- children remained in a distinct learning space
-- adult and child interaction was not mixed directly
-- future development could build on stronger moderation and safety controls
+- Children remained in a distinct learning space
+- Adult and child interaction was not mixed directly
+- Future development could build on stronger moderation and safety controls
 
 ## Technical Stack
 
@@ -82,11 +82,11 @@ This was designed as an initial protective layer so that:
 - Kids dashboard
 - Protected routes
 - Registration and login flows
-- Project feed/news feed
-- Add and edit project forms
-- Flash card game
-- Memory matching game
-- Rock Paper Scissors game
+- Project Feed/News Feed
+- Add and Edit Project Forms
+- Flash Card Game
+- Memory Matching Game
+- Rock Paper Scissors Game
 
 ## Running the Project Locally
 
@@ -100,12 +100,14 @@ This was designed as an initial protective layer so that:
 Choose one:
 
 **npm**
+
 ```bash
 npm install
 ``` 
 or
 
-```
+yarn
+```bash
 yarn
 ```
 
@@ -122,12 +124,14 @@ This starts the mock API used for CRUD operations through the local db.json work
 
 ## Start the React app
 
-In a separate terminal:
-```
+**npm**
+```bash
 npm start
 ```
 or
-```
+
+yarn
+```bash
 yarn start
 ```
 
@@ -143,18 +147,18 @@ Some planned backend structure was explored separately, but the strongest comple
 
 One of the most memorable challenges in the project was translating a vanilla JavaScript Rock Paper Scissors game into React.
 
-While rebuilding the game logic in React, the scoreboard repeatedly rendered one step behind, even though console.log() output looked correct. That debugging process became an important learning moment in understanding React state timing, stale state, and render behavior.
+While rebuilding the game logic in React, the scoreboard repeatedly rendered one step behind, even though the `console.log()` output looked correct. That debugging process became an important learning moment in understanding React state timing, stale state, and render behavior.
 
 ## Why This Project Matters
 
 School'R is an important portfolio project because it demonstrates:
 
--collaborative frontend architecture  
--role-based application design  
--concept translation through pair programming  
--early product thinking around learning, safety, and usability  
--hands-on growth in React state management and component structure  
+- Collaborative Frontend Architecture  
+- Role-Based Application Design  
+- Concept Translation through Pair-Programming  
+- Early Product Thinking around Learning, Safety, and Usability  
+- Hands-on Growth in React State Management and Component Structure  
 
-### Credits
+## Credits
 
 *School'R was created as a collaborative side project by members of Team Awesome during the Lambda School / BloomTech learning environment.*
