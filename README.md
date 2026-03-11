@@ -82,7 +82,7 @@ This was designed as an initial protective layer so that:
 - Kids dashboard
 - Protected routes
 - Registration and login flows
-- Project feed / news feed
+- Project feed/news feed
 - Add and edit project forms
 - Flash card game
 - Memory matching game
@@ -139,7 +139,7 @@ During development, CRUD behavior was supported through a mock API workflow.
 
 Some planned backend structure was explored separately, but the strongest completed work in this project is the React frontend prototype.
 
-T## echnical Challenge
+## Technical Challenge
 
 One of the most memorable challenges in the project was translating a vanilla JavaScript Rock Paper Scissors game into React.
 
@@ -149,11 +149,11 @@ Why This Project Matters
 
 School'R is an important portfolio project because it demonstrates:
 
--collaborative frontend architecture
--role-based application design
--concept translation through pair programming
--early product thinking around learning, safety, and usability
--hands-on growth in React state management and component structure
+-collaborative frontend architecture  
+-role-based application design  
+-concept translation through pair programming  
+-early product thinking around learning, safety, and usability  
+-hands-on growth in React state management and component structure  
 
 ### Credits
 
