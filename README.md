@@ -157,4 +157,4 @@ School'R is an important portfolio project because it demonstrates:
 
 ### Credits
 
-* School'R was created as a collaborative side project by members of Team Awesome during the Lambda School / BloomTech learning environment. *
+*School'R was created as a collaborative side project by members of Team Awesome during the Lambda School / BloomTech learning environment.*
