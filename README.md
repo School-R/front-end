@@ -145,7 +145,7 @@ One of the most memorable challenges in the project was translating a vanilla Ja
 
 While rebuilding the game logic in React, the scoreboard repeatedly rendered one step behind, even though console.log() output looked correct. That debugging process became an important learning moment in understanding React state timing, stale state, and render behavior.
 
-Why This Project Matters
+## Why This Project Matters
 
 School'R is an important portfolio project because it demonstrates:
 
