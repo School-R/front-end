@@ -90,26 +90,26 @@ This was designed as an initial protective layer so that:
 
 ## Running the Project Locally
 
-# Prerequisites
+### Prerequisites
 
 - Node.js
 - npm or yarn
 
-# Install Dependencies
+### Install Dependencies
 
 Choose one: `npm install` or `yarn`
 
-# Start the Mock API
+### Start the Mock API
 
 Run `npm run mock:api` or `yarn mock:api`
 
 This starts the mock API used for CRUD operations through the local `db.json` workflow.
 
-# Start the React App
+### Start the React App
 
 In a separate terminal, run `npm start` or `yarn start`
 
-# Notes
+### Notes
 
 - If the UI loads but project data is missing, confirm the mock API is running.
 - If a port conflict occurs, update the script in `package.json` or stop the conflicting process.
